@@ -1,0 +1,586 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ANY_STRING
+    ATOM_EX
+    CHAR_STRING
+    NODE_EX
+    VARIABLE
+    VARS
+
+Grammar
+
+Rule 0     S' -> theory
+Rule 1     theory -> statement theory
+Rule 2     theory -> statement
+Rule 3     statement -> NODE COLON eqseq DOT
+Rule 4     eqseq -> equation eqseq
+Rule 5     eqseq -> equation
+Rule 6     equation -> lhs rhs
+Rule 7     lhs -> L_ANGLE atomseq R_ANGLE
+Rule 8     rhs -> EQ atomval
+Rule 9     rhs -> DEFEQ descval
+Rule 10    atomval -> atomseq
+Rule 11    atomval -> L_PAREN atomseq R_PAREN
+Rule 12    atomseq -> ATOM atomseq
+Rule 13    atomseq -> <empty>
+Rule 14    descval -> descseq
+Rule 15    descval -> L_PAREN descseq R_PAREN
+Rule 16    descseq -> desc descseq
+Rule 17    descseq -> <empty>
+Rule 18    desc -> ATOM
+Rule 19    desc -> DQUOTE spec DQUOTE
+Rule 20    desc -> spec
+Rule 21    spec -> NODE COLON descpath
+Rule 22    spec -> NODE
+Rule 23    spec -> descpath
+Rule 24    descpath -> L_ANGLE descseq R_ANGLE
+
+Terminals, with rules where they appear
+
+ANY_STRING           : 
+ATOM                 : 12 18
+ATOM_EX              : 
+CHAR_STRING          : 
+COLON                : 3 21
+DEFEQ                : 9
+DOT                  : 3
+DQUOTE               : 19 19
+EQ                   : 8
+L_ANGLE              : 7 24
+L_PAREN              : 11 15
+NODE                 : 3 21 22
+NODE_EX              : 
+R_ANGLE              : 7 24
+R_PAREN              : 11 15
+VARIABLE             : 
+VARS                 : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+atomseq              : 7 10 11 12
+atomval              : 8
+desc                 : 16
+descpath             : 21 23
+descseq              : 14 15 16 24
+descval              : 9
+eqseq                : 3 4
+equation             : 4 5
+lhs                  : 6
+rhs                  : 6
+spec                 : 19 20
+statement            : 1 2
+theory               : 1 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . theory
+    (1) theory -> . statement theory
+    (2) theory -> . statement
+    (3) statement -> . NODE COLON eqseq DOT
+
+    NODE            shift and go to state 3
+
+    theory                         shift and go to state 1
+    statement                      shift and go to state 2
+
+state 1
+
+    (0) S' -> theory .
+
+
+
+state 2
+
+    (1) theory -> statement . theory
+    (2) theory -> statement .
+    (1) theory -> . statement theory
+    (2) theory -> . statement
+    (3) statement -> . NODE COLON eqseq DOT
+
+    $end            reduce using rule 2 (theory -> statement .)
+    NODE            shift and go to state 3
+
+    statement                      shift and go to state 2
+    theory                         shift and go to state 4
+
+state 3
+
+    (3) statement -> NODE . COLON eqseq DOT
+
+    COLON           shift and go to state 5
+
+
+state 4
+
+    (1) theory -> statement theory .
+
+    $end            reduce using rule 1 (theory -> statement theory .)
+
+
+state 5
+
+    (3) statement -> NODE COLON . eqseq DOT
+    (4) eqseq -> . equation eqseq
+    (5) eqseq -> . equation
+    (6) equation -> . lhs rhs
+    (7) lhs -> . L_ANGLE atomseq R_ANGLE
+
+    L_ANGLE         shift and go to state 9
+
+    eqseq                          shift and go to state 6
+    equation                       shift and go to state 7
+    lhs                            shift and go to state 8
+
+state 6
+
+    (3) statement -> NODE COLON eqseq . DOT
+
+    DOT             shift and go to state 10
+
+
+state 7
+
+    (4) eqseq -> equation . eqseq
+    (5) eqseq -> equation .
+    (4) eqseq -> . equation eqseq
+    (5) eqseq -> . equation
+    (6) equation -> . lhs rhs
+    (7) lhs -> . L_ANGLE atomseq R_ANGLE
+
+    DOT             reduce using rule 5 (eqseq -> equation .)
+    L_ANGLE         shift and go to state 9
+
+    equation                       shift and go to state 7
+    eqseq                          shift and go to state 11
+    lhs                            shift and go to state 8
+
+state 8
+
+    (6) equation -> lhs . rhs
+    (8) rhs -> . EQ atomval
+    (9) rhs -> . DEFEQ descval
+
+    EQ              shift and go to state 13
+    DEFEQ           shift and go to state 14
+
+    rhs                            shift and go to state 12
+
+state 9
+
+    (7) lhs -> L_ANGLE . atomseq R_ANGLE
+    (12) atomseq -> . ATOM atomseq
+    (13) atomseq -> .
+
+    ATOM            shift and go to state 16
+    R_ANGLE         reduce using rule 13 (atomseq -> .)
+
+    atomseq                        shift and go to state 15
+
+state 10
+
+    (3) statement -> NODE COLON eqseq DOT .
+
+    NODE            reduce using rule 3 (statement -> NODE COLON eqseq DOT .)
+    $end            reduce using rule 3 (statement -> NODE COLON eqseq DOT .)
+
+
+state 11
+
+    (4) eqseq -> equation eqseq .
+
+    DOT             reduce using rule 4 (eqseq -> equation eqseq .)
+
+
+state 12
+
+    (6) equation -> lhs rhs .
+
+    L_ANGLE         reduce using rule 6 (equation -> lhs rhs .)
+    DOT             reduce using rule 6 (equation -> lhs rhs .)
+
+
+state 13
+
+    (8) rhs -> EQ . atomval
+    (10) atomval -> . atomseq
+    (11) atomval -> . L_PAREN atomseq R_PAREN
+    (12) atomseq -> . ATOM atomseq
+    (13) atomseq -> .
+
+    L_PAREN         shift and go to state 19
+    ATOM            shift and go to state 16
+    L_ANGLE         reduce using rule 13 (atomseq -> .)
+    DOT             reduce using rule 13 (atomseq -> .)
+
+    atomval                        shift and go to state 17
+    atomseq                        shift and go to state 18
+
+state 14
+
+    (9) rhs -> DEFEQ . descval
+    (14) descval -> . descseq
+    (15) descval -> . L_PAREN descseq R_PAREN
+    (16) descseq -> . desc descseq
+    (17) descseq -> .
+    (18) desc -> . ATOM
+    (19) desc -> . DQUOTE spec DQUOTE
+    (20) desc -> . spec
+    (21) spec -> . NODE COLON descpath
+    (22) spec -> . NODE
+    (23) spec -> . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+  ! shift/reduce conflict for L_ANGLE resolved as shift
+    L_PAREN         shift and go to state 22
+    DOT             reduce using rule 17 (descseq -> .)
+    ATOM            shift and go to state 24
+    DQUOTE          shift and go to state 25
+    NODE            shift and go to state 27
+    L_ANGLE         shift and go to state 29
+
+  ! L_ANGLE         [ reduce using rule 17 (descseq -> .) ]
+
+    descval                        shift and go to state 20
+    descseq                        shift and go to state 21
+    desc                           shift and go to state 23
+    spec                           shift and go to state 26
+    descpath                       shift and go to state 28
+
+state 15
+
+    (7) lhs -> L_ANGLE atomseq . R_ANGLE
+
+    R_ANGLE         shift and go to state 30
+
+
+state 16
+
+    (12) atomseq -> ATOM . atomseq
+    (12) atomseq -> . ATOM atomseq
+    (13) atomseq -> .
+
+    ATOM            shift and go to state 16
+    R_ANGLE         reduce using rule 13 (atomseq -> .)
+    L_ANGLE         reduce using rule 13 (atomseq -> .)
+    DOT             reduce using rule 13 (atomseq -> .)
+    R_PAREN         reduce using rule 13 (atomseq -> .)
+
+    atomseq                        shift and go to state 31
+
+state 17
+
+    (8) rhs -> EQ atomval .
+
+    L_ANGLE         reduce using rule 8 (rhs -> EQ atomval .)
+    DOT             reduce using rule 8 (rhs -> EQ atomval .)
+
+
+state 18
+
+    (10) atomval -> atomseq .
+
+    L_ANGLE         reduce using rule 10 (atomval -> atomseq .)
+    DOT             reduce using rule 10 (atomval -> atomseq .)
+
+
+state 19
+
+    (11) atomval -> L_PAREN . atomseq R_PAREN
+    (12) atomseq -> . ATOM atomseq
+    (13) atomseq -> .
+
+    ATOM            shift and go to state 16
+    R_PAREN         reduce using rule 13 (atomseq -> .)
+
+    atomseq                        shift and go to state 32
+
+state 20
+
+    (9) rhs -> DEFEQ descval .
+
+    L_ANGLE         reduce using rule 9 (rhs -> DEFEQ descval .)
+    DOT             reduce using rule 9 (rhs -> DEFEQ descval .)
+
+
+state 21
+
+    (14) descval -> descseq .
+
+    L_ANGLE         reduce using rule 14 (descval -> descseq .)
+    DOT             reduce using rule 14 (descval -> descseq .)
+
+
+state 22
+
+    (15) descval -> L_PAREN . descseq R_PAREN
+    (16) descseq -> . desc descseq
+    (17) descseq -> .
+    (18) desc -> . ATOM
+    (19) desc -> . DQUOTE spec DQUOTE
+    (20) desc -> . spec
+    (21) spec -> . NODE COLON descpath
+    (22) spec -> . NODE
+    (23) spec -> . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+    R_PAREN         reduce using rule 17 (descseq -> .)
+    ATOM            shift and go to state 24
+    DQUOTE          shift and go to state 25
+    NODE            shift and go to state 27
+    L_ANGLE         shift and go to state 29
+
+    descseq                        shift and go to state 33
+    desc                           shift and go to state 23
+    spec                           shift and go to state 26
+    descpath                       shift and go to state 28
+
+state 23
+
+    (16) descseq -> desc . descseq
+    (16) descseq -> . desc descseq
+    (17) descseq -> .
+    (18) desc -> . ATOM
+    (19) desc -> . DQUOTE spec DQUOTE
+    (20) desc -> . spec
+    (21) spec -> . NODE COLON descpath
+    (22) spec -> . NODE
+    (23) spec -> . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+  ! shift/reduce conflict for L_ANGLE resolved as shift
+    DOT             reduce using rule 17 (descseq -> .)
+    R_PAREN         reduce using rule 17 (descseq -> .)
+    R_ANGLE         reduce using rule 17 (descseq -> .)
+    ATOM            shift and go to state 24
+    DQUOTE          shift and go to state 25
+    NODE            shift and go to state 27
+    L_ANGLE         shift and go to state 29
+
+  ! L_ANGLE         [ reduce using rule 17 (descseq -> .) ]
+
+    desc                           shift and go to state 23
+    descseq                        shift and go to state 34
+    spec                           shift and go to state 26
+    descpath                       shift and go to state 28
+
+state 24
+
+    (18) desc -> ATOM .
+
+    ATOM            reduce using rule 18 (desc -> ATOM .)
+    DQUOTE          reduce using rule 18 (desc -> ATOM .)
+    NODE            reduce using rule 18 (desc -> ATOM .)
+    L_ANGLE         reduce using rule 18 (desc -> ATOM .)
+    DOT             reduce using rule 18 (desc -> ATOM .)
+    R_PAREN         reduce using rule 18 (desc -> ATOM .)
+    R_ANGLE         reduce using rule 18 (desc -> ATOM .)
+
+
+state 25
+
+    (19) desc -> DQUOTE . spec DQUOTE
+    (21) spec -> . NODE COLON descpath
+    (22) spec -> . NODE
+    (23) spec -> . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+    NODE            shift and go to state 27
+    L_ANGLE         shift and go to state 29
+
+    spec                           shift and go to state 35
+    descpath                       shift and go to state 28
+
+state 26
+
+    (20) desc -> spec .
+
+    ATOM            reduce using rule 20 (desc -> spec .)
+    DQUOTE          reduce using rule 20 (desc -> spec .)
+    NODE            reduce using rule 20 (desc -> spec .)
+    L_ANGLE         reduce using rule 20 (desc -> spec .)
+    DOT             reduce using rule 20 (desc -> spec .)
+    R_PAREN         reduce using rule 20 (desc -> spec .)
+    R_ANGLE         reduce using rule 20 (desc -> spec .)
+
+
+state 27
+
+    (21) spec -> NODE . COLON descpath
+    (22) spec -> NODE .
+
+    COLON           shift and go to state 36
+    ATOM            reduce using rule 22 (spec -> NODE .)
+    DQUOTE          reduce using rule 22 (spec -> NODE .)
+    NODE            reduce using rule 22 (spec -> NODE .)
+    L_ANGLE         reduce using rule 22 (spec -> NODE .)
+    DOT             reduce using rule 22 (spec -> NODE .)
+    R_PAREN         reduce using rule 22 (spec -> NODE .)
+    R_ANGLE         reduce using rule 22 (spec -> NODE .)
+
+
+state 28
+
+    (23) spec -> descpath .
+
+    ATOM            reduce using rule 23 (spec -> descpath .)
+    DQUOTE          reduce using rule 23 (spec -> descpath .)
+    NODE            reduce using rule 23 (spec -> descpath .)
+    L_ANGLE         reduce using rule 23 (spec -> descpath .)
+    DOT             reduce using rule 23 (spec -> descpath .)
+    R_PAREN         reduce using rule 23 (spec -> descpath .)
+    R_ANGLE         reduce using rule 23 (spec -> descpath .)
+
+
+state 29
+
+    (24) descpath -> L_ANGLE . descseq R_ANGLE
+    (16) descseq -> . desc descseq
+    (17) descseq -> .
+    (18) desc -> . ATOM
+    (19) desc -> . DQUOTE spec DQUOTE
+    (20) desc -> . spec
+    (21) spec -> . NODE COLON descpath
+    (22) spec -> . NODE
+    (23) spec -> . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+    R_ANGLE         reduce using rule 17 (descseq -> .)
+    ATOM            shift and go to state 24
+    DQUOTE          shift and go to state 25
+    NODE            shift and go to state 27
+    L_ANGLE         shift and go to state 29
+
+    descseq                        shift and go to state 37
+    desc                           shift and go to state 23
+    spec                           shift and go to state 26
+    descpath                       shift and go to state 28
+
+state 30
+
+    (7) lhs -> L_ANGLE atomseq R_ANGLE .
+
+    EQ              reduce using rule 7 (lhs -> L_ANGLE atomseq R_ANGLE .)
+    DEFEQ           reduce using rule 7 (lhs -> L_ANGLE atomseq R_ANGLE .)
+
+
+state 31
+
+    (12) atomseq -> ATOM atomseq .
+
+    R_ANGLE         reduce using rule 12 (atomseq -> ATOM atomseq .)
+    L_ANGLE         reduce using rule 12 (atomseq -> ATOM atomseq .)
+    DOT             reduce using rule 12 (atomseq -> ATOM atomseq .)
+    R_PAREN         reduce using rule 12 (atomseq -> ATOM atomseq .)
+
+
+state 32
+
+    (11) atomval -> L_PAREN atomseq . R_PAREN
+
+    R_PAREN         shift and go to state 38
+
+
+state 33
+
+    (15) descval -> L_PAREN descseq . R_PAREN
+
+    R_PAREN         shift and go to state 39
+
+
+state 34
+
+    (16) descseq -> desc descseq .
+
+    L_ANGLE         reduce using rule 16 (descseq -> desc descseq .)
+    DOT             reduce using rule 16 (descseq -> desc descseq .)
+    R_PAREN         reduce using rule 16 (descseq -> desc descseq .)
+    R_ANGLE         reduce using rule 16 (descseq -> desc descseq .)
+
+
+state 35
+
+    (19) desc -> DQUOTE spec . DQUOTE
+
+    DQUOTE          shift and go to state 40
+
+
+state 36
+
+    (21) spec -> NODE COLON . descpath
+    (24) descpath -> . L_ANGLE descseq R_ANGLE
+
+    L_ANGLE         shift and go to state 29
+
+    descpath                       shift and go to state 41
+
+state 37
+
+    (24) descpath -> L_ANGLE descseq . R_ANGLE
+
+    R_ANGLE         shift and go to state 42
+
+
+state 38
+
+    (11) atomval -> L_PAREN atomseq R_PAREN .
+
+    L_ANGLE         reduce using rule 11 (atomval -> L_PAREN atomseq R_PAREN .)
+    DOT             reduce using rule 11 (atomval -> L_PAREN atomseq R_PAREN .)
+
+
+state 39
+
+    (15) descval -> L_PAREN descseq R_PAREN .
+
+    L_ANGLE         reduce using rule 15 (descval -> L_PAREN descseq R_PAREN .)
+    DOT             reduce using rule 15 (descval -> L_PAREN descseq R_PAREN .)
+
+
+state 40
+
+    (19) desc -> DQUOTE spec DQUOTE .
+
+    ATOM            reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    DQUOTE          reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    NODE            reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    L_ANGLE         reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    DOT             reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    R_PAREN         reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+    R_ANGLE         reduce using rule 19 (desc -> DQUOTE spec DQUOTE .)
+
+
+state 41
+
+    (21) spec -> NODE COLON descpath .
+
+    ATOM            reduce using rule 21 (spec -> NODE COLON descpath .)
+    DQUOTE          reduce using rule 21 (spec -> NODE COLON descpath .)
+    NODE            reduce using rule 21 (spec -> NODE COLON descpath .)
+    L_ANGLE         reduce using rule 21 (spec -> NODE COLON descpath .)
+    DOT             reduce using rule 21 (spec -> NODE COLON descpath .)
+    R_PAREN         reduce using rule 21 (spec -> NODE COLON descpath .)
+    R_ANGLE         reduce using rule 21 (spec -> NODE COLON descpath .)
+
+
+state 42
+
+    (24) descpath -> L_ANGLE descseq R_ANGLE .
+
+    ATOM            reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    DQUOTE          reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    NODE            reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    L_ANGLE         reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    DOT             reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    R_PAREN         reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+    R_ANGLE         reduce using rule 24 (descpath -> L_ANGLE descseq R_ANGLE .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for L_ANGLE in state 14 resolved as shift
+WARNING: shift/reduce conflict for L_ANGLE in state 23 resolved as shift

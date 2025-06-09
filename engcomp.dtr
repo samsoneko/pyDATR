@@ -1,0 +1,640 @@
+% Filename: engcomp.dtr
+% Type:     DATR theory file for zdatr software
+% Author:   Dafydd Gibbon
+% Date:     14.12.95     (basic theory)
+%           17.01.96     (modifier-head generalisation; semantics)
+%           22.01.96     (surface interpretation cascade)
+% Description:
+%   Compositional word formation for English, partially compositional
+%   surface (phonetic and orthographic) and semantic interpretation.
+%   DATR features:
+%   - atom declarations
+%   - nested evaluable paths
+%   Linguistic features:
+%   - highly general head-modifier relation
+%   - same mechanism for semantic and surface interpretations
+%   - cascade (functional composition by nested paths) of compositional
+%     morphology and interpretative phonemic and orthographic components.
+%_____________________________________________
+
+#hide
+Adjective Adjective_compound Adjective_derivation Adjective_suffix
+Noun Noun_compound Noun_derivation Noun_suffix
+Verb
+Word Sign
+First Operator Second
+Interpretation
+Sentence NP VP
+Morphophon
+Morphograph
+StressOp
+
+Busdriver Colourblind Fighterbomber Grassgreen
+% Housewife
+Mousetrap Mousetrapcheese Paleface2
+Paleface Steamboat Bomber Driver
+Fighter Blind Boat Bomb
+Bus Cheese Colour Drive
+Face Fat Fight Grass
+Green Greenish House Husband
+Lean Make Mouse Pale
+Steam Thin Trap Wife
+
+Er Ish
+.
+
+
+#show
+<surf graph> <surf graph orth>
+<surf> <surf phon>
+<sem>
+% <plur surf graph> <plur surf graph orth>
+% <plur surf> <plur surf phon>
+% <plur sem>
+.
+
+%_____________________________________________
+% # node
+% none declared currently
+%.
+
+# vars $gender: masc femn neut.
+# vars $number: sing plur .
+
+# atom
+ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+ OCCUPIED_IN FOR OF APPLICATION
+ OPERATED-BY
+ OF-SOMEONE
+ AS-WELL-AS
+ CAN
+ AFFECT
+ WRT SIMILAR-TO HASPROP ISA IS.
+%_____________________________________________
+%_____________________________________________
+
+% 1 Sentence level objects
+
+% Currently none defined; these would be idioms.
+
+%_____________________________________________
+%_____________________________________________
+
+% 2 Word level objects
+
+%_____________________________________________
+
+% 2.1 Compound word objects
+
+Housewife:
+<>                  == Noun_compound
+<this>              == is
+<operator sem>      == OCCUPIED_IN
+<modifier>          == "House:<unmarked>"
+<head>              == "Wife:<>".
+
+Mousetrap:
+<>                  == Noun_compound
+<operator sem>      == FOR
+<modifier>          == "Mouse:<unmarked>"
+<head>              == "Trap:<>".
+
+Mousetrapcheese:
+<>                   == Noun_compound
+<operator sem>       == FOR
+<operator surf graph> == _
+<modifier>           == "Mousetrap:<unmarked>"
+<head>               == "Cheese:<>".
+
+Colourblind:
+<>                  == Adjective_compound
+<operator sem>      == WRT
+<modifier>          == "Colour:<unmarked>"
+<head>              == "Blind:<>".
+
+Grassgreen:
+<>                   == Adjective_compound
+<operator sem>       == SIMILAR-TO
+<operator surf graph> == -
+<modifier>           == "Grass:<unmarked>"
+<head>               == "Green:<>".
+
+Steamboat:
+<>                   == Noun_compound
+<operator sem>       == OPERATED-BY
+<modifier>           == "Steam:<unmarked>"
+<head>               == "Boat:<>".
+
+Paleface2:
+<>                   == Noun_compound:<>
+<operator sem>       == HASPROP
+<modifier>           == "Paleface:<unmarked>"
+<head sem>           == someone.
+
+Paleface:
+<>                   == Noun_compound:<>
+<operator sem>       == IS
+<modifier>           == "Pale:<unmarked>"
+<head>               == "Face:<>".
+
+Fighterbomber:
+<>                   == Noun_compound
+<operator sem>       == AS-WELL-AS
+<operator surf graph> == -
+<modifier>           == "Fighter:<unmarked>"
+<head>               == "Bomber:<>".
+
+Busdriver:
+<>                   == Noun_compound
+<operator sem>       == AFFECT
+<operator surf graph> == -
+<modifier>           == "Bus:<unmarked>"
+<head>               == "Driver:<>".
+
+%_____________________________________________
+
+% 2.2 Derived word objects
+
+Bomber:
+<>                   == Noun_derivation
+<modifier>           == "Bomb:<unmarked>"
+<head>               == "Er:<>"
+<operator sem>       == CAN.
+
+Driver:
+<>                   == Noun_derivation
+<modifier>           == "Drive:<unmarked>"
+<head>               == "Er:<>"
+<operator sem>       == CAN.
+
+Fighter:
+<>                   == Noun_derivation
+<modifier>           == "Fight:<unmarked>"
+<head>               == "Er:<>"
+<operator sem>       == CAN.
+
+Greenish:
+<>                   == Adjective_derivation
+<modifier>           == "Green:<>"
+<operator>           == "Ish:<>".
+
+
+%_____________________________________________
+
+% 2.3 Affix objects
+
+Ish:
+<>          == Adjective_suffix
+<sem>       == approximately
+<surf graph> == i s h
+<surf>      == I S.
+
+Er:
+<>                   == Noun_suffix
+<modifier sem>       == agent|instrument
+<modifier surf graph> == e r
+<modifier surf>      == @.
+
+%_____________________________________________
+
+% 2.4 Simplex word objects
+
+Fight:
+<>                   == Verb
+<modifier sem>       == physically_oppose
+<modifier surf graph> == f i g h t 
+<modifier surf>      == f a i t.
+
+Bomb:
+<>                   == Verb
+<modifier sem>       == destroy_with_airborne_explosive
+<modifier surf graph> == b o m b
+<modifier surf>      == b O m.
+
+Drive:
+<>                   == Verb
+<modifier sem>       == move_vehicle
+<modifier surf graph> == d r i v e
+<modifier surf>      == d r a i v.
+
+Boat:
+<>                    == Noun
+<modifier sem>        == water_vehicle
+<modifier surf graph>  == b o a t
+<modifier surf>       == b V u t.
+
+Bus:
+<>                    == Noun
+<modifier sem>        == public_road_vehicle
+<modifier surf graph>  == b u s
+<modifier surf>       == b V s.
+
+Steam:
+<>                    == Noun
+<sem indiv>           == mass
+<modifier sem>        == gasiform_water
+<modifier surf graph>  == s t e a m
+<modifier surf>       == s t i i m.
+
+Pale:
+<>                    == Adjective
+<modifier sem>        == rather_white
+<modifier surf graph>  == p a l e
+<modifier surf>       == p e i l.
+
+Face:
+<>                     == Noun
+<modifier sem>         == front_of_head
+<modifier surf graph>   == f a c e
+<modifier surf>        == f e i s.
+
+
+Cheese:
+<>                     == Noun
+<sem indiv>            == mass
+<modifier sem>         == caseus
+<modifier surf graph>   == c h e e s e
+<modifier surf>        == t S i i z.
+
+Colour:
+<>                     == Noun
+<sem indiv>            == mass
+<modifier sem>         == spectral_property
+<modifier surf graph>   == c o l o u r
+<modifier surf>        == k V l @.
+
+Grass:
+<>                     == Noun
+<sem indiv>            == mass
+<modifier sem>         == green-blade-leaved_cowfood_plant
+<modifier surf graph>   == g r a s s
+<modifier surf>        == g r a a s.
+
+Green:
+<>                     == Adjective
+<modifier sem>         == verdant
+<modifier surf graph>   == g r e e n
+<modifier surf>        == g r i i n.
+
+Wife:
+<>                          == Noun:<>
+<modifier sem>              == married_woman
+<modifier sem converse>     == "Husband:<citation>"
+<modifier surf graph>        == w i f e
+<modifier plur surf graph>   == w i v e
+<modifier surf>             == w a i f
+<modifier plur surf>        == w a i v.
+
+Husband:
+<>                      == Noun
+<modifier sem>          == married_man
+<modifier sem converse> == "Wife:<citation>"
+<modifier surf graph>    == h u s b a n d
+<modifier surf>         == h V z b @ n d.
+
+House:
+<>                        == Noun
+<modifier sem>            == dwelling_place
+<modifier surf graph>      == h o u s e
+<modifier surf>           == h a u s
+<modifier plur surf phon> == h a u z.
+
+Blind:
+<>                     == Adjective
+<modifier sem>         == sightless
+<modifier surf graph>   == b l i n d
+<modifier surf>        == b l a I n d.
+
+Fat:
+<>                     == Adjective
+<modifier sem>         == pinguis
+<modifier surf graph>   == f a t
+<modifier surf>        == f A t.
+
+Lean:
+<>                     == Adjective
+<modifier sem>         == macer
+<modifier surf graph>   == l e a n
+<modifier surf>        == l i i n
+<sem synonym>          == Thin:<citation>.
+
+Thin:
+<>                     == Adjective
+<modifier sem>         == macer
+<modifier surf graph>   == t h i n
+<modifier surf>        == T I n
+<sem synonym>          == Lean:<citation>.
+
+Make:
+<>                     == Verb
+<modifier sem>         == change_state
+<modifier surf graph>   == m a k e
+<modifier surf>        == m e I k.
+
+Mouse:
+<>                        == Noun
+<modifier sem>            == domestic_rodent
+<modifier surf graph>      == m o u s e
+<plur surf graph>          == m i c e
+<modifier surf>           == m a u s
+<plur surf phon>          == m a i s.
+
+Trap:
+<>                        == Noun
+<modifier sem>            == catching_instrument
+<modifier surf graph>      == t r a p
+<modifier surf>           == t r A p.
+
+%_____________________________________________
+%_____________________________________________
+
+% 3 Hierarchy of generalised objects (classes)
+
+Adjective:
+<>                      == Word
+<plur>                  == <>
+
+<sem indiv>             == mass
+<head>                  ==
+<head sem>              == something
+<operator sem>          == HASPROP
+<cat surf>              == adj.
+
+Adjective_compound:
+<>                      == Adjective
+<cat morph>             == compound.
+
+Adjective_derivation:
+<>                      == Adjective
+<cat morph>             == derivation.
+
+Adjective_suffix:
+<>                      == Adjective
+<cat surf>              == adj-adj-suffix.
+
+%_____________________________________________
+
+Noun:
+<>                      == Word
+<sem indiv>             == count
+<cat surf>              == noun
+<person>                == third
+
+<unmarked sing>         == <unmarked>
+<unmarked plur>         == <unmarked sing>
+
+<head plur surf graph>   == #+ s
+<head plur surf>        == #+ /Z .
+
+
+Noun_compound:
+<>                      == Noun
+<cat morph>             == compound
+<unmarked operator>     == "<operator>"
+<operator surf>         == #.
+
+Noun_derivation:
+<>                      == Noun
+<cat morph>             == derivation
+<operator surf>         == +.
+
+
+Noun_suffix:
+<>                      == Noun
+<cat morph>             == suffix
+<cat surf>              == verb-noun-suffix.
+
+%_____________________________________________
+
+Verb:
+<>                      == Word
+<unmarked sing>         == <unmarked>
+<unmarked surf>         == <unmarked plur surf>
+
+<sem indiv>             == exists
+<cat surf>              == verb
+<sing>                  == <>
+<head plur surf>        ==
+<head surf graph>        == #+ s
+<head surf>             == #+ Z
+<head plur sem>         == <head sem>
+<head sem>              == action.
+
+%_____________________________________________
+
+%% Top level word defaults
+
+Word:
+<>                       == Sign
+
+<plur surf phon>         == Morphophon:<Interpretation>
+<surf phon>              == Morphophon:<Interpretation>
+<plur surf graph orth>   == Morphograph:<Interpretation>
+<surf graph orth>        == Morphograph:<Interpretation>
+
+<surf>                   == Interpretation
+<plur surf>              == Interpretation
+
+<cat morph>              == stem
+<cat surf>               == word
+<cat syn>                == "<cat surf>"
+
+<sem>                    == Interpretation
+<plur sem>               == Interpretation
+
+<sing>                   == <>
+
+<unmarked>                == Interpretation
+<unmarked plur sem>       == <unmarked sem>
+
+% Neutralisation
+<operator sing>          == "<operator>"
+<operator plur>          == "<operator>"
+<operator unmarked sem>  == "<operator sem>"
+
+% Default
+<operator sem>           == OF
+
+<modifier sing>          == "<modifier>"
+<modifier plur>          == "<modifier>"
+
+<head plur>              == "<head>"
+<head surf>              ==
+
+<head sem>               == <indiv "<sem indiv>">
+<indiv exists>           == APPLICATION
+<indiv mass>             == some
+<indiv>                  == one
+
+<head plur sem>          == more_than_one
+
+<citation>               == "<modifier surf graph>" .
+
+
+Sign:
+<>                       == .
+
+%_____________________________________________
+
+Sentence:
+<declarative>  == NP:<head> _ VP:<modifier>.
+
+NP:
+<head>         == "<head modifier>" _ "<head head>"
+<modifier>     == "<modifier modifier modifier>" _ "<modifier modifier head>".
+
+VP:
+<modifier>     == "<modifier head>" _ NP.
+
+%_____________________________________________
+%_____________________________________________
+
+Interpretation:
+<>                 == First Operator Second
+<unmarked>         == <>.
+
+First:
+<>                  == StressOp "<modifier>"
+<sem>               == { "<head sem>" _ 
+<plur sem>          == { "<head plur sem>" _ .
+
+Second:
+<>                  == "<head>"
+<sem>               == _ { "<modifier sem>" } }
+<plur sem>          == _ { "<modifier plur sem>" } }.
+
+Operator:
+<>                  == "<operator>".
+
+StressOp:
+<>                  ==
+<surf phon>         == <stress "<cat morph>">
+<plur surf phon>    == <surf phon>
+<stress stem>       == /
+<stress compound>   == /
+<stress>            == .
+
+%_____________________________________________
+%_____________________________________________
+
+Morphograph:
+<>       ==
+<->      == - <>
+<_>      == _ <>
+<+>      == <>
+<#+>     == <>
+<#>      == <>
+<##>     == <>
+<a>      == a <>
+<e>      == e <>
+<e + e>  == e <>
+<e #+ e> == e <>
+<i>      == i <>
+<o>      == o <>
+<y>      == y <>
+<y + s>  == i e s <>
+<y #+ s> == i e s <>
+<u>      == u <>
+<b>      == b <>
+<c>      == c <>
+<d>      == d <>
+<f>      == f <>
+<g>      == g <>
+<h>      == h <>
+<j>      == j <>
+<k>      == k <>
+<l>      == l <>
+<m>      == m <>
+<n>      == n <>
+<p>      == p <>
+<q>      == q <>
+<r>      == r <>
+<s>      == s <>
+<s #+ s> == s e s <>
+<t>      == t <>
+<v>      == v <>
+<w>      == w <>
+<x>      == x <>
+<z>      == z <>.
+
+%% /Z is used for the plur/1-sing-pres morphophoneme
+
+Morphophon:
+<>        ==
+
+</>       == / <>
+
+<1>       == 1 <>
+<2>       == 2 <>
+<3>       == 3 <>
+<4>       == 4 <>
+
+<+>       == <>
+<#+>      == <>
+<#>       == <>
+<##>      == <>
+
+<i>       == i <>
+<I>       == I <>
+<e>       == e <>
+<E>       == E <>
+
+%% The upper case A is introduced instead for the AEsh vowel:
+<A>       == A <>
+<a>       == a <>
+
+<u>       == u <>
+<U>       == U <>
+<o>       == o <>
+<O>       == O <>
+<V>       == V <>
+
+<@>       == @ <>
+
+%<a i>     == a I <>
+%<e i>     == e I <>
+%<a u>     == a U <>
+%<V u>     == V U <>
+
+<p>       == p <>
+<p #+ /Z>    == p s <>
+<t>       == t <>
+<t #+ /Z>    == t s <>
+
+<k>       == k <>
+<k #+ /Z>    == k s <>
+
+<b>       == b <>
+<d>       == d <>
+<g>       == g <>
+
+<f>       == f <>
+<f #+ /Z>    == f s <>
+<T>       == T <>
+<T #+ /Z>    == T z <>
+<s>       == s <>
+<s #+ /Z> == s I z <>
+<S>       == S <>
+<S #+ /Z> == S I z <>
+<h>       == h <>
+
+<v>       == v <>
+<D>       == D <>
+<z>       == z <>
+<z #+ /Z> == z I z <>
+<Z>       == z <>
+<Z #+ /Z> == Z I z <>
+</Z>      == z <>
+
+<m>       == m <>
+<n>       == n <>
+<N>       == N <>
+
+<r>       == r <>
+<l>       == l <>
+
+<j>       == j <>
+<w>       == w <>.
+
+%_____________________________________________
+
