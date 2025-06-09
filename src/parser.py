@@ -13,17 +13,17 @@ def p_theory_single(p):
 
 # --- Statements ---
 
-# def p_statement_atomex(p):
+# def p_statement_atom(p):
 #     '''statement : ATOM_EX itemlist DOT'''
 #     p[0] = ('atom_exceptions', p[2])
 
-# def p_statement_nodeex(p):
+# def p_statement_node(p):
 #     '''statement : NODE_EX itemlist DOT'''
 #     p[0] = ('node_exceptions', p[2])
 
-# def p_statement_vars(p):
-#     '''statement : VARS VARIABLE atomlist DOT'''
-#     p[0] = ('variables', p[2], p[3])
+def p_statement_vars(p):
+    '''statement : VARS VARIABLE COLON atomlist DOT'''
+    p[0] = ('variables', p[2], p[4])
 
 def p_statement_sentence(p):
     '''statement : NODE COLON eqseq DOT'''
@@ -40,41 +40,37 @@ def p_statement_sentence(p):
 #     p[0] = [p[1]]
 
 # def p_item(p):
-#     '''item : CHAR_STRING
-#             | ANY_STRING'''
+#     '''item : CHAR_STRING | ANY_STRING'''
 #     p[0] = p[1].strip("'")
 
 # --- Atomlist ---
 
-# def p_atomlist_multiple(p):
-#     '''atomlist : ATOM atomlist'''
-#     p[0] = [p[1]] + p[2]
+def p_atomlist_multiple(p):
+    '''atomlist : ATOM atomlist'''
+    p[0] = [p[1]] + p[2]
 
-# def p_atomlist_single(p):
-#     '''atomlist : ATOM'''
-#     p[0] = [p[1]]
+def p_atomlist_single(p):
+    '''atomlist : ATOM'''
+    p[0] = [p[1]]
 
 # --- Equation Sequences ---
 
 def p_eqseq_multiple(p):
     '''eqseq : equation eqseq'''
-    print("Matched multiple equations")
     p[0] = [p[1]] + p[2]
 
 def p_eqseq_single(p):
     '''eqseq : equation'''
-    print("Matched single equation")
     p[0] = [p[1]]
 
 def p_equation(p):
     '''equation : lhs rhs'''
-    print("Matched equation content")
     p[0] = ('equation', p[1], p[2])
 
 # --- Left-hand side ---
 
 def p_lhs(p):
-    '''lhs : L_ANGLE atomseq R_ANGLE'''
+    '''lhs : L_ANGLE_LEFT atomseq R_ANGLE_LEFT'''
     p[0] = ('lhs', p[2])
 
 # --- Right-hand side (value) ---
@@ -85,10 +81,9 @@ def p_rhs_extrhs(p):
 
 def p_rhs_defrhs(p):
     '''rhs : DEFEQ descval'''
-    print("DEBUG: matched rhs defrhs")
     p[0] = ('defrhs', p[2])
 
-# --- Atom and Desc values ---
+# --- Atom values ---
 
 def p_atomval_plain(p):
     '''atomval : atomseq'''
@@ -105,6 +100,8 @@ def p_atomseq_multiple(p):
 def p_atomseq_empty(p):
     '''atomseq : '''
     p[0] = []
+
+# --- Desc values ---
 
 def p_descval_plain(p):
     '''descval : descseq'''
@@ -129,26 +126,26 @@ def p_desc_atom(p):
     p[0] = ('atom', p[1])
 
 def p_desc_pointer_dquoted(p):
-    '''desc : DQUOTE spec DQUOTE'''
+    '''desc : DQUOTE pointer DQUOTE'''
     p[0] = ('pointer', p[1].strip('"'))
 
-def p_desc_pointer_spec(p):
-    '''desc : spec'''
+def p_desc_pointer(p):
+    '''desc : pointer'''
     p[0] = ('pointer', p[1])
 
 # --- Pointers and paths ---
 
-def p_spec_node_descpath(p):
-    '''spec : NODE COLON descpath'''
-    p[0] = ('spec', p[1], p[3])
+def p_pointer_node_descpath(p):
+    '''pointer : NODE COLON descpath'''
+    p[0] = ('pointer', p[1], p[3])
 
-def p_spec_node(p):
-    '''spec : NODE'''
-    p[0] = ('spec', p[1])
+def p_pointer_node(p):
+    '''pointer : NODE'''
+    p[0] = ('pointer', p[1])
 
-def p_spec_descpath(p):
-    '''spec : descpath'''
-    p[0] = ('spec', None, p[1])
+def p_pointer_descpath(p):
+    '''pointer : descpath'''
+    p[0] = ('pointer', None, p[1])
 
 def p_descpath(p):
     '''descpath : L_ANGLE descseq R_ANGLE'''
@@ -163,4 +160,4 @@ def p_error(p):
         print("Syntax error at EOF")
 
 # Build the parser
-parser = yacc.yacc(debug=True, write_tables=False)
+parser = yacc.yacc(write_tables=False)

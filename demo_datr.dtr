@@ -1,3 +1,17 @@
+#vars $number : hallo i bims.
+#vars $number : hallo i bims.
+
+VERB:
+    <> == Node
+    <syn cat> = i
+    <syn cat> == "<verb>"
+    <syn type cat> == <verb>
+    <syn> == Node:<verb>
+    <syn type> == (main)
+    <syn type> == Node:<verb> main.
 VERB:
     <syn cat> == verb
+    <syn cat> = verb
+    <syn type cat> == <verb>
+    <syn> == Node:<verb>
     <syn type> == main.

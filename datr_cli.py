@@ -11,7 +11,7 @@ def main():
 
     filename = sys.argv[1]
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r',  encoding='utf-8') as f:
             data = f.read()
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
