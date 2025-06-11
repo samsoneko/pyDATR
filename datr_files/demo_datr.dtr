@@ -9,7 +9,7 @@ VERB:
     <syn> == Node:<verb>
     <syn type> == (main)
     <syn type> == Node:<verb> main.
-VERB:
+VERB1:
     <syn cat> == verb
     <syn cat> = verb
     <syn type cat> == <verb>

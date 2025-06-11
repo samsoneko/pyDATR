@@ -1,7 +1,7 @@
 # main.py
 
 import sys
-from src import lexer, parser
+from src import lexer, parser, theory
 
 def main():
     # Read input file
@@ -27,6 +27,9 @@ def main():
     print("\n== Parse Tree ==")
     result = parser.parser.parse(data, lexer=lexer.lexer)
     print(result)
+
+    datr_theory = theory.build_theory(result)
+    print(datr_theory)
 
 if __name__ == '__main__':
     main()

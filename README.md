@@ -1,2 +1,2 @@
 # pyDATR
-An implementation of the DATR language in Python 3
+A simple reimplementation of the DATR language in Python 3

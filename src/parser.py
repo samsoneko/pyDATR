@@ -27,7 +27,7 @@ def p_statement_vars(p):
 
 def p_statement_sentence(p):
     '''statement : NODE COLON eqseq DOT'''
-    p[0] = ('sentence', p[1], p[3])
+    p[0] = ('node', p[1], p[3])
 
 # --- Itemlists and Strings ---
 
