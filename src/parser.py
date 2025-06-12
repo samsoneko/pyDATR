@@ -95,7 +95,7 @@ def p_atomval_paren(p):
 
 def p_atomseq_multiple(p):
     '''atomseq : ATOM atomseq'''
-    p[0] = [p[1]] + p[2]
+    p[0] = [('atom', p[1])] + p[2]
 
 def p_atomseq_empty(p):
     '''atomseq : '''
@@ -127,25 +127,25 @@ def p_desc_atom(p):
 
 def p_desc_pointer_dquoted(p):
     '''desc : DQUOTE pointer DQUOTE'''
-    p[0] = ('pointer', p[1].strip('"'))
+    p[0] = ('global_pointer', p[2])
 
 def p_desc_pointer(p):
     '''desc : pointer'''
-    p[0] = ('pointer', p[1])
+    p[0] = p[1]
 
 # --- Pointers and paths ---
 
 def p_pointer_node_descpath(p):
     '''pointer : NODE COLON descpath'''
-    p[0] = ('pointer', p[1], p[3])
+    p[0] = ('local_pointer', p[1], p[3])
 
 def p_pointer_node(p):
     '''pointer : NODE'''
-    p[0] = ('pointer', p[1])
+    p[0] = ('local_pointer', p[1], None)
 
 def p_pointer_descpath(p):
     '''pointer : descpath'''
-    p[0] = ('pointer', None, p[1])
+    p[0] = ('local_pointer', None, p[1])
 
 def p_descpath(p):
     '''descpath : L_ANGLE descseq R_ANGLE'''

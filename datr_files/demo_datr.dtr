@@ -2,16 +2,16 @@
 #vars $number : hallo i bims.
 
 VERB:
-    <> == Node
+    <> == Cat
     <syn cat> = i
     <syn cat> == "<verb>"
-    <syn type cat> == <verb>
-    <syn> == Node:<verb>
+    <syn type cat> == <verb adj>
+    <syn> == Cat:<verb>
     <syn type> == (main)
-    <syn type> == Node:<verb> main.
-VERB1:
+    <syn type> == Cat:<verb> main.
+Cat:
     <syn cat> == verb
     <syn cat> = verb
     <syn type cat> == <verb>
-    <syn> == Node:<verb>
+    <syn> == Cat:<verb>
     <syn type> == main.

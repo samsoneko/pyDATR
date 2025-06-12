@@ -28,8 +28,11 @@ def main():
     result = parser.parser.parse(data, lexer=lexer.lexer)
     print(result)
 
-    datr_theory = theory.build_theory(result)
-    print(datr_theory)
+    print("\n")
+    datr_theory = theory.Theory("default", result)
+    print(datr_theory.present())
+    datr_theory.build()
+    print(datr_theory.present())
 
 if __name__ == '__main__':
     main()
