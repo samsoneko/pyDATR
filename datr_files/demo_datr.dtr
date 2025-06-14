@@ -2,16 +2,16 @@
 #vars $number : hallo i bims.
 
 VERB:
-    <> == Cat
-    <syn cat> = i
-    <syn cat> == "<verb>"
-    <syn type cat> == <verb adj>
-    <syn> == Cat:<verb>
-    <syn type> == (main)
-    <syn type> == Cat:<verb> main.
-Cat:
     <syn cat> == verb
-    <syn cat> = verb
-    <syn type cat> == <verb>
-    <syn> == Cat:<verb>
     <syn type> == main.
+Love:
+    <> == VERB
+    <mor root> == love.
+Word1:
+    <> == Love
+    <syn form> == present participle
+    <mor form> == <mor root> ing.
+Word2:
+    <> == Love 
+    <syn form> == passive participle
+    <mor form> == <mor root> ed.

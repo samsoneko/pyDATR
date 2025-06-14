@@ -77,11 +77,11 @@ def p_lhs(p):
 
 def p_rhs_extrhs(p):
     '''rhs : EQ atomval'''
-    p[0] = ('extrhs', p[2])
+    p[0] = ('extensional', p[2])
 
 def p_rhs_defrhs(p):
     '''rhs : DEFEQ descval'''
-    p[0] = ('defrhs', p[2])
+    p[0] = ('definitional', p[2])
 
 # --- Atom values ---
 
