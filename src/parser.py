@@ -95,7 +95,7 @@ def p_atomval_paren(p):
 
 def p_atomseq_multiple(p):
     '''atomseq : ATOM atomseq'''
-    p[0] = [('atom', p[1])] + p[2]
+    p[0] = [p[1]] + p[2]
 
 def p_atomseq_empty(p):
     '''atomseq : '''
@@ -123,7 +123,7 @@ def p_descseq_empty(p):
 
 def p_desc_atom(p):
     '''desc : ATOM'''
-    p[0] = ('atom', p[1])
+    p[0] = p[1]
 
 def p_desc_pointer_dquoted(p):
     '''desc : DQUOTE pointer DQUOTE'''

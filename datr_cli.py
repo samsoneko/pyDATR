@@ -31,8 +31,7 @@ def main():
     print("\n")
     datr_theory = theory.Theory("default", result)
     print(datr_theory.present())
-    datr_theory.build()
-    print(datr_theory.present())
+    result = datr_theory.query("Word2:<mor form>")
 
 if __name__ == '__main__':
     main()
