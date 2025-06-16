@@ -11,7 +11,7 @@ class Theory(object): # Object for holding the information of a theory
     # Adds a node to the theory
     def add_node(self, parsed_node):
         if parsed_node[1] in [node.get_name() for node in self.nodes]: # Node with same identifier already exists
-            print("error: duplicate node names")
+            print("pyDATR Error: Duplicate node names")
             return
         new_node = Node(parsed_node)
         self.nodes.append(new_node)
@@ -26,59 +26,65 @@ class Theory(object): # Object for holding the information of a theory
     
     # Prepares a query for resolvement
     def query(self, query):
-        result = ""
-        datr_query_pattern = re.compile(
-            r'^'                                     # Start of string
-            r'(?P<node>[A-Z][\w\p{L}\p{N}]*)'         # Node name: uppercase + word chars (Unicode ok)
-            r'\s*:<\s*'                               # Colon and opening angle bracket
-            r'(?P<path>(?:[a-z][\w\p{L}\p{N}]*|\$[\w\p{L}\p{N}]+)'  # First descriptor (atom or variable)
-            r'(?:\s+(?:[a-z][\w\p{L}\p{N}]*|\$[\w\p{L}\p{N}]+))*'   # Remaining descriptors (optional)
-            r')\s*>'                                  # Closing angle bracket
-            r'$'                                      # End of string
-        )
+        try:
+            # Split the query into node and path
+            split_query = query.split(":")
+            node_name = split_query[0]
+            path = split_query[1]
+            path = path.strip()[1:-1].split() # Prepare the path for resolvement
+            node_regex = re.compile(r"[A-ZÀ-ÖØ-Þ][^\W!:<>\(\)=\"'\.%]*")
+            path_regex = re.compile(r"[^\WA-Z!:<>\(\)=\"'\.%][^\W!:<>\(\)=\"'\.%]*")
+            if not node_regex.match(node_name):
+                raise SyntaxError
+            for path_element in path:
+                if not path_regex.match(path_element):
+                    raise SyntaxError
 
-        # If the query doesn't match the regex pattern, raise an error
-        if not datr_query_pattern.match(query):
-            print("Query is of invalid form")
+        except:
+            print("pyDATR Error: Query is of invalid form")
             raise SyntaxError
-        else:
-            print("Query is of valid form")
-        
-        # Split the query into node and path
-        split_query = query.split(":")
-        node_name = split_query[0]
-        path = split_query[1]
 
-        print("The query will be executed for node: " + node_name + " and path: " + path)
-        path = path.strip()[1:-1].split() # Prepare the path for resolvement
-        return self.resolve(node_name, path)
+        print("The query will be executed for node: " + node_name + " and path: " , path, "\n")
+
+        # Resolves the query, setting bot the local and the global context to the initial node
+        return self.resolve(node_name, path, node_name)
     
     # Resolves a query inside the theory
-    def resolve(self, node_name, path):
+    def resolve(self, node_name, path, global_node_name):
         # Find the specified node and process the path
         node = self.find_node_or_none(node_name)
 
         # Only evaluate further if the specified node exists in the theory
         if node:
+            print("Resolving query for: ", path)
+            for descriptor in path:
+                if type(descriptor) != str:
+                    print("Inheritance in descriptor found: ", descriptor)
+                    resolved_descriptor = self.resolve_rhs([], [descriptor], node_name, global_node_name)
+                    index = path.index(descriptor) # This raises ValueError if there's no 'b' in the list.
+                    path[index:index+1] = resolved_descriptor
+            print(path)
             best_match = node.get_best_match(path)
             node_rhs = best_match.rhs
             remaining_path = path[len(best_match.lhs):]
-            print("the remaining path is: ", remaining_path)
-            result = self.resolve_rhs(remaining_path, node_rhs, node_name)
+            print("The remaining path after the match is: ", remaining_path, "\n")
+            result = self.resolve_rhs(remaining_path, node_rhs, node_name, global_node_name)
         else:
-            print("The specified node does not exist")
+            print("pyDATR Error: The specified node does not exist")
             raise NameError
         
         return result
     
     # Resolves the rhs of a sentence in the context of the given node
-    def resolve_rhs(self, remaining_path, rhs, context_node_name):
+    def resolve_rhs(self, remaining_path, rhs, context_node_name, global_node_name):
 
+        # If the current rhs consists of only one element
         if type(rhs) == list and len(rhs) == 1:
             rhs = rhs[0]
             # If the current rhs element is an atom and the remaining path is empty, return the atom
-            if type(rhs) == str and len(remaining_path) == 0:
-                print("returning atom: " + rhs)
+            # EVERY RECURSIVE CALL OF THIS FUNCTION HAS TO ARRIVE HERE AT SOME POINT, OTHERWISE THE QUERY FAILS
+            if type(rhs) == str:
+                print("Atom found: " + rhs)
                 return [rhs]
             
             # TODO Add variable handling
@@ -86,20 +92,33 @@ class Theory(object): # Object for holding the information of a theory
             # If the current rhs element is a pointer, resolve it
             if type(rhs) == tuple:
                 if rhs[0] == "local_pointer":
-                    resolve_node_name = rhs[1] if rhs[1] != None else context_node_name
-                    resolve_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
-                    print("continuing evaluation in node: " + resolve_node_name)
-                    return self.resolve(resolve_node_name, resolve_path)
+                    # Handle local inheritance
+                    local_node_name = rhs[1] if rhs[1] != None else context_node_name
+                    local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
+                    print("Local pointer found, continuing evaluation in node: " + local_node_name)
+                    return self.resolve(local_node_name, local_path, global_node_name)
+                elif rhs[0] == "global_pointer":
+                    # Handle global inheritance
+                    rhs = rhs[1]
+                    local_node_name = rhs[1] if rhs[1] != None else global_node_name
+                    local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
+                    print("Global pointer found, continuing evaluation in node: " + global_node_name)
+                    return self.resolve(local_node_name, local_path, global_node_name)
+                else:
+                    # If the evaluation reaches this point, something went horribly wrong
+                    print("pyDATR Error: RHS invalid, an error in the parser must have occured")
+                    raise TabError
         
         # If the current rhs is a list of multiple elements, recursively restart for each element
         elif type(rhs) == list and len(rhs) > 1:
             values = []
-            print("multiple elements were found in the rhs")
-            for element in rhs:
-                print("starting recursive resolvement with rhs: ", element)
-                values.extend(self.resolve_rhs(remaining_path, [element], context_node_name))
+            print("Multiple elements were found in the rhs, starting recursive resolvement")
+            for descriptor in rhs:
+                print("Rsolvement is startet for path: ", remaining_path, " and rhs: ", descriptor)
+                values.extend(self.resolve_rhs(remaining_path, [descriptor], context_node_name, global_node_name))
             return values
 
+        print("pyDATR Error: At least one element of the RHS is invalid")
         raise TabError
 
     # Finds a node and returns it or returns None
@@ -140,17 +159,17 @@ class Node(object): # Object for holding the information of a node
         for sentence in self.sentences: # Get all paths in the node that could match the query path
             if sentence.matches_path(path):
                 candidates.append(sentence)
-        print("found " + str(len(candidates)) + " candidates")
+        print(str(len(candidates)) + " candidates were found")
 
         if len(candidates) == 0:
-            print("No fitting path at node " + self.get_name() + " exists")
+            print("pyDATR Error: No fitting path at node " + self.get_name() + " exists")
             raise NameError
         else:
             best_match = candidates[0]
             for candidate in candidates:
                 if len(candidate.lhs) > len(best_match.lhs):
                     best_match = candidate
-            print("best sentence is returned: ", best_match.lhs, " -> ", best_match.rhs , " at node: " + self.name)
+            print("The best sentence is returned: ", best_match.lhs, " -> ", best_match.rhs , " at node: " + self.name)
             return best_match
 
     # Returns all matching sentences that are at least as specific as the given desc (more or equally)
@@ -186,7 +205,9 @@ class Sentence(object): # Object for holding the information of a sentence
         for i in range(len(self.lhs)): # Loop through the elements of the candidate lhs
             if i < len(path):
                 if self.lhs[i] != path[i]:
+                    print("Path: ", self.lhs, " does not fit path ", path, " because an element of it is not equal")
                     return False # If the lhs is specified until this point, but not matching the path, disqualify candidate
             else:
+                print("Path: ", self.lhs, " does not fit path ", path, " because it is more specific")
                 return False # If the lhs is longer than the path (and hence more specific), disqualify candidate
         return True

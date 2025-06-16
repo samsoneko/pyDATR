@@ -48,7 +48,7 @@ def t_NODE(t):
     return t
 
 def t_ATOM(t):
-    r"[^\W\dA-Z!:<>\(\)=\"'\.%][^\W!:<>\(\)=\"'\.%]*" # Regex for atom content, needs to start with lowercase letter, otherwise free
+    r"[^\WA-Z!:<>\(\)=\"'\.%][^\W!:<>\(\)=\"'\.%]*" # Regex for atom content, not allowed to start with an uppercase letter, otherwise free
     return t
 
 # def t_CHAR_STRING(t):

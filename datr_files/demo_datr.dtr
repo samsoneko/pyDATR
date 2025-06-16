@@ -14,4 +14,25 @@ Word1:
 Word2:
     <> == Love
     <syn form> == passive participle
+    <root> == root
     <mor form> == <mor root> ed.
+
+S1:
+    <subj 1 sg> == ni S2:<>
+    <subj 2 sg> == u S2:<>
+    <subj 3 sg> == a S2:<>
+    <subj 1 pl> == tu S2:<>
+    <subj 2 pl> == m S2:<>
+    <subj 3 pl> == wa S2:<>.
+S2:
+    <past> == li S3:<>
+    <futr> == ta S3:<>.
+S3:
+    <obj 1 sg> == ni S4:<>
+    <obj 2 sg> == ku S4:<>
+    <obj 3 sg> == m S4:<>
+    <obj 1 pl> == tu S4:<>
+    <obj 2 pl> == wa S4:<>
+    <obj 3 pl> == wa S4:<>.
+S4:
+    <like> == penda.
