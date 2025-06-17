@@ -1,28 +1,40 @@
 import regex as re
 from src import error
 
-DEBUG = False
-
 class Theory(object): # Object for holding the information of a theory
     def __init__(self, name, parsed_datr):
         self.name = name
         self.nodes = []
+        self.variables = []
         for entry in parsed_datr:
             if entry[0] == "node":
                 self.add_node(entry)
+        for entry in parsed_datr:
+            if entry[0] == "variable":
+                self.add_variable(entry)
 
     # Adds a node to the theory
     def add_node(self, parsed_node):
         if parsed_node[1] in [node.get_name() for node in self.nodes]: # Node with same identifier already exists
             print("pyDATR Error: Duplicate node names")
-            return
+            raise error.DATRLogicError(parsed_node[1])
         new_node = Node(parsed_node)
         self.nodes.append(new_node)
+    
+    # Adds a variable to the theory
+    def add_variable(self, parsed_variable):
+        if parsed_variable[1] in [variable.get_name() for variable in self.variables]: # Variable with same identifier already exists
+            print("pyDATR Error: Duplicate node names")
+            raise error.DATRLogicError(parsed_variable[1])
+        new_variable = Variable(parsed_variable)
+        self.variables.append(new_variable)
 
     # Returns a pretty print of the theory content
     def present(self):
         pretty_string = ""
         pretty_string += "Theory: " + self.name
+        for variable in self.variables:
+            pretty_string += variable.present()
         for node in self.nodes:
             pretty_string += node.present()
         return pretty_string
@@ -146,7 +158,7 @@ class Node(object): # Object for holding the information of a node
         new_sentence = Sentence(parsed_sentence[1][1], parsed_sentence[2][1], parsed_sentence[2][0])
         self.sentences.append(new_sentence)
     
-    # Returns a pretty print of the theory content
+    # Returns a pretty print of the node content
     def present(self):
         pretty_string = ""
         pretty_string += "\n  Node: " + self.name
@@ -187,6 +199,28 @@ class Node(object): # Object for holding the information of a node
                 matching_sentences.append(sentence)
             
         return matching_sentences
+
+class Variable(object): # Object for holding the information of a variable
+    def __init__(self, parsed_variable):
+        self.name = parsed_variable[1]
+        self.values = []
+        for value in parsed_variable[2]:
+            self.values.append(value)
+    
+    # Checks if the given values is present in the values of the variable
+    def is_in_values(self, value_to_check):
+        for value in self.values:
+            if value == value_to_check:
+                return True
+        return False
+    
+    # Returns a pretty print of the variable content
+    def present(self):
+        pretty_string = ""
+        pretty_string += "\n  Variable: " + self.name + ":"
+        for value in self.values:
+            pretty_string += " " + value
+        return pretty_string
     
 class Sentence(object): # Object for holding the information of a sentence
     def __init__(self, lhs, rhs, type):
@@ -194,7 +228,7 @@ class Sentence(object): # Object for holding the information of a sentence
         self.type = type
         self.rhs = rhs
 
-    # Returns a pretty print of the theory content
+    # Returns a pretty print of the sentence content
     def present(self):
         pretty_string = ""
         pretty_string += "\n    Sentence(" + self.type + "): " + str(self.lhs) + " -> " + str(self.rhs)

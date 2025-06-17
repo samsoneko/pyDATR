@@ -1,21 +1,23 @@
-#vars $number : hallo i bims.
-#vars $number : hallo i bims.
+#vars $test : one two.
 
 VERB:
     <syn cat> == verb
-    <syn type> == main.
+    <syn type> == main
+    <mor form> == "<mor "<syn form>">"
+    <mor past> == "<mor root>" ed
+    <mor passive> == "<mor past>"
+    <mor present> == "<mor root>"
+    <mor present participle> == "<mor root>" ing
+    <mor present tense sing three> == "<mor root>" s.
 Love:
     <> == VERB
     <mor root> == love.
 Word1:
     <> == Love
-    <syn form> == present participle
-    <mor form> == <mor root> ing.
+    <syn form> == present participle.
 Word2:
     <> == Love
-    <syn form> == passive participle
-    <root> == root
-    <mor form> == <mor root> ed.
+    <syn form> == passive participle.
 
 S1:
     <subj 1 sg> == ni S2:<>

@@ -23,7 +23,7 @@ def p_theory_single(p):
 
 def p_statement_vars(p):
     '''statement : VARS VARIABLE COLON atomlist DOT'''
-    p[0] = ('variables', p[2], p[4])
+    p[0] = ('variable', p[2], p[4])
 
 def p_statement_sentence(p):
     '''statement : NODE COLON eqseq DOT'''
@@ -132,6 +132,10 @@ def p_desc_pointer_dquoted(p):
 def p_desc_pointer(p):
     '''desc : pointer'''
     p[0] = p[1]
+
+def p_desc_variable(p):
+    '''desc : VARIABLE'''
+    p[0] = ('variable', p[1])
 
 # --- Pointers and paths ---
 

@@ -22,3 +22,9 @@ class DATRResolvementError(SystemError):
     def __init__(self, rhs):
         self.rhs = rhs
         super().__init__(self.rhs)
+
+class DATRLogicError(SystemError):
+    # Raised when a node, variable or path is defined multiple times
+    def __init__(self, element):
+        self.element = element
+        super().__init__(self.element)
