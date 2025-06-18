@@ -70,7 +70,7 @@ def p_equation(p):
 # --- Left-hand side ---
 
 def p_lhs(p):
-    '''lhs : L_ANGLE_LEFT atomseq R_ANGLE_LEFT'''
+    '''lhs : L_ANGLE_LEFT lhsseq R_ANGLE_LEFT'''
     p[0] = ('lhs', p[2])
 
 # --- Right-hand side (value) ---
@@ -82,6 +82,24 @@ def p_rhs_extrhs(p):
 def p_rhs_defrhs(p):
     '''rhs : DEFEQ descval'''
     p[0] = ('definitional', p[2])
+
+# --- LHS values (Atom or Variable) ---
+
+def p_lhsseq_multiple(p):
+    '''lhsseq : lhselem lhsseq'''
+    p[0] = [p[1]] + p[2]
+
+def p_lhsseq_empty(p):
+    '''lhsseq : '''
+    p[0] = []
+
+def p_lhselem_atom(p):
+    '''lhselem : ATOM'''
+    p[0] = p[1]
+
+def p_lhselem_variable(p):
+    '''lhselem : VARIABLE'''
+    p[0] = ('variable', p[1])
 
 # --- Atom values ---
 

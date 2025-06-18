@@ -24,7 +24,7 @@ class Theory(object): # Object for holding the information of a theory
     # Adds a variable to the theory
     def add_variable(self, parsed_variable):
         if parsed_variable[1] in [variable.get_name() for variable in self.variables]: # Variable with same identifier already exists
-            print("pyDATR Error: Duplicate node names")
+            print("pyDATR Error: Duplicate variable names")
             raise error.DATRLogicError(parsed_variable[1])
         new_variable = Variable(parsed_variable)
         self.variables.append(new_variable)
@@ -76,7 +76,7 @@ class Theory(object): # Object for holding the information of a theory
                 if type(descriptor) != str: # If one of the path elments is a pointer, resolve it before continuing
                     print("Inheritance in descriptor found: ", descriptor)
                     resolved_descriptor = self.resolve_rhs([], [descriptor], node_name, global_node_name)
-                    index = path.index(descriptor) # This raises ValueError if there's no 'b' in the list.
+                    index = path.index(descriptor)
                     path[index:index+1] = resolved_descriptor
             best_match = node.get_best_match(path)
             node_rhs = best_match.rhs
@@ -85,7 +85,7 @@ class Theory(object): # Object for holding the information of a theory
             result = self.resolve_rhs(remaining_path, node_rhs, node_name, global_node_name)
         else:
             print("pyDATR Error: The specified node does not exist")
-            raise error.DATRNodeError(node_name)
+            raise error.DATRLookupError(node_name)
         
         return result
     
@@ -100,8 +100,6 @@ class Theory(object): # Object for holding the information of a theory
             if type(rhs) == str:
                 print("Atom found: " + rhs, "\n")
                 return [rhs]
-            
-            # TODO Add variable handling
 
             # If the current rhs element is a pointer, resolve it
             if type(rhs) == tuple:
@@ -141,6 +139,13 @@ class Theory(object): # Object for holding the information of a theory
             if node.get_name() == node_name:
                 return node
         return None
+    
+    # Finds a variable and returns it or returns None
+    def find_variable_or_none(self, variable_name):
+        for variable in self.variable:
+            if variable.get_name() == variable_name:
+                return variable
+        return None
 
 class Node(object): # Object for holding the information of a node
     def __init__(self, parsed_node):
@@ -173,6 +178,8 @@ class Node(object): # Object for holding the information of a node
             if sentence.matches_path(path):
                 candidates.append(sentence)
         print("Number of matches: " + str(len(candidates)))
+
+        # TODO Filter out variables and check for their definition
 
         if len(candidates) == 0:
             print("pyDATR Error: No fitting path at node " + self.get_name() + " exists")
@@ -207,12 +214,9 @@ class Variable(object): # Object for holding the information of a variable
         for value in parsed_variable[2]:
             self.values.append(value)
     
-    # Checks if the given values is present in the values of the variable
-    def is_in_values(self, value_to_check):
-        for value in self.values:
-            if value == value_to_check:
-                return True
-        return False
+    # Returns its own name
+    def get_name(self):
+        return self.name
     
     # Returns a pretty print of the variable content
     def present(self):
@@ -238,7 +242,7 @@ class Sentence(object): # Object for holding the information of a sentence
     def matches_path(self, path):
         for i in range(len(self.lhs)): # Loop through the elements of the candidate lhs
             if i < len(path):
-                if self.lhs[i] != path[i]:
+                if self.lhs[i] != path[i] and type(self.lhs[i]) == str: # check for equality, but ignore variables
                     print("Path ", self.lhs, " does not fit path ", path, " because an element of it is not equal")
                     return False # If the lhs is specified until this point, but not matching the path, disqualify candidate
             else:

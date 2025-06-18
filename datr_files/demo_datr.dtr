@@ -1,9 +1,9 @@
-#vars $test : one two.
+#vars $test : form.
 
 VERB:
     <syn cat> == verb
     <syn type> == main
-    <mor form> == "<mor "<syn form>">"
+    <mor $test> == "<mor "<syn $test>">"
     <mor past> == "<mor root>" ed
     <mor passive> == "<mor past>"
     <mor present> == "<mor root>"

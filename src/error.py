@@ -5,11 +5,11 @@ class DATRPathError(LookupError):
         self.path = path
         super().__init__(self.node, self.path)
 
-class DATRNodeError(LookupError):
-    # Raised when a node in the given query can not be resolved
-    def __init__(self, node):
-        self.node = node
-        super().__init__(self.node)
+class DATRLookupError(LookupError):
+    # Raised when a node or variable in the given query can not be resolved
+    def __init__(self, element):
+        self.node = element
+        super().__init__(self.element)
 
 class DATRSyntaxError(SyntaxError):
     # Raised when a query is of invalid form

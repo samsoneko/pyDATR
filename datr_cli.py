@@ -33,7 +33,7 @@ def main():
     datr_theory = theory.Theory("default", result)
     print(datr_theory.present())
     print("\n")
-    # result = datr_theory.query("Word2:<mor form>")
+    result = datr_theory.query("Word2:<mor form>")
     # # result = datr_theory.query("S1:<subj 1 sg futr obj 2 sg like>")
     # print(result)
 
