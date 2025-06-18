@@ -1,5 +1,6 @@
 import regex as re
 from src import error
+import copy
 
 class Theory(object): # Object for holding the information of a theory
     def __init__(self, name, parsed_datr):
@@ -62,27 +63,39 @@ class Theory(object): # Object for holding the information of a theory
 
         # Resolves the query, setting bot the local and the global context to the initial node
         # If the resolvement arrives here, the query was successful
-        return self.resolve(node_name, path, node_name)
+        return self.resolve(node_name, path, node_name, {})
     
     # Resolves a query inside the theory
-    def resolve(self, node_name, path, global_node_name):
+    def resolve(self, node_name, path, global_node_name, resolved_variables):
         # Find the specified node and process the path
         node = self.find_node_or_none(node_name)
 
         # Only evaluate further if the specified node exists in the theory
         if node:
-            print("\033[94m Resolving query for: ", path, "\033[0m")
+            print("\033[94m Resolving query at node: ", node_name, " for: ", path, " with variables: ", resolved_variables, "\033[0m")
             for descriptor in path:
                 if type(descriptor) != str: # If one of the path elments is a pointer, resolve it before continuing
-                    print("Inheritance in descriptor found: ", descriptor)
-                    resolved_descriptor = self.resolve_rhs([], [descriptor], node_name, global_node_name)
+                    print("Inheritance in descriptor found: ", descriptor, ", starting resolvement")
+                    resolved_descriptor = self.resolve_rhs([], [descriptor], node_name, global_node_name, resolved_variables)
                     index = path.index(descriptor)
                     path[index:index+1] = resolved_descriptor
-            best_match = node.get_best_match(path)
-            node_rhs = best_match.rhs
-            remaining_path = path[len(best_match.lhs):]
+            best_match = node.get_best_match(path, self)
+
+            # Prepare data for variables
+            sentence_lhs = copy.deepcopy(best_match.lhs)
+            sentence_rhs = copy.deepcopy(best_match.rhs)
+            # Test for variables and resolve
+            for index, element in enumerate(sentence_lhs):
+                if type(element) == tuple:
+                    if element[0] == "variable":
+                        # At this point we already know that the variable is exchangable, so it is replaced with the respective atom from the path
+                        print("Variable ", sentence_lhs[index], " will be exchanged for atom ", path[index])
+                        resolved_variables[sentence_lhs[index][1]] = path[index] # Add the resolved variable to the lookup dictionary
+                        sentence_lhs[index] = path[index] # Exchange the variable for the atom
+
+            remaining_path = path[len(sentence_lhs):] # Calculate the ramining path
             print("The remaining path after the match is: ", remaining_path)
-            result = self.resolve_rhs(remaining_path, node_rhs, node_name, global_node_name)
+            result = self.resolve_rhs(remaining_path, sentence_rhs, node_name, global_node_name, resolved_variables)
         else:
             print("pyDATR Error: The specified node does not exist")
             raise error.DATRLookupError(node_name)
@@ -90,7 +103,7 @@ class Theory(object): # Object for holding the information of a theory
         return result
     
     # Resolves the rhs of a sentence in the context of the given node
-    def resolve_rhs(self, remaining_path, rhs, context_node_name, global_node_name):
+    def resolve_rhs(self, remaining_path, rhs, context_node_name, global_node_name, resolved_variables):
 
         # If the current rhs consists of only one element
         if type(rhs) == list and len(rhs) == 1:
@@ -100,6 +113,16 @@ class Theory(object): # Object for holding the information of a theory
             if type(rhs) == str:
                 print("Atom found: " + rhs, "\n")
                 return [rhs]
+            
+            if type(rhs) == tuple and rhs[0] == "variable":
+                print("Variable found: ", rhs)
+                key = rhs[1]
+                try:
+                    atom = resolved_variables[key]
+                    return [atom]
+                except:
+                    print("The respective variable ", rhs, " could not be resolved")
+                    raise error.DATRLookupError(key)
 
             # If the current rhs element is a pointer, resolve it
             if type(rhs) == tuple:
@@ -108,14 +131,14 @@ class Theory(object): # Object for holding the information of a theory
                     local_node_name = rhs[1] if rhs[1] != None else context_node_name
                     local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
                     print("Local pointer found, continuing evaluation in node: " + local_node_name, "\n")
-                    return self.resolve(local_node_name, local_path, global_node_name)
+                    return self.resolve(local_node_name, local_path, global_node_name, resolved_variables)
                 elif rhs[0] == "global_pointer":
                     # Handle global inheritance
                     rhs = rhs[1]
                     local_node_name = rhs[1] if rhs[1] != None else global_node_name
                     local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
                     print("Global pointer found, continuing evaluation in node: " + global_node_name, "\n")
-                    return self.resolve(local_node_name, local_path, global_node_name)
+                    return self.resolve(local_node_name, local_path, global_node_name, resolved_variables)
                 else:
                     # If the evaluation reaches this point, something went horribly wrong
                     print("pyDATR Error: RHS invalid, an error in the parser must have occured")
@@ -127,7 +150,7 @@ class Theory(object): # Object for holding the information of a theory
             print("Multiple elements were found in the rhs, starting recursive resolvement")
             for descriptor in rhs:
                 print("Resolvement is startet for path: ", remaining_path, " and rhs: ", descriptor)
-                values.extend(self.resolve_rhs(remaining_path, [descriptor], context_node_name, global_node_name))
+                values.extend(self.resolve_rhs(remaining_path, [descriptor], context_node_name, global_node_name, resolved_variables))
             return values
 
         print("pyDATR Error: At least one element of the RHS is invalid")
@@ -172,14 +195,12 @@ class Node(object): # Object for holding the information of a node
         return pretty_string
     
     # Evaluates a path from a query
-    def get_best_match(self, path):
+    def get_best_match(self, path, theory):
         candidates = []
         for sentence in self.sentences: # Get all paths in the node that could match the query path
-            if sentence.matches_path(path):
+            if sentence.matches_path(path, theory):
                 candidates.append(sentence)
         print("Number of matches: " + str(len(candidates)))
-
-        # TODO Filter out variables and check for their definition
 
         if len(candidates) == 0:
             print("pyDATR Error: No fitting path at node " + self.get_name() + " exists")
@@ -218,6 +239,16 @@ class Variable(object): # Object for holding the information of a variable
     def get_name(self):
         return self.name
     
+    # Returns if the atom exists in the variable
+    def atom_exists(self, atom):
+        if self.values == []:
+            return True # Return true if the variable ranges all atoms
+        else:
+            for variable_atom in self.values:
+                if variable_atom == atom:
+                    return True # Return true if one atom of the variable matches the specified atom
+        return False
+    
     # Returns a pretty print of the variable content
     def present(self):
         pretty_string = ""
@@ -239,7 +270,8 @@ class Sentence(object): # Object for holding the information of a sentence
         return pretty_string
     
     # Returns true if the lhs does not conflict with the path, hence everything less or equally specified
-    def matches_path(self, path):
+    def matches_path(self, path, theory):
+        # Check if any of the conditions for minimal path equality are not met
         for i in range(len(self.lhs)): # Loop through the elements of the candidate lhs
             if i < len(path):
                 if self.lhs[i] != path[i] and type(self.lhs[i]) == str: # check for equality, but ignore variables
@@ -248,5 +280,17 @@ class Sentence(object): # Object for holding the information of a sentence
             else:
                 print("Path ", self.lhs, " does not fit path ", path, " because it is more specific")
                 return False # If the lhs is longer than the path (and hence more specific), disqualify candidate
+        
+        # Filter out the match if there is a variable that can't be resolved
+        for index, element in enumerate(self.lhs):
+            if type(element) == tuple:
+                if element[0] == "variable":
+                    for variable in theory.variables:
+                        if variable.get_name() == element[1]:
+                            if not variable.atom_exists(path[index]):
+                                print("Path ", self.lhs, " does not fit path ", path, " because the contained variable does not match")
+                                return False
+        
+        # Return that the sentence matches
         print("Path ", self.lhs, " fits path ", path)
         return True

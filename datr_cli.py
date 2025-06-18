@@ -35,7 +35,7 @@ def main():
     print("\n")
     result = datr_theory.query("Word2:<mor form>")
     # # result = datr_theory.query("S1:<subj 1 sg futr obj 2 sg like>")
-    # print(result)
+    print(result)
 
 if __name__ == '__main__':
     main()

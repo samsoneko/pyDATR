@@ -8,7 +8,7 @@ class DATRPathError(LookupError):
 class DATRLookupError(LookupError):
     # Raised when a node or variable in the given query can not be resolved
     def __init__(self, element):
-        self.node = element
+        self.element = element
         super().__init__(self.element)
 
 class DATRSyntaxError(SyntaxError):
