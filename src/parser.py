@@ -22,7 +22,7 @@ def p_theory_single(p):
 #     p[0] = ('node_exceptions', p[2])
 
 def p_statement_vars(p):
-    '''statement : VARS VARIABLE COLON atomlist DOT'''
+    '''statement : VARS VARIABLE COLON varlist DOT'''
     p[0] = ('variable', p[2], p[4])
 
 def p_statement_sentence(p):
@@ -43,15 +43,23 @@ def p_statement_sentence(p):
 #     '''item : CHAR_STRING | ANY_STRING'''
 #     p[0] = p[1].strip("'")
 
-# --- Atomlist ---
+# --- Varlist ---
 
-def p_atomlist_multiple(p):
-    '''atomlist : ATOM atomlist'''
+def p_varlist_multiple(p):
+    '''varlist : var varlist'''
     p[0] = [p[1]] + p[2]
 
-def p_atomlist_single(p):
-    '''atomlist : ATOM'''
-    p[0] = [p[1]]
+def p_varlist_empty(p):
+    '''varlist : '''
+    p[0] = []
+
+def p_var_atom(p):
+    '''var : ATOM'''
+    p[0] = p[1]
+
+def p_var_var(p):
+    '''var : VARIABLE'''
+    p[0] = p[1]
 
 # --- Equation Sequences ---
 

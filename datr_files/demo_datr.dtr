@@ -1,4 +1,5 @@
-#vars $test : form.
+#vars $test : $rec.
+#vars $rec : form.
 
 VERB:
     <syn cat> == verb

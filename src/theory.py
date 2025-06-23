@@ -165,7 +165,7 @@ class Theory(object): # Object for holding the information of a theory
     
     # Finds a variable and returns it or returns None
     def find_variable_or_none(self, variable_name):
-        for variable in self.variable:
+        for variable in self.variables:
             if variable.get_name() == variable_name:
                 return variable
         return None
@@ -240,13 +240,25 @@ class Variable(object): # Object for holding the information of a variable
         return self.name
     
     # Returns if the atom exists in the variable
-    def atom_exists(self, atom):
+    def atom_exists(self, atom, theory):
+        print("Trying to resolve atom " + atom + " in variable " + self.get_name())
         if self.values == []:
+            print("Resolved " + atom + " in variable " + self.get_name() + " because the variable spans all atoms")
             return True # Return true if the variable ranges all atoms
         else:
-            for variable_atom in self.values:
-                if variable_atom == atom:
-                    return True # Return true if one atom of the variable matches the specified atom
+            for variable_entry in self.values:
+                if variable_entry == atom:
+                    print("Resolved " + atom + " in variable " + self.get_name() + " because the atom is defined in the variable")
+                    return True # Return true if one entry of the variable matches the specified atom
+                elif variable_entry.startswith("$"):
+                    included_variable = theory.find_variable_or_none(variable_entry) # If the entry is a variable itself, try to get it from the theory
+                    if included_variable == None:
+                        print("The respective variable ", variable_entry, " could not be resolved")
+                        raise error.DATRLookupError(variable_entry)
+                    else:
+                        print("Continuing resolvement for atom " + atom + " in variable " + variable_entry)
+                        return included_variable.atom_exists(atom, theory) # If the entry variable exists, continue resolvement there
+        print("Failed to resolve atom " + atom + " in variable " + variable_entry)
         return False
     
     # Returns a pretty print of the variable content
@@ -275,22 +287,23 @@ class Sentence(object): # Object for holding the information of a sentence
         for i in range(len(self.lhs)): # Loop through the elements of the candidate lhs
             if i < len(path):
                 if self.lhs[i] != path[i] and type(self.lhs[i]) == str: # check for equality, but ignore variables
-                    print("Path ", self.lhs, " does not fit path ", path, " because an element of it is not equal")
+                    print("\033[91mX\033[0m Path ", self.lhs, " does not fit path ", path, " because an element of it is not equal")
                     return False # If the lhs is specified until this point, but not matching the path, disqualify candidate
             else:
-                print("Path ", self.lhs, " does not fit path ", path, " because it is more specific")
+                print("\033[91mX\033[0m Path ", self.lhs, " does not fit path ", path, " because it is more specific")
                 return False # If the lhs is longer than the path (and hence more specific), disqualify candidate
         
         # Filter out the match if there is a variable that can't be resolved
         for index, element in enumerate(self.lhs):
             if type(element) == tuple:
                 if element[0] == "variable":
-                    for variable in theory.variables:
-                        if variable.get_name() == element[1]:
-                            if not variable.atom_exists(path[index]):
-                                print("Path ", self.lhs, " does not fit path ", path, " because the contained variable does not match")
-                                return False
+                    print("Found variable " + element[1] + " in lhs in place of " + path[index])
+                    variable = theory.find_variable_or_none(element[1])
+                    if variable != None:
+                        if not variable.atom_exists(path[index], theory):
+                            print("\033[91mX\033[0m Path ", self.lhs, " does not fit path ", path, " because the contained variable does not match")
+                            return False
         
         # Return that the sentence matches
-        print("Path ", self.lhs, " fits path ", path)
+        print("\033[92mO\033[0m Path ", self.lhs, " fits path ", path)
         return True

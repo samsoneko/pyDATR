@@ -10,76 +10,79 @@ Grammar
 Rule 0     S' -> theory
 Rule 1     theory -> statement theory
 Rule 2     theory -> statement
-Rule 3     statement -> VARS VARIABLE COLON atomlist DOT
+Rule 3     statement -> VARS VARIABLE COLON varlist DOT
 Rule 4     statement -> NODE COLON eqseq DOT
-Rule 5     atomlist -> ATOM atomlist
-Rule 6     atomlist -> ATOM
-Rule 7     eqseq -> equation eqseq
-Rule 8     eqseq -> equation
-Rule 9     equation -> lhs rhs
-Rule 10    lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
-Rule 11    rhs -> EQ atomval
-Rule 12    rhs -> DEFEQ descval
-Rule 13    lhsseq -> lhselem lhsseq
-Rule 14    lhsseq -> <empty>
-Rule 15    lhselem -> ATOM
-Rule 16    lhselem -> VARIABLE
-Rule 17    atomval -> atomseq
-Rule 18    atomval -> L_PAREN atomseq R_PAREN
-Rule 19    atomseq -> ATOM atomseq
-Rule 20    atomseq -> <empty>
-Rule 21    descval -> descseq
-Rule 22    descval -> L_PAREN descseq R_PAREN
-Rule 23    descseq -> desc descseq
-Rule 24    descseq -> <empty>
-Rule 25    desc -> ATOM
-Rule 26    desc -> DQUOTE pointer DQUOTE
-Rule 27    desc -> pointer
-Rule 28    desc -> VARIABLE
-Rule 29    pointer -> NODE COLON descpath
-Rule 30    pointer -> NODE
-Rule 31    pointer -> descpath
-Rule 32    descpath -> L_ANGLE descseq R_ANGLE
+Rule 5     varlist -> var varlist
+Rule 6     varlist -> <empty>
+Rule 7     var -> ATOM
+Rule 8     var -> VARIABLE
+Rule 9     eqseq -> equation eqseq
+Rule 10    eqseq -> equation
+Rule 11    equation -> lhs rhs
+Rule 12    lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
+Rule 13    rhs -> EQ atomval
+Rule 14    rhs -> DEFEQ descval
+Rule 15    lhsseq -> lhselem lhsseq
+Rule 16    lhsseq -> <empty>
+Rule 17    lhselem -> ATOM
+Rule 18    lhselem -> VARIABLE
+Rule 19    atomval -> atomseq
+Rule 20    atomval -> L_PAREN atomseq R_PAREN
+Rule 21    atomseq -> ATOM atomseq
+Rule 22    atomseq -> <empty>
+Rule 23    descval -> descseq
+Rule 24    descval -> L_PAREN descseq R_PAREN
+Rule 25    descseq -> desc descseq
+Rule 26    descseq -> <empty>
+Rule 27    desc -> ATOM
+Rule 28    desc -> DQUOTE pointer DQUOTE
+Rule 29    desc -> pointer
+Rule 30    desc -> VARIABLE
+Rule 31    pointer -> NODE COLON descpath
+Rule 32    pointer -> NODE
+Rule 33    pointer -> descpath
+Rule 34    descpath -> L_ANGLE descseq R_ANGLE
 
 Terminals, with rules where they appear
 
-ATOM                 : 5 6 15 19 25
+ATOM                 : 7 17 21 27
 ATOM_EX              : 
-COLON                : 3 4 29
-DEFEQ                : 12
+COLON                : 3 4 31
+DEFEQ                : 14
 DOT                  : 3 4
-DQUOTE               : 26 26
-EQ                   : 11
-L_ANGLE              : 32
-L_ANGLE_LEFT         : 10
-L_PAREN              : 18 22
-NODE                 : 4 29 30
+DQUOTE               : 28 28
+EQ                   : 13
+L_ANGLE              : 34
+L_ANGLE_LEFT         : 12
+L_PAREN              : 20 24
+NODE                 : 4 31 32
 NODE_EX              : 
-R_ANGLE              : 32
-R_ANGLE_LEFT         : 10
-R_PAREN              : 18 22
-VARIABLE             : 3 16 28
+R_ANGLE              : 34
+R_ANGLE_LEFT         : 12
+R_PAREN              : 20 24
+VARIABLE             : 3 8 18 30
 VARS                 : 3
 error                : 
 
 Nonterminals, with rules where they appear
 
-atomlist             : 3 5
-atomseq              : 17 18 19
-atomval              : 11
-desc                 : 23
-descpath             : 29 31
-descseq              : 21 22 23 32
-descval              : 12
-eqseq                : 4 7
-equation             : 7 8
-lhs                  : 9
-lhselem              : 13
-lhsseq               : 10 13
-pointer              : 26 27
-rhs                  : 9
+atomseq              : 19 20 21
+atomval              : 13
+desc                 : 25
+descpath             : 31 33
+descseq              : 23 24 25 34
+descval              : 14
+eqseq                : 4 9
+equation             : 9 10
+lhs                  : 11
+lhselem              : 15
+lhsseq               : 12 15
+pointer              : 28 29
+rhs                  : 11
 statement            : 1 2
 theory               : 1 0
+var                  : 5
+varlist              : 3 5
 
 Parsing method: LALR
 
@@ -88,7 +91,7 @@ state 0
     (0) S' -> . theory
     (1) theory -> . statement theory
     (2) theory -> . statement
-    (3) statement -> . VARS VARIABLE COLON atomlist DOT
+    (3) statement -> . VARS VARIABLE COLON varlist DOT
     (4) statement -> . NODE COLON eqseq DOT
 
     VARS            shift and go to state 3
@@ -109,7 +112,7 @@ state 2
     (2) theory -> statement .
     (1) theory -> . statement theory
     (2) theory -> . statement
-    (3) statement -> . VARS VARIABLE COLON atomlist DOT
+    (3) statement -> . VARS VARIABLE COLON varlist DOT
     (4) statement -> . NODE COLON eqseq DOT
 
     $end            reduce using rule 2 (theory -> statement .)
@@ -121,7 +124,7 @@ state 2
 
 state 3
 
-    (3) statement -> VARS . VARIABLE COLON atomlist DOT
+    (3) statement -> VARS . VARIABLE COLON varlist DOT
 
     VARIABLE        shift and go to state 6
 
@@ -142,7 +145,7 @@ state 5
 
 state 6
 
-    (3) statement -> VARS VARIABLE . COLON atomlist DOT
+    (3) statement -> VARS VARIABLE . COLON varlist DOT
 
     COLON           shift and go to state 8
 
@@ -150,10 +153,10 @@ state 6
 state 7
 
     (4) statement -> NODE COLON . eqseq DOT
-    (7) eqseq -> . equation eqseq
-    (8) eqseq -> . equation
-    (9) equation -> . lhs rhs
-    (10) lhs -> . L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
+    (9) eqseq -> . equation eqseq
+    (10) eqseq -> . equation
+    (11) equation -> . lhs rhs
+    (12) lhs -> . L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
 
     L_ANGLE_LEFT    shift and go to state 12
 
@@ -163,83 +166,109 @@ state 7
 
 state 8
 
-    (3) statement -> VARS VARIABLE COLON . atomlist DOT
-    (5) atomlist -> . ATOM atomlist
-    (6) atomlist -> . ATOM
+    (3) statement -> VARS VARIABLE COLON . varlist DOT
+    (5) varlist -> . var varlist
+    (6) varlist -> .
+    (7) var -> . ATOM
+    (8) var -> . VARIABLE
 
-    ATOM            shift and go to state 14
+    DOT             reduce using rule 6 (varlist -> .)
+    ATOM            shift and go to state 16
+    VARIABLE        shift and go to state 13
 
-    atomlist                       shift and go to state 13
+    varlist                        shift and go to state 14
+    var                            shift and go to state 15
 
 state 9
 
     (4) statement -> NODE COLON eqseq . DOT
 
-    DOT             shift and go to state 15
+    DOT             shift and go to state 17
 
 
 state 10
 
-    (7) eqseq -> equation . eqseq
-    (8) eqseq -> equation .
-    (7) eqseq -> . equation eqseq
-    (8) eqseq -> . equation
-    (9) equation -> . lhs rhs
-    (10) lhs -> . L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
+    (9) eqseq -> equation . eqseq
+    (10) eqseq -> equation .
+    (9) eqseq -> . equation eqseq
+    (10) eqseq -> . equation
+    (11) equation -> . lhs rhs
+    (12) lhs -> . L_ANGLE_LEFT lhsseq R_ANGLE_LEFT
 
-    DOT             reduce using rule 8 (eqseq -> equation .)
+    DOT             reduce using rule 10 (eqseq -> equation .)
     L_ANGLE_LEFT    shift and go to state 12
 
     equation                       shift and go to state 10
-    eqseq                          shift and go to state 16
+    eqseq                          shift and go to state 18
     lhs                            shift and go to state 11
 
 state 11
 
-    (9) equation -> lhs . rhs
-    (11) rhs -> . EQ atomval
-    (12) rhs -> . DEFEQ descval
+    (11) equation -> lhs . rhs
+    (13) rhs -> . EQ atomval
+    (14) rhs -> . DEFEQ descval
 
-    EQ              shift and go to state 18
-    DEFEQ           shift and go to state 19
+    EQ              shift and go to state 20
+    DEFEQ           shift and go to state 21
 
-    rhs                            shift and go to state 17
+    rhs                            shift and go to state 19
 
 state 12
 
-    (10) lhs -> L_ANGLE_LEFT . lhsseq R_ANGLE_LEFT
-    (13) lhsseq -> . lhselem lhsseq
-    (14) lhsseq -> .
-    (15) lhselem -> . ATOM
-    (16) lhselem -> . VARIABLE
+    (12) lhs -> L_ANGLE_LEFT . lhsseq R_ANGLE_LEFT
+    (15) lhsseq -> . lhselem lhsseq
+    (16) lhsseq -> .
+    (17) lhselem -> . ATOM
+    (18) lhselem -> . VARIABLE
 
-    R_ANGLE_LEFT    reduce using rule 14 (lhsseq -> .)
-    ATOM            shift and go to state 22
-    VARIABLE        shift and go to state 23
+    R_ANGLE_LEFT    reduce using rule 16 (lhsseq -> .)
+    ATOM            shift and go to state 24
+    VARIABLE        shift and go to state 25
 
-    lhsseq                         shift and go to state 20
-    lhselem                        shift and go to state 21
+    lhsseq                         shift and go to state 22
+    lhselem                        shift and go to state 23
 
 state 13
 
-    (3) statement -> VARS VARIABLE COLON atomlist . DOT
+    (8) var -> VARIABLE .
 
-    DOT             shift and go to state 24
+    ATOM            reduce using rule 8 (var -> VARIABLE .)
+    VARIABLE        reduce using rule 8 (var -> VARIABLE .)
+    DOT             reduce using rule 8 (var -> VARIABLE .)
 
 
 state 14
 
-    (5) atomlist -> ATOM . atomlist
-    (6) atomlist -> ATOM .
-    (5) atomlist -> . ATOM atomlist
-    (6) atomlist -> . ATOM
+    (3) statement -> VARS VARIABLE COLON varlist . DOT
 
-    DOT             reduce using rule 6 (atomlist -> ATOM .)
-    ATOM            shift and go to state 14
+    DOT             shift and go to state 26
 
-    atomlist                       shift and go to state 25
 
 state 15
+
+    (5) varlist -> var . varlist
+    (5) varlist -> . var varlist
+    (6) varlist -> .
+    (7) var -> . ATOM
+    (8) var -> . VARIABLE
+
+    DOT             reduce using rule 6 (varlist -> .)
+    ATOM            shift and go to state 16
+    VARIABLE        shift and go to state 13
+
+    var                            shift and go to state 15
+    varlist                        shift and go to state 27
+
+state 16
+
+    (7) var -> ATOM .
+
+    ATOM            reduce using rule 7 (var -> ATOM .)
+    VARIABLE        reduce using rule 7 (var -> ATOM .)
+    DOT             reduce using rule 7 (var -> ATOM .)
+
+
+state 17
 
     (4) statement -> NODE COLON eqseq DOT .
 
@@ -248,480 +277,480 @@ state 15
     $end            reduce using rule 4 (statement -> NODE COLON eqseq DOT .)
 
 
-state 16
-
-    (7) eqseq -> equation eqseq .
-
-    DOT             reduce using rule 7 (eqseq -> equation eqseq .)
-
-
-state 17
-
-    (9) equation -> lhs rhs .
-
-    L_ANGLE_LEFT    reduce using rule 9 (equation -> lhs rhs .)
-    DOT             reduce using rule 9 (equation -> lhs rhs .)
-
-
 state 18
 
-    (11) rhs -> EQ . atomval
-    (17) atomval -> . atomseq
-    (18) atomval -> . L_PAREN atomseq R_PAREN
-    (19) atomseq -> . ATOM atomseq
-    (20) atomseq -> .
+    (9) eqseq -> equation eqseq .
 
-    L_PAREN         shift and go to state 28
-    ATOM            shift and go to state 29
-    L_ANGLE_LEFT    reduce using rule 20 (atomseq -> .)
-    DOT             reduce using rule 20 (atomseq -> .)
+    DOT             reduce using rule 9 (eqseq -> equation eqseq .)
 
-    atomval                        shift and go to state 26
-    atomseq                        shift and go to state 27
 
 state 19
 
-    (12) rhs -> DEFEQ . descval
-    (21) descval -> . descseq
-    (22) descval -> . L_PAREN descseq R_PAREN
-    (23) descseq -> . desc descseq
-    (24) descseq -> .
-    (25) desc -> . ATOM
-    (26) desc -> . DQUOTE pointer DQUOTE
-    (27) desc -> . pointer
-    (28) desc -> . VARIABLE
-    (29) pointer -> . NODE COLON descpath
-    (30) pointer -> . NODE
-    (31) pointer -> . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (11) equation -> lhs rhs .
 
-    L_PAREN         shift and go to state 32
-    L_ANGLE_LEFT    reduce using rule 24 (descseq -> .)
-    DOT             reduce using rule 24 (descseq -> .)
-    ATOM            shift and go to state 34
-    DQUOTE          shift and go to state 35
-    VARIABLE        shift and go to state 37
-    NODE            shift and go to state 38
-    L_ANGLE         shift and go to state 40
+    L_ANGLE_LEFT    reduce using rule 11 (equation -> lhs rhs .)
+    DOT             reduce using rule 11 (equation -> lhs rhs .)
 
-    descval                        shift and go to state 30
-    descseq                        shift and go to state 31
-    desc                           shift and go to state 33
-    pointer                        shift and go to state 36
-    descpath                       shift and go to state 39
 
 state 20
 
-    (10) lhs -> L_ANGLE_LEFT lhsseq . R_ANGLE_LEFT
+    (13) rhs -> EQ . atomval
+    (19) atomval -> . atomseq
+    (20) atomval -> . L_PAREN atomseq R_PAREN
+    (21) atomseq -> . ATOM atomseq
+    (22) atomseq -> .
 
-    R_ANGLE_LEFT    shift and go to state 41
+    L_PAREN         shift and go to state 30
+    ATOM            shift and go to state 31
+    L_ANGLE_LEFT    reduce using rule 22 (atomseq -> .)
+    DOT             reduce using rule 22 (atomseq -> .)
 
+    atomval                        shift and go to state 28
+    atomseq                        shift and go to state 29
 
 state 21
 
-    (13) lhsseq -> lhselem . lhsseq
-    (13) lhsseq -> . lhselem lhsseq
-    (14) lhsseq -> .
-    (15) lhselem -> . ATOM
-    (16) lhselem -> . VARIABLE
+    (14) rhs -> DEFEQ . descval
+    (23) descval -> . descseq
+    (24) descval -> . L_PAREN descseq R_PAREN
+    (25) descseq -> . desc descseq
+    (26) descseq -> .
+    (27) desc -> . ATOM
+    (28) desc -> . DQUOTE pointer DQUOTE
+    (29) desc -> . pointer
+    (30) desc -> . VARIABLE
+    (31) pointer -> . NODE COLON descpath
+    (32) pointer -> . NODE
+    (33) pointer -> . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    R_ANGLE_LEFT    reduce using rule 14 (lhsseq -> .)
-    ATOM            shift and go to state 22
-    VARIABLE        shift and go to state 23
+    L_PAREN         shift and go to state 34
+    L_ANGLE_LEFT    reduce using rule 26 (descseq -> .)
+    DOT             reduce using rule 26 (descseq -> .)
+    ATOM            shift and go to state 36
+    DQUOTE          shift and go to state 37
+    VARIABLE        shift and go to state 39
+    NODE            shift and go to state 40
+    L_ANGLE         shift and go to state 42
 
-    lhselem                        shift and go to state 21
-    lhsseq                         shift and go to state 42
+    descval                        shift and go to state 32
+    descseq                        shift and go to state 33
+    desc                           shift and go to state 35
+    pointer                        shift and go to state 38
+    descpath                       shift and go to state 41
 
 state 22
 
-    (15) lhselem -> ATOM .
+    (12) lhs -> L_ANGLE_LEFT lhsseq . R_ANGLE_LEFT
 
-    ATOM            reduce using rule 15 (lhselem -> ATOM .)
-    VARIABLE        reduce using rule 15 (lhselem -> ATOM .)
-    R_ANGLE_LEFT    reduce using rule 15 (lhselem -> ATOM .)
+    R_ANGLE_LEFT    shift and go to state 43
 
 
 state 23
 
-    (16) lhselem -> VARIABLE .
+    (15) lhsseq -> lhselem . lhsseq
+    (15) lhsseq -> . lhselem lhsseq
+    (16) lhsseq -> .
+    (17) lhselem -> . ATOM
+    (18) lhselem -> . VARIABLE
 
-    ATOM            reduce using rule 16 (lhselem -> VARIABLE .)
-    VARIABLE        reduce using rule 16 (lhselem -> VARIABLE .)
-    R_ANGLE_LEFT    reduce using rule 16 (lhselem -> VARIABLE .)
+    R_ANGLE_LEFT    reduce using rule 16 (lhsseq -> .)
+    ATOM            shift and go to state 24
+    VARIABLE        shift and go to state 25
 
+    lhselem                        shift and go to state 23
+    lhsseq                         shift and go to state 44
 
 state 24
 
-    (3) statement -> VARS VARIABLE COLON atomlist DOT .
+    (17) lhselem -> ATOM .
 
-    VARS            reduce using rule 3 (statement -> VARS VARIABLE COLON atomlist DOT .)
-    NODE            reduce using rule 3 (statement -> VARS VARIABLE COLON atomlist DOT .)
-    $end            reduce using rule 3 (statement -> VARS VARIABLE COLON atomlist DOT .)
+    ATOM            reduce using rule 17 (lhselem -> ATOM .)
+    VARIABLE        reduce using rule 17 (lhselem -> ATOM .)
+    R_ANGLE_LEFT    reduce using rule 17 (lhselem -> ATOM .)
 
 
 state 25
 
-    (5) atomlist -> ATOM atomlist .
+    (18) lhselem -> VARIABLE .
 
-    DOT             reduce using rule 5 (atomlist -> ATOM atomlist .)
+    ATOM            reduce using rule 18 (lhselem -> VARIABLE .)
+    VARIABLE        reduce using rule 18 (lhselem -> VARIABLE .)
+    R_ANGLE_LEFT    reduce using rule 18 (lhselem -> VARIABLE .)
 
 
 state 26
 
-    (11) rhs -> EQ atomval .
+    (3) statement -> VARS VARIABLE COLON varlist DOT .
 
-    L_ANGLE_LEFT    reduce using rule 11 (rhs -> EQ atomval .)
-    DOT             reduce using rule 11 (rhs -> EQ atomval .)
+    VARS            reduce using rule 3 (statement -> VARS VARIABLE COLON varlist DOT .)
+    NODE            reduce using rule 3 (statement -> VARS VARIABLE COLON varlist DOT .)
+    $end            reduce using rule 3 (statement -> VARS VARIABLE COLON varlist DOT .)
 
 
 state 27
 
-    (17) atomval -> atomseq .
+    (5) varlist -> var varlist .
 
-    L_ANGLE_LEFT    reduce using rule 17 (atomval -> atomseq .)
-    DOT             reduce using rule 17 (atomval -> atomseq .)
+    DOT             reduce using rule 5 (varlist -> var varlist .)
 
 
 state 28
 
-    (18) atomval -> L_PAREN . atomseq R_PAREN
-    (19) atomseq -> . ATOM atomseq
-    (20) atomseq -> .
+    (13) rhs -> EQ atomval .
 
-    ATOM            shift and go to state 29
-    R_PAREN         reduce using rule 20 (atomseq -> .)
+    L_ANGLE_LEFT    reduce using rule 13 (rhs -> EQ atomval .)
+    DOT             reduce using rule 13 (rhs -> EQ atomval .)
 
-    atomseq                        shift and go to state 43
 
 state 29
 
-    (19) atomseq -> ATOM . atomseq
-    (19) atomseq -> . ATOM atomseq
-    (20) atomseq -> .
+    (19) atomval -> atomseq .
 
-    ATOM            shift and go to state 29
-    L_ANGLE_LEFT    reduce using rule 20 (atomseq -> .)
-    DOT             reduce using rule 20 (atomseq -> .)
-    R_PAREN         reduce using rule 20 (atomseq -> .)
+    L_ANGLE_LEFT    reduce using rule 19 (atomval -> atomseq .)
+    DOT             reduce using rule 19 (atomval -> atomseq .)
 
-    atomseq                        shift and go to state 44
 
 state 30
 
-    (12) rhs -> DEFEQ descval .
+    (20) atomval -> L_PAREN . atomseq R_PAREN
+    (21) atomseq -> . ATOM atomseq
+    (22) atomseq -> .
 
-    L_ANGLE_LEFT    reduce using rule 12 (rhs -> DEFEQ descval .)
-    DOT             reduce using rule 12 (rhs -> DEFEQ descval .)
+    ATOM            shift and go to state 31
+    R_PAREN         reduce using rule 22 (atomseq -> .)
 
+    atomseq                        shift and go to state 45
 
 state 31
 
-    (21) descval -> descseq .
+    (21) atomseq -> ATOM . atomseq
+    (21) atomseq -> . ATOM atomseq
+    (22) atomseq -> .
 
-    L_ANGLE_LEFT    reduce using rule 21 (descval -> descseq .)
-    DOT             reduce using rule 21 (descval -> descseq .)
+    ATOM            shift and go to state 31
+    L_ANGLE_LEFT    reduce using rule 22 (atomseq -> .)
+    DOT             reduce using rule 22 (atomseq -> .)
+    R_PAREN         reduce using rule 22 (atomseq -> .)
 
+    atomseq                        shift and go to state 46
 
 state 32
 
-    (22) descval -> L_PAREN . descseq R_PAREN
-    (23) descseq -> . desc descseq
-    (24) descseq -> .
-    (25) desc -> . ATOM
-    (26) desc -> . DQUOTE pointer DQUOTE
-    (27) desc -> . pointer
-    (28) desc -> . VARIABLE
-    (29) pointer -> . NODE COLON descpath
-    (30) pointer -> . NODE
-    (31) pointer -> . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (14) rhs -> DEFEQ descval .
 
-    R_PAREN         reduce using rule 24 (descseq -> .)
-    ATOM            shift and go to state 34
-    DQUOTE          shift and go to state 35
-    VARIABLE        shift and go to state 37
-    NODE            shift and go to state 38
-    L_ANGLE         shift and go to state 40
+    L_ANGLE_LEFT    reduce using rule 14 (rhs -> DEFEQ descval .)
+    DOT             reduce using rule 14 (rhs -> DEFEQ descval .)
 
-    descseq                        shift and go to state 45
-    desc                           shift and go to state 33
-    pointer                        shift and go to state 36
-    descpath                       shift and go to state 39
 
 state 33
 
-    (23) descseq -> desc . descseq
-    (23) descseq -> . desc descseq
-    (24) descseq -> .
-    (25) desc -> . ATOM
-    (26) desc -> . DQUOTE pointer DQUOTE
-    (27) desc -> . pointer
-    (28) desc -> . VARIABLE
-    (29) pointer -> . NODE COLON descpath
-    (30) pointer -> . NODE
-    (31) pointer -> . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (23) descval -> descseq .
 
-    L_ANGLE_LEFT    reduce using rule 24 (descseq -> .)
-    DOT             reduce using rule 24 (descseq -> .)
-    R_PAREN         reduce using rule 24 (descseq -> .)
-    R_ANGLE         reduce using rule 24 (descseq -> .)
-    ATOM            shift and go to state 34
-    DQUOTE          shift and go to state 35
-    VARIABLE        shift and go to state 37
-    NODE            shift and go to state 38
-    L_ANGLE         shift and go to state 40
+    L_ANGLE_LEFT    reduce using rule 23 (descval -> descseq .)
+    DOT             reduce using rule 23 (descval -> descseq .)
 
-    desc                           shift and go to state 33
-    descseq                        shift and go to state 46
-    pointer                        shift and go to state 36
-    descpath                       shift and go to state 39
 
 state 34
 
-    (25) desc -> ATOM .
+    (24) descval -> L_PAREN . descseq R_PAREN
+    (25) descseq -> . desc descseq
+    (26) descseq -> .
+    (27) desc -> . ATOM
+    (28) desc -> . DQUOTE pointer DQUOTE
+    (29) desc -> . pointer
+    (30) desc -> . VARIABLE
+    (31) pointer -> . NODE COLON descpath
+    (32) pointer -> . NODE
+    (33) pointer -> . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    ATOM            reduce using rule 25 (desc -> ATOM .)
-    DQUOTE          reduce using rule 25 (desc -> ATOM .)
-    VARIABLE        reduce using rule 25 (desc -> ATOM .)
-    NODE            reduce using rule 25 (desc -> ATOM .)
-    L_ANGLE         reduce using rule 25 (desc -> ATOM .)
-    L_ANGLE_LEFT    reduce using rule 25 (desc -> ATOM .)
-    DOT             reduce using rule 25 (desc -> ATOM .)
-    R_PAREN         reduce using rule 25 (desc -> ATOM .)
-    R_ANGLE         reduce using rule 25 (desc -> ATOM .)
+    R_PAREN         reduce using rule 26 (descseq -> .)
+    ATOM            shift and go to state 36
+    DQUOTE          shift and go to state 37
+    VARIABLE        shift and go to state 39
+    NODE            shift and go to state 40
+    L_ANGLE         shift and go to state 42
 
+    descseq                        shift and go to state 47
+    desc                           shift and go to state 35
+    pointer                        shift and go to state 38
+    descpath                       shift and go to state 41
 
 state 35
 
-    (26) desc -> DQUOTE . pointer DQUOTE
-    (29) pointer -> . NODE COLON descpath
-    (30) pointer -> . NODE
-    (31) pointer -> . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (25) descseq -> desc . descseq
+    (25) descseq -> . desc descseq
+    (26) descseq -> .
+    (27) desc -> . ATOM
+    (28) desc -> . DQUOTE pointer DQUOTE
+    (29) desc -> . pointer
+    (30) desc -> . VARIABLE
+    (31) pointer -> . NODE COLON descpath
+    (32) pointer -> . NODE
+    (33) pointer -> . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    NODE            shift and go to state 38
-    L_ANGLE         shift and go to state 40
+    L_ANGLE_LEFT    reduce using rule 26 (descseq -> .)
+    DOT             reduce using rule 26 (descseq -> .)
+    R_PAREN         reduce using rule 26 (descseq -> .)
+    R_ANGLE         reduce using rule 26 (descseq -> .)
+    ATOM            shift and go to state 36
+    DQUOTE          shift and go to state 37
+    VARIABLE        shift and go to state 39
+    NODE            shift and go to state 40
+    L_ANGLE         shift and go to state 42
 
-    pointer                        shift and go to state 47
-    descpath                       shift and go to state 39
+    desc                           shift and go to state 35
+    descseq                        shift and go to state 48
+    pointer                        shift and go to state 38
+    descpath                       shift and go to state 41
 
 state 36
 
-    (27) desc -> pointer .
+    (27) desc -> ATOM .
 
-    ATOM            reduce using rule 27 (desc -> pointer .)
-    DQUOTE          reduce using rule 27 (desc -> pointer .)
-    VARIABLE        reduce using rule 27 (desc -> pointer .)
-    NODE            reduce using rule 27 (desc -> pointer .)
-    L_ANGLE         reduce using rule 27 (desc -> pointer .)
-    L_ANGLE_LEFT    reduce using rule 27 (desc -> pointer .)
-    DOT             reduce using rule 27 (desc -> pointer .)
-    R_PAREN         reduce using rule 27 (desc -> pointer .)
-    R_ANGLE         reduce using rule 27 (desc -> pointer .)
+    ATOM            reduce using rule 27 (desc -> ATOM .)
+    DQUOTE          reduce using rule 27 (desc -> ATOM .)
+    VARIABLE        reduce using rule 27 (desc -> ATOM .)
+    NODE            reduce using rule 27 (desc -> ATOM .)
+    L_ANGLE         reduce using rule 27 (desc -> ATOM .)
+    L_ANGLE_LEFT    reduce using rule 27 (desc -> ATOM .)
+    DOT             reduce using rule 27 (desc -> ATOM .)
+    R_PAREN         reduce using rule 27 (desc -> ATOM .)
+    R_ANGLE         reduce using rule 27 (desc -> ATOM .)
 
 
 state 37
 
-    (28) desc -> VARIABLE .
+    (28) desc -> DQUOTE . pointer DQUOTE
+    (31) pointer -> . NODE COLON descpath
+    (32) pointer -> . NODE
+    (33) pointer -> . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    ATOM            reduce using rule 28 (desc -> VARIABLE .)
-    DQUOTE          reduce using rule 28 (desc -> VARIABLE .)
-    VARIABLE        reduce using rule 28 (desc -> VARIABLE .)
-    NODE            reduce using rule 28 (desc -> VARIABLE .)
-    L_ANGLE         reduce using rule 28 (desc -> VARIABLE .)
-    L_ANGLE_LEFT    reduce using rule 28 (desc -> VARIABLE .)
-    DOT             reduce using rule 28 (desc -> VARIABLE .)
-    R_PAREN         reduce using rule 28 (desc -> VARIABLE .)
-    R_ANGLE         reduce using rule 28 (desc -> VARIABLE .)
+    NODE            shift and go to state 40
+    L_ANGLE         shift and go to state 42
 
+    pointer                        shift and go to state 49
+    descpath                       shift and go to state 41
 
 state 38
 
-    (29) pointer -> NODE . COLON descpath
-    (30) pointer -> NODE .
+    (29) desc -> pointer .
 
-    COLON           shift and go to state 48
-    ATOM            reduce using rule 30 (pointer -> NODE .)
-    DQUOTE          reduce using rule 30 (pointer -> NODE .)
-    VARIABLE        reduce using rule 30 (pointer -> NODE .)
-    NODE            reduce using rule 30 (pointer -> NODE .)
-    L_ANGLE         reduce using rule 30 (pointer -> NODE .)
-    L_ANGLE_LEFT    reduce using rule 30 (pointer -> NODE .)
-    DOT             reduce using rule 30 (pointer -> NODE .)
-    R_PAREN         reduce using rule 30 (pointer -> NODE .)
-    R_ANGLE         reduce using rule 30 (pointer -> NODE .)
+    ATOM            reduce using rule 29 (desc -> pointer .)
+    DQUOTE          reduce using rule 29 (desc -> pointer .)
+    VARIABLE        reduce using rule 29 (desc -> pointer .)
+    NODE            reduce using rule 29 (desc -> pointer .)
+    L_ANGLE         reduce using rule 29 (desc -> pointer .)
+    L_ANGLE_LEFT    reduce using rule 29 (desc -> pointer .)
+    DOT             reduce using rule 29 (desc -> pointer .)
+    R_PAREN         reduce using rule 29 (desc -> pointer .)
+    R_ANGLE         reduce using rule 29 (desc -> pointer .)
 
 
 state 39
 
-    (31) pointer -> descpath .
+    (30) desc -> VARIABLE .
 
-    ATOM            reduce using rule 31 (pointer -> descpath .)
-    DQUOTE          reduce using rule 31 (pointer -> descpath .)
-    VARIABLE        reduce using rule 31 (pointer -> descpath .)
-    NODE            reduce using rule 31 (pointer -> descpath .)
-    L_ANGLE         reduce using rule 31 (pointer -> descpath .)
-    L_ANGLE_LEFT    reduce using rule 31 (pointer -> descpath .)
-    DOT             reduce using rule 31 (pointer -> descpath .)
-    R_PAREN         reduce using rule 31 (pointer -> descpath .)
-    R_ANGLE         reduce using rule 31 (pointer -> descpath .)
+    ATOM            reduce using rule 30 (desc -> VARIABLE .)
+    DQUOTE          reduce using rule 30 (desc -> VARIABLE .)
+    VARIABLE        reduce using rule 30 (desc -> VARIABLE .)
+    NODE            reduce using rule 30 (desc -> VARIABLE .)
+    L_ANGLE         reduce using rule 30 (desc -> VARIABLE .)
+    L_ANGLE_LEFT    reduce using rule 30 (desc -> VARIABLE .)
+    DOT             reduce using rule 30 (desc -> VARIABLE .)
+    R_PAREN         reduce using rule 30 (desc -> VARIABLE .)
+    R_ANGLE         reduce using rule 30 (desc -> VARIABLE .)
 
 
 state 40
 
-    (32) descpath -> L_ANGLE . descseq R_ANGLE
-    (23) descseq -> . desc descseq
-    (24) descseq -> .
-    (25) desc -> . ATOM
-    (26) desc -> . DQUOTE pointer DQUOTE
-    (27) desc -> . pointer
-    (28) desc -> . VARIABLE
-    (29) pointer -> . NODE COLON descpath
-    (30) pointer -> . NODE
-    (31) pointer -> . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (31) pointer -> NODE . COLON descpath
+    (32) pointer -> NODE .
 
-    R_ANGLE         reduce using rule 24 (descseq -> .)
-    ATOM            shift and go to state 34
-    DQUOTE          shift and go to state 35
-    VARIABLE        shift and go to state 37
-    NODE            shift and go to state 38
-    L_ANGLE         shift and go to state 40
+    COLON           shift and go to state 50
+    ATOM            reduce using rule 32 (pointer -> NODE .)
+    DQUOTE          reduce using rule 32 (pointer -> NODE .)
+    VARIABLE        reduce using rule 32 (pointer -> NODE .)
+    NODE            reduce using rule 32 (pointer -> NODE .)
+    L_ANGLE         reduce using rule 32 (pointer -> NODE .)
+    L_ANGLE_LEFT    reduce using rule 32 (pointer -> NODE .)
+    DOT             reduce using rule 32 (pointer -> NODE .)
+    R_PAREN         reduce using rule 32 (pointer -> NODE .)
+    R_ANGLE         reduce using rule 32 (pointer -> NODE .)
 
-    descseq                        shift and go to state 49
-    desc                           shift and go to state 33
-    pointer                        shift and go to state 36
-    descpath                       shift and go to state 39
 
 state 41
 
-    (10) lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .
+    (33) pointer -> descpath .
 
-    EQ              reduce using rule 10 (lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .)
-    DEFEQ           reduce using rule 10 (lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .)
+    ATOM            reduce using rule 33 (pointer -> descpath .)
+    DQUOTE          reduce using rule 33 (pointer -> descpath .)
+    VARIABLE        reduce using rule 33 (pointer -> descpath .)
+    NODE            reduce using rule 33 (pointer -> descpath .)
+    L_ANGLE         reduce using rule 33 (pointer -> descpath .)
+    L_ANGLE_LEFT    reduce using rule 33 (pointer -> descpath .)
+    DOT             reduce using rule 33 (pointer -> descpath .)
+    R_PAREN         reduce using rule 33 (pointer -> descpath .)
+    R_ANGLE         reduce using rule 33 (pointer -> descpath .)
 
 
 state 42
 
-    (13) lhsseq -> lhselem lhsseq .
+    (34) descpath -> L_ANGLE . descseq R_ANGLE
+    (25) descseq -> . desc descseq
+    (26) descseq -> .
+    (27) desc -> . ATOM
+    (28) desc -> . DQUOTE pointer DQUOTE
+    (29) desc -> . pointer
+    (30) desc -> . VARIABLE
+    (31) pointer -> . NODE COLON descpath
+    (32) pointer -> . NODE
+    (33) pointer -> . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    R_ANGLE_LEFT    reduce using rule 13 (lhsseq -> lhselem lhsseq .)
+    R_ANGLE         reduce using rule 26 (descseq -> .)
+    ATOM            shift and go to state 36
+    DQUOTE          shift and go to state 37
+    VARIABLE        shift and go to state 39
+    NODE            shift and go to state 40
+    L_ANGLE         shift and go to state 42
 
+    descseq                        shift and go to state 51
+    desc                           shift and go to state 35
+    pointer                        shift and go to state 38
+    descpath                       shift and go to state 41
 
 state 43
 
-    (18) atomval -> L_PAREN atomseq . R_PAREN
+    (12) lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .
 
-    R_PAREN         shift and go to state 50
+    EQ              reduce using rule 12 (lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .)
+    DEFEQ           reduce using rule 12 (lhs -> L_ANGLE_LEFT lhsseq R_ANGLE_LEFT .)
 
 
 state 44
 
-    (19) atomseq -> ATOM atomseq .
+    (15) lhsseq -> lhselem lhsseq .
 
-    L_ANGLE_LEFT    reduce using rule 19 (atomseq -> ATOM atomseq .)
-    DOT             reduce using rule 19 (atomseq -> ATOM atomseq .)
-    R_PAREN         reduce using rule 19 (atomseq -> ATOM atomseq .)
+    R_ANGLE_LEFT    reduce using rule 15 (lhsseq -> lhselem lhsseq .)
 
 
 state 45
 
-    (22) descval -> L_PAREN descseq . R_PAREN
+    (20) atomval -> L_PAREN atomseq . R_PAREN
 
-    R_PAREN         shift and go to state 51
+    R_PAREN         shift and go to state 52
 
 
 state 46
 
-    (23) descseq -> desc descseq .
+    (21) atomseq -> ATOM atomseq .
 
-    L_ANGLE_LEFT    reduce using rule 23 (descseq -> desc descseq .)
-    DOT             reduce using rule 23 (descseq -> desc descseq .)
-    R_PAREN         reduce using rule 23 (descseq -> desc descseq .)
-    R_ANGLE         reduce using rule 23 (descseq -> desc descseq .)
+    L_ANGLE_LEFT    reduce using rule 21 (atomseq -> ATOM atomseq .)
+    DOT             reduce using rule 21 (atomseq -> ATOM atomseq .)
+    R_PAREN         reduce using rule 21 (atomseq -> ATOM atomseq .)
 
 
 state 47
 
-    (26) desc -> DQUOTE pointer . DQUOTE
+    (24) descval -> L_PAREN descseq . R_PAREN
 
-    DQUOTE          shift and go to state 52
+    R_PAREN         shift and go to state 53
 
 
 state 48
 
-    (29) pointer -> NODE COLON . descpath
-    (32) descpath -> . L_ANGLE descseq R_ANGLE
+    (25) descseq -> desc descseq .
 
-    L_ANGLE         shift and go to state 40
+    L_ANGLE_LEFT    reduce using rule 25 (descseq -> desc descseq .)
+    DOT             reduce using rule 25 (descseq -> desc descseq .)
+    R_PAREN         reduce using rule 25 (descseq -> desc descseq .)
+    R_ANGLE         reduce using rule 25 (descseq -> desc descseq .)
 
-    descpath                       shift and go to state 53
 
 state 49
 
-    (32) descpath -> L_ANGLE descseq . R_ANGLE
+    (28) desc -> DQUOTE pointer . DQUOTE
 
-    R_ANGLE         shift and go to state 54
+    DQUOTE          shift and go to state 54
 
 
 state 50
 
-    (18) atomval -> L_PAREN atomseq R_PAREN .
+    (31) pointer -> NODE COLON . descpath
+    (34) descpath -> . L_ANGLE descseq R_ANGLE
 
-    L_ANGLE_LEFT    reduce using rule 18 (atomval -> L_PAREN atomseq R_PAREN .)
-    DOT             reduce using rule 18 (atomval -> L_PAREN atomseq R_PAREN .)
+    L_ANGLE         shift and go to state 42
 
+    descpath                       shift and go to state 55
 
 state 51
 
-    (22) descval -> L_PAREN descseq R_PAREN .
+    (34) descpath -> L_ANGLE descseq . R_ANGLE
 
-    L_ANGLE_LEFT    reduce using rule 22 (descval -> L_PAREN descseq R_PAREN .)
-    DOT             reduce using rule 22 (descval -> L_PAREN descseq R_PAREN .)
+    R_ANGLE         shift and go to state 56
 
 
 state 52
 
-    (26) desc -> DQUOTE pointer DQUOTE .
+    (20) atomval -> L_PAREN atomseq R_PAREN .
 
-    ATOM            reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    DQUOTE          reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    VARIABLE        reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    NODE            reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    L_ANGLE         reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    L_ANGLE_LEFT    reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    DOT             reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    R_PAREN         reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
-    R_ANGLE         reduce using rule 26 (desc -> DQUOTE pointer DQUOTE .)
+    L_ANGLE_LEFT    reduce using rule 20 (atomval -> L_PAREN atomseq R_PAREN .)
+    DOT             reduce using rule 20 (atomval -> L_PAREN atomseq R_PAREN .)
 
 
 state 53
 
-    (29) pointer -> NODE COLON descpath .
+    (24) descval -> L_PAREN descseq R_PAREN .
 
-    ATOM            reduce using rule 29 (pointer -> NODE COLON descpath .)
-    DQUOTE          reduce using rule 29 (pointer -> NODE COLON descpath .)
-    VARIABLE        reduce using rule 29 (pointer -> NODE COLON descpath .)
-    NODE            reduce using rule 29 (pointer -> NODE COLON descpath .)
-    L_ANGLE         reduce using rule 29 (pointer -> NODE COLON descpath .)
-    L_ANGLE_LEFT    reduce using rule 29 (pointer -> NODE COLON descpath .)
-    DOT             reduce using rule 29 (pointer -> NODE COLON descpath .)
-    R_PAREN         reduce using rule 29 (pointer -> NODE COLON descpath .)
-    R_ANGLE         reduce using rule 29 (pointer -> NODE COLON descpath .)
+    L_ANGLE_LEFT    reduce using rule 24 (descval -> L_PAREN descseq R_PAREN .)
+    DOT             reduce using rule 24 (descval -> L_PAREN descseq R_PAREN .)
 
 
 state 54
 
-    (32) descpath -> L_ANGLE descseq R_ANGLE .
+    (28) desc -> DQUOTE pointer DQUOTE .
 
-    ATOM            reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    DQUOTE          reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    VARIABLE        reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    NODE            reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    L_ANGLE         reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    L_ANGLE_LEFT    reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    DOT             reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    R_PAREN         reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
-    R_ANGLE         reduce using rule 32 (descpath -> L_ANGLE descseq R_ANGLE .)
+    ATOM            reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    DQUOTE          reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    VARIABLE        reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    NODE            reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    L_ANGLE         reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    L_ANGLE_LEFT    reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    DOT             reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    R_PAREN         reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+    R_ANGLE         reduce using rule 28 (desc -> DQUOTE pointer DQUOTE .)
+
+
+state 55
+
+    (31) pointer -> NODE COLON descpath .
+
+    ATOM            reduce using rule 31 (pointer -> NODE COLON descpath .)
+    DQUOTE          reduce using rule 31 (pointer -> NODE COLON descpath .)
+    VARIABLE        reduce using rule 31 (pointer -> NODE COLON descpath .)
+    NODE            reduce using rule 31 (pointer -> NODE COLON descpath .)
+    L_ANGLE         reduce using rule 31 (pointer -> NODE COLON descpath .)
+    L_ANGLE_LEFT    reduce using rule 31 (pointer -> NODE COLON descpath .)
+    DOT             reduce using rule 31 (pointer -> NODE COLON descpath .)
+    R_PAREN         reduce using rule 31 (pointer -> NODE COLON descpath .)
+    R_ANGLE         reduce using rule 31 (pointer -> NODE COLON descpath .)
+
+
+state 56
+
+    (34) descpath -> L_ANGLE descseq R_ANGLE .
+
+    ATOM            reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    DQUOTE          reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    VARIABLE        reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    NODE            reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    L_ANGLE         reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    L_ANGLE_LEFT    reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    DOT             reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    R_PAREN         reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
+    R_ANGLE         reduce using rule 34 (descpath -> L_ANGLE descseq R_ANGLE .)
 
