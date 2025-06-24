@@ -131,14 +131,14 @@ class Theory(object): # Object for holding the information of a theory
                     local_node_name = rhs[1] if rhs[1] != None else context_node_name
                     local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
                     print("Local pointer found, continuing evaluation in node: " + local_node_name, "\n")
-                    return self.resolve(local_node_name, local_path, global_node_name, resolved_variables)
+                    return self.resolve(local_node_name, local_path, global_node_name, resolved_variables) # Setting a new local context
                 elif rhs[0] == "global_pointer":
                     # Handle global inheritance
                     rhs = rhs[1]
                     local_node_name = rhs[1] if rhs[1] != None else global_node_name
                     local_path = rhs[2] + remaining_path if rhs[2] != None else remaining_path
                     print("Global pointer found, continuing evaluation in node: " + global_node_name, "\n")
-                    return self.resolve(local_node_name, local_path, global_node_name, resolved_variables)
+                    return self.resolve(local_node_name, local_path, local_node_name, resolved_variables) # Setting a new local and global context
                 else:
                     # If the evaluation reaches this point, something went horribly wrong
                     print("pyDATR Error: RHS invalid, an error in the parser must have occured")

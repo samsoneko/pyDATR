@@ -1,12 +1,12 @@
-# main.py
+# datr_cli.py
 
 import sys
 from src import lexer, parser, theory
 
 def main():
     # Read input file
-    if len(sys.argv) != 2:
-        print("Usage: python main.py <input_file.dtr>")
+    if len(sys.argv) != 3:
+        print("Usage: python datr_cli.py <input_file.dtr> <query>")
         return
 
     # Open the input file
@@ -33,7 +33,8 @@ def main():
     datr_theory = theory.Theory("default", result)
     print(datr_theory.present())
     print("\n")
-    result = datr_theory.query("Word2:<mor form>")
+    query = sys.argv[2]
+    result = datr_theory.query(query)
     # # result = datr_theory.query("S1:<subj 1 sg futr obj 2 sg like>")
     print(result)
 
