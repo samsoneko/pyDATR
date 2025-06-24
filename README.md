@@ -29,7 +29,7 @@ In this step, the entire input file is tokenzied using `ply.lex`. While the nami
 In this step, the tokenized input is further parsed using `ply.yacc`. The grammar used for this is modeled after the grammar rules used by [ZDATR v1.1](https://web.archive.org/web/20110719101756/http://www.spectrum.uni-bielefeld.de/DATR/index.html), while being adjusted to better match the full DATR specification. If the syntax of the input file does not match the DATR specification, a respective error is thrown and the parser terminates. 
 ### 3. Converting the theory to a python object representation
 In this step, the parsed input is converted into python objects. The resulting structure is as follows:
-1. A theory object is the 
+1. A theory "parent" object holds all necessary information for the entire DATR theory.
 2. The theory object contains a list of child node objects as well as a list of variable objects.
 3. Each node object contains a list of sentence objects.
 4. Each variable object contains a list of atoms or other variable references.
