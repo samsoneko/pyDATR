@@ -5,8 +5,8 @@ from src import lexer, parser, theory
 
 def main():
     # Read input file
-    if len(sys.argv) != 3:
-        print("Usage: python datr_cli.py <input_file.dtr> <query>")
+    if len(sys.argv) != 2:
+        print("Usage: python datr_cli.py <input_file.dtr>")
         return
 
     # Open the input file
@@ -33,10 +33,25 @@ def main():
     datr_theory = theory.Theory("default", result)
     print(datr_theory.present())
     print("\n")
-    query = sys.argv[2]
-    result = datr_theory.query(query)
-    # # result = datr_theory.query("S1:<subj 1 sg futr obj 2 sg like>")
-    print(result)
+    # Enables the user to perform multiple queries at once, as long as the program doesn't crash
+    while True:
+        results = []
+        user_input = input("Please input your prompt: ")
+        queries = user_input.split(",")
+        queries = [query.strip() for query in queries]
+        print("Starting resolvement for queries: " + str(queries))
+        for query in queries:
+            results.append(datr_theory.query(query))
+        print(prettify(results))
+
+def prettify(result_list):
+    pretty_list = []
+    for result in result_list:
+        pretty_entry = ""
+        for element in result:
+            pretty_entry += element
+        pretty_list.append(pretty_entry)
+    return pretty_list
 
 if __name__ == '__main__':
     main()
