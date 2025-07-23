@@ -1,0 +1,3423 @@
+{
+    "valo": {
+        "nominative": {
+            "singular": "valo",
+            "plural": "valot"
+        },
+        "genitive": {
+            "singular": "valon",
+            "plural": "valoien"
+        },
+        "partitive": {
+            "singular": "valoa",
+            "plural": "valoia"
+        },
+        "inessive": {
+            "singular": "valossa",
+            "plural": "valoissa"
+        },
+        "elative": {
+            "singular": "valosta",
+            "plural": "valoista"
+        },
+        "illative": {
+            "singular": "valoon",
+            "plural": "valoihin"
+        },
+        "adessive": {
+            "singular": "valolla",
+            "plural": "valoilla"
+        },
+        "ablative": {
+            "singular": "valolta",
+            "plural": "valoilta"
+        },
+        "allative": {
+            "singular": "valolle",
+            "plural": "valoille"
+        },
+        "essive": {
+            "singular": "valona",
+            "plural": "valoina"
+        },
+        "translative": {
+            "singular": "valoksi",
+            "plural": "valoiksi"
+        }
+    },
+    "katu": {
+        "nominative": {
+            "singular": "katu",
+            "plural": "kadut"
+        },
+        "genitive": {
+            "singular": "kadun",
+            "plural": "katuien"
+        },
+        "partitive": {
+            "singular": "katua",
+            "plural": "katuia"
+        },
+        "inessive": {
+            "singular": "kadussa",
+            "plural": "kaduissa"
+        },
+        "elative": {
+            "singular": "kadusta",
+            "plural": "kaduista"
+        },
+        "illative": {
+            "singular": "katuun",
+            "plural": "katuihin"
+        },
+        "adessive": {
+            "singular": "kadulla",
+            "plural": "kaduilla"
+        },
+        "ablative": {
+            "singular": "kadulta",
+            "plural": "kaduilta"
+        },
+        "allative": {
+            "singular": "kadulle",
+            "plural": "kaduille"
+        },
+        "essive": {
+            "singular": "katuna",
+            "plural": "katuina"
+        },
+        "translative": {
+            "singular": "kaduksi",
+            "plural": "kaduiksi"
+        }
+    },
+    "palvelu": {
+        "nominative": {
+            "singular": "palvelu",
+            "plural": "palvelut"
+        },
+        "genitive": {
+            "singular": "palvelun",
+            "plural": [
+                "palveluien",
+                "palveluiden"
+            ]
+        },
+        "partitive": {
+            "singular": "palvelua",
+            "plural": [
+                "palveluia",
+                "palveluita"
+            ]
+        },
+        "inessive": {
+            "singular": "palvelussa",
+            "plural": "palveluissa"
+        },
+        "elative": {
+            "singular": "palvelusta",
+            "plural": "palveluista"
+        },
+        "illative": {
+            "singular": "palveluun",
+            "plural": "palveluihin"
+        },
+        "adessive": {
+            "singular": "palvelulla",
+            "plural": "palveluilla"
+        },
+        "ablative": {
+            "singular": "palvelulta",
+            "plural": "palveluilta"
+        },
+        "allative": {
+            "singular": "palvelulle",
+            "plural": "palveluille"
+        },
+        "essive": {
+            "singular": "palveluna",
+            "plural": "palveluina"
+        },
+        "translative": {
+            "singular": "palveluksi",
+            "plural": "palveluiksi"
+        }
+    },
+    "valtio": {
+        "nominative": {
+            "singular": "valtio",
+            "plural": "valtiot"
+        },
+        "genitive": {
+            "singular": "valtion",
+            "plural": "valtioiden"
+        },
+        "partitive": {
+            "singular": "valtiota",
+            "plural": "valtioita"
+        },
+        "inessive": {
+            "singular": "valtiossa",
+            "plural": "valtioissa"
+        },
+        "elative": {
+            "singular": "valtiosta",
+            "plural": "valtioista"
+        },
+        "illative": {
+            "singular": "valtioon",
+            "plural": "valtioihin"
+        },
+        "adessive": {
+            "singular": "valtiolla",
+            "plural": "valtioilla"
+        },
+        "ablative": {
+            "singular": "valtiolta",
+            "plural": "valtioilta"
+        },
+        "allative": {
+            "singular": "valtiolle",
+            "plural": "valtioille"
+        },
+        "essive": {
+            "singular": "valtiona",
+            "plural": "valtioina"
+        },
+        "translative": {
+            "singular": "valtioksi",
+            "plural": "valtioiksi"
+        }
+    },
+    "laatikko": {
+        "nominative": {
+            "singular": "laatikko",
+            "plural": "laatikot"
+        },
+        "genitive": {
+            "singular": "laatikon",
+            "plural": [
+                "laatikkoien",
+                "laatikoiden"
+            ]
+        },
+        "partitive": {
+            "singular": "laatikkoa",
+            "plural": [
+                "laatikkoia",
+                "laatikoita"
+            ]
+        },
+        "inessive": {
+            "singular": "laatikossa",
+            "plural": "laatikoissa"
+        },
+        "elative": {
+            "singular": "laatikosta",
+            "plural": "laatikoista"
+        },
+        "illative": {
+            "singular": "laatikkoon",
+            "plural": "laatikkoihin"
+        },
+        "adessive": {
+            "singular": "laatikolla",
+            "plural": "laatikoilla"
+        },
+        "ablative": {
+            "singular": "laatikolta",
+            "plural": "laatikoilta"
+        },
+        "allative": {
+            "singular": "laatikolle",
+            "plural": "laatikoille"
+        },
+        "essive": {
+            "singular": "laatikkona",
+            "plural": "laatikkoina"
+        },
+        "translative": {
+            "singular": "laatikoksi",
+            "plural": "laatikoiksi"
+        }
+    },
+    "risti": {
+        "nominative": {
+            "singular": "risti",
+            "plural": "ristit"
+        },
+        "genitive": {
+            "singular": "ristin",
+            "plural": "ristien"
+        },
+        "partitive": {
+            "singular": "ristiä",
+            "plural": "risteiä"
+        },
+        "inessive": {
+            "singular": "ristissä",
+            "plural": "risteissä"
+        },
+        "elative": {
+            "singular": "rististä",
+            "plural": "risteistä"
+        },
+        "illative": {
+            "singular": "ristiin",
+            "plural": "risteihin"
+        },
+        "adessive": {
+            "singular": "ristillä",
+            "plural": "risteillä"
+        },
+        "ablative": {
+            "singular": "ristiltä",
+            "plural": "risteiltä"
+        },
+        "allative": {
+            "singular": "ristille",
+            "plural": "risteille"
+        },
+        "essive": {
+            "singular": "ristinä",
+            "plural": "risteinä"
+        },
+        "translative": {
+            "singular": "ristiksi",
+            "plural": "risteiksi"
+        }
+    },
+    "koti": {
+        "nominative": {
+            "singular": "koti",
+            "plural": "kodit"
+        },
+        "genitive": {
+            "singular": "kodin",
+            "plural": "kotien"
+        },
+        "partitive": {
+            "singular": "kotia",
+            "plural": "koteia"
+        },
+        "inessive": {
+            "singular": "kodissa",
+            "plural": "kodeissa"
+        },
+        "elative": {
+            "singular": "kodista",
+            "plural": "kodeista"
+        },
+        "illative": {
+            "singular": "kotiin",
+            "plural": "koteihin"
+        },
+        "adessive": {
+            "singular": "kodilla",
+            "plural": "kodeilla"
+        },
+        "ablative": {
+            "singular": "kodilta",
+            "plural": "kodeilta"
+        },
+        "allative": {
+            "singular": "kodille",
+            "plural": "kodeille"
+        },
+        "essive": {
+            "singular": "kotina",
+            "plural": "koteina"
+        },
+        "translative": {
+            "singular": "kodiksi",
+            "plural": "kodeiksi"
+        }
+    },
+    "paperi": {
+        "nominative": {
+            "singular": "paperi",
+            "plural": "paperit"
+        },
+        "genitive": {
+            "singular": "paperin",
+            "plural": [
+                "paperien",
+                "papereiden"
+            ]
+        },
+        "partitive": {
+            "singular": "paperia",
+            "plural": [
+                "papereia",
+                "papereita"
+            ]
+        },
+        "inessive": {
+            "singular": "paperissa",
+            "plural": "papereissa"
+        },
+        "elative": {
+            "singular": "paperista",
+            "plural": "papereista"
+        },
+        "illative": {
+            "singular": "paperiin",
+            "plural": "papereihin"
+        },
+        "adessive": {
+            "singular": "paperilla",
+            "plural": "papereilla"
+        },
+        "ablative": {
+            "singular": "paperilta",
+            "plural": "papereilta"
+        },
+        "allative": {
+            "singular": "paperille",
+            "plural": "papereille"
+        },
+        "essive": {
+            "singular": "paperina",
+            "plural": "papereina"
+        },
+        "translative": {
+            "singular": "paperiksi",
+            "plural": "papereiksi"
+        }
+    },
+    "ovi": {
+        "nominative": {
+            "singular": "ovi",
+            "plural": "ovet"
+        },
+        "genitive": {
+            "singular": "oven",
+            "plural": "ovien"
+        },
+        "partitive": {
+            "singular": "ovea",
+            "plural": "ovia"
+        },
+        "inessive": {
+            "singular": "ovessa",
+            "plural": "ovissa"
+        },
+        "elative": {
+            "singular": "ovesta",
+            "plural": "ovista"
+        },
+        "illative": {
+            "singular": "oveen",
+            "plural": "oviin"
+        },
+        "adessive": {
+            "singular": "ovella",
+            "plural": "ovilla"
+        },
+        "ablative": {
+            "singular": "ovelta",
+            "plural": "ovilta"
+        },
+        "allative": {
+            "singular": "ovelle",
+            "plural": "oville"
+        },
+        "essive": {
+            "singular": "ovena",
+            "plural": "ovina"
+        },
+        "translative": {
+            "singular": "oveksi",
+            "plural": "oviksi"
+        }
+    },
+    "lahti": {
+        "nominative": {
+            "singular": "lahti",
+            "plural": "lahdet"
+        },
+        "genitive": {
+            "singular": "lahden",
+            "plural": "lahtien"
+        },
+        "partitive": {
+            "singular": "lahtea",
+            "plural": "lahtia"
+        },
+        "inessive": {
+            "singular": "lahdessa",
+            "plural": "lahdissa"
+        },
+        "elative": {
+            "singular": "lahdesta",
+            "plural": "lahdista"
+        },
+        "illative": {
+            "singular": "lahteen",
+            "plural": "lahtiin"
+        },
+        "adessive": {
+            "singular": "lahdella",
+            "plural": "lahdilla"
+        },
+        "ablative": {
+            "singular": "lahdelta",
+            "plural": "lahdilta"
+        },
+        "allative": {
+            "singular": "lahdelle",
+            "plural": "lahdille"
+        },
+        "essive": {
+            "singular": "lahtena",
+            "plural": "lahtina"
+        },
+        "translative": {
+            "singular": "lahdeksi",
+            "plural": "lahdiksi"
+        }
+    },
+    "nalle": {
+        "nominative": {
+            "singular": "nalle",
+            "plural": "nallet"
+        },
+        "genitive": {
+            "singular": "nallen",
+            "plural": "nalleien"
+        },
+        "partitive": {
+            "singular": "nallea",
+            "plural": "nalleia"
+        },
+        "inessive": {
+            "singular": "nallessa",
+            "plural": "nalleissa"
+        },
+        "elative": {
+            "singular": "nallesta",
+            "plural": "nalleista"
+        },
+        "illative": {
+            "singular": "nalleen",
+            "plural": "nalleihin"
+        },
+        "adessive": {
+            "singular": "nallella",
+            "plural": "nalleilla"
+        },
+        "ablative": {
+            "singular": "nallelta",
+            "plural": "nalleilta"
+        },
+        "allative": {
+            "singular": "nallelle",
+            "plural": "nalleille"
+        },
+        "essive": {
+            "singular": "nallena",
+            "plural": "nalleina"
+        },
+        "translative": {
+            "singular": "nalleksi",
+            "plural": "nalleiksi"
+        }
+    },
+    "nukke": {
+        "nominative": {
+            "singular": "nukke",
+            "plural": "nuket"
+        },
+        "genitive": {
+            "singular": "nuken",
+            "plural": "nukkeien"
+        },
+        "partitive": {
+            "singular": "nukkea",
+            "plural": "nukkeia"
+        },
+        "inessive": {
+            "singular": "nukessa",
+            "plural": "nukeissa"
+        },
+        "elative": {
+            "singular": "nukesta",
+            "plural": "nukeista"
+        },
+        "illative": {
+            "singular": "nukkeen",
+            "plural": "nukkeihin"
+        },
+        "adessive": {
+            "singular": "nukella",
+            "plural": "nukeilla"
+        },
+        "ablative": {
+            "singular": "nukelta",
+            "plural": "nukeilta"
+        },
+        "allative": {
+            "singular": "nukelle",
+            "plural": "nukeille"
+        },
+        "essive": {
+            "singular": "nukkena",
+            "plural": "nukkeina"
+        },
+        "translative": {
+            "singular": "nukeksi",
+            "plural": "nukeiksi"
+        }
+    },
+    "kala": {
+        "nominative": {
+            "singular": "kala",
+            "plural": "kalat"
+        },
+        "genitive": {
+            "singular": "kalan",
+            "plural": "kaloien"
+        },
+        "partitive": {
+            "singular": "kalaa",
+            "plural": "kaloia"
+        },
+        "inessive": {
+            "singular": "kalassa",
+            "plural": "kaloissa"
+        },
+        "elative": {
+            "singular": "kalasta",
+            "plural": "kaloista"
+        },
+        "illative": {
+            "singular": "kalaan",
+            "plural": "kaloihin"
+        },
+        "adessive": {
+            "singular": "kalalla",
+            "plural": "kaloilla"
+        },
+        "ablative": {
+            "singular": "kalalta",
+            "plural": "kaloilta"
+        },
+        "allative": {
+            "singular": "kalalle",
+            "plural": "kaloille"
+        },
+        "essive": {
+            "singular": "kalana",
+            "plural": "kaloina"
+        },
+        "translative": {
+            "singular": "kalaksi",
+            "plural": "kaloiksi"
+        }
+    },
+    "rauta": {
+        "nominative": {
+            "singular": "rauta",
+            "plural": "raudat"
+        },
+        "genitive": {
+            "singular": "raudan",
+            "plural": "rautoien"
+        },
+        "partitive": {
+            "singular": "rautaa",
+            "plural": "rautoia"
+        },
+        "inessive": {
+            "singular": "raudassa",
+            "plural": "raudoissa"
+        },
+        "elative": {
+            "singular": "raudasta",
+            "plural": "raudoista"
+        },
+        "illative": {
+            "singular": "rautaan",
+            "plural": "rautoihin"
+        },
+        "adessive": {
+            "singular": "raudalla",
+            "plural": "raudoilla"
+        },
+        "ablative": {
+            "singular": "raudalta",
+            "plural": "raudoilta"
+        },
+        "allative": {
+            "singular": "raudalle",
+            "plural": "raudoille"
+        },
+        "essive": {
+            "singular": "rautana",
+            "plural": "rautoina"
+        },
+        "translative": {
+            "singular": "raudaksi",
+            "plural": "raudoiksi"
+        }
+    },
+    "koira": {
+        "nominative": {
+            "singular": "koira",
+            "plural": "koirat"
+        },
+        "genitive": {
+            "singular": "koiran",
+            "plural": "koirien"
+        },
+        "partitive": {
+            "singular": "koiraa",
+            "plural": "koiria"
+        },
+        "inessive": {
+            "singular": "koirassa",
+            "plural": "koirissa"
+        },
+        "elative": {
+            "singular": "koirasta",
+            "plural": "koirista"
+        },
+        "illative": {
+            "singular": "koiraan",
+            "plural": "koiriin"
+        },
+        "adessive": {
+            "singular": "koiralla",
+            "plural": "koirilla"
+        },
+        "ablative": {
+            "singular": "koiralta",
+            "plural": "koirilta"
+        },
+        "allative": {
+            "singular": "koiralle",
+            "plural": "koirille"
+        },
+        "essive": {
+            "singular": "koirana",
+            "plural": "koirina"
+        },
+        "translative": {
+            "singular": "koiraksi",
+            "plural": "koiriksi"
+        }
+    },
+    "sota": {
+        "nominative": {
+            "singular": "sota",
+            "plural": "sodat"
+        },
+        "genitive": {
+            "singular": "sodan",
+            "plural": "sotien"
+        },
+        "partitive": {
+            "singular": "sotaa",
+            "plural": "sotia"
+        },
+        "inessive": {
+            "singular": "sodassa",
+            "plural": "sodissa"
+        },
+        "elative": {
+            "singular": "sodasta",
+            "plural": "sodista"
+        },
+        "illative": {
+            "singular": "sotaan",
+            "plural": "sotiin"
+        },
+        "adessive": {
+            "singular": "sodalla",
+            "plural": "sodilla"
+        },
+        "ablative": {
+            "singular": "sodalta",
+            "plural": "sodilta"
+        },
+        "allative": {
+            "singular": "sodalle",
+            "plural": "sodille"
+        },
+        "essive": {
+            "singular": "sotana",
+            "plural": "sotina"
+        },
+        "translative": {
+            "singular": "sodaksi",
+            "plural": "sodiksi"
+        }
+    },
+    "omena": {
+        "nominative": {
+            "singular": "omena",
+            "plural": "omenat"
+        },
+        "genitive": {
+            "singular": "omenan",
+            "plural": "omenoiden"
+        },
+        "partitive": {
+            "singular": "omenaa",
+            "plural": "omenoita"
+        },
+        "inessive": {
+            "singular": "omenassa",
+            "plural": "omenoissa"
+        },
+        "elative": {
+            "singular": "omenasta",
+            "plural": "omenoista"
+        },
+        "illative": {
+            "singular": "omenaan",
+            "plural": "omenoihin"
+        },
+        "adessive": {
+            "singular": "omenalla",
+            "plural": "omenoilla"
+        },
+        "ablative": {
+            "singular": "omenalta",
+            "plural": "omenoilta"
+        },
+        "allative": {
+            "singular": "omenalle",
+            "plural": "omenoille"
+        },
+        "essive": {
+            "singular": "omenana",
+            "plural": "omenoina"
+        },
+        "translative": {
+            "singular": "omenaksi",
+            "plural": "omenoiksi"
+        }
+    },
+    "kulkija": {
+        "nominative": {
+            "singular": "kulkija",
+            "plural": "kulkijat"
+        },
+        "genitive": {
+            "singular": "kulkijan",
+            "plural": "kulkijoiden"
+        },
+        "partitive": {
+            "singular": "kulkijaa",
+            "plural": "kulkijoita"
+        },
+        "inessive": {
+            "singular": "kulkijassa",
+            "plural": "kulkijoissa"
+        },
+        "elative": {
+            "singular": "kulkijasta",
+            "plural": "kulkijoista"
+        },
+        "illative": {
+            "singular": "kulkijaan",
+            "plural": "kulkijoihin"
+        },
+        "adessive": {
+            "singular": "kulkijalla",
+            "plural": "kulkijoilla"
+        },
+        "ablative": {
+            "singular": "kulkijalta",
+            "plural": "kulkijoilta"
+        },
+        "allative": {
+            "singular": "kulkijalle",
+            "plural": "kulkijoille"
+        },
+        "essive": {
+            "singular": "kulkijana",
+            "plural": "kulkijoina"
+        },
+        "translative": {
+            "singular": "kulkijaksi",
+            "plural": "kulkijoiksi"
+        }
+    },
+    "katiska": {
+        "nominative": {
+            "singular": "katiska",
+            "plural": "katiskat"
+        },
+        "genitive": {
+            "singular": "katiskan",
+            "plural": [
+                "katiskoien",
+                "katiskoiden"
+            ]
+        },
+        "partitive": {
+            "singular": "katiskaa",
+            "plural": [
+                "katiskoia",
+                "katiskoita"
+            ]
+        },
+        "inessive": {
+            "singular": "katiskassa",
+            "plural": "katiskoissa"
+        },
+        "elative": {
+            "singular": "katiskasta",
+            "plural": "katiskoista"
+        },
+        "illative": {
+            "singular": "katiskaan",
+            "plural": "katiskoihin"
+        },
+        "adessive": {
+            "singular": "katiskalla",
+            "plural": "katiskoilla"
+        },
+        "ablative": {
+            "singular": "katiskalta",
+            "plural": "katiskoilta"
+        },
+        "allative": {
+            "singular": "katiskalle",
+            "plural": "katiskoille"
+        },
+        "essive": {
+            "singular": "katiskana",
+            "plural": "katiskoina"
+        },
+        "translative": {
+            "singular": "katiskaksi",
+            "plural": "katiskoiksi"
+        }
+    },
+    "solakka": {
+        "nominative": {
+            "singular": "solakka",
+            "plural": "solakat"
+        },
+        "genitive": {
+            "singular": "solakan",
+            "plural": [
+                "solakkoien",
+                "solakoiden"
+            ]
+        },
+        "partitive": {
+            "singular": "solakkaa",
+            "plural": [
+                "solakkoia",
+                "solakoita"
+            ]
+        },
+        "inessive": {
+            "singular": "solakassa",
+            "plural": "solakoissa"
+        },
+        "elative": {
+            "singular": "solakasta",
+            "plural": "solakoista"
+        },
+        "illative": {
+            "singular": "solakkaan",
+            "plural": "solakkoihin"
+        },
+        "adessive": {
+            "singular": "solakalla",
+            "plural": "solakoilla"
+        },
+        "ablative": {
+            "singular": "solakalta",
+            "plural": "solakoilta"
+        },
+        "allative": {
+            "singular": "solakalle",
+            "plural": "solakoille"
+        },
+        "essive": {
+            "singular": "solakkana",
+            "plural": "solakkoina"
+        },
+        "translative": {
+            "singular": "solakaksi",
+            "plural": "solakoiksi"
+        }
+    },
+    "navetta": {
+        "nominative": {
+            "singular": "navetta",
+            "plural": "navetat"
+        },
+        "genitive": {
+            "singular": "navetan",
+            "plural": [
+                "navettoien",
+                "navetoiden"
+            ]
+        },
+        "partitive": {
+            "singular": "navettaa",
+            "plural": [
+                "navettoia",
+                "navetoita"
+            ]
+        },
+        "inessive": {
+            "singular": "navetassa",
+            "plural": "navetoissa"
+        },
+        "elative": {
+            "singular": "navetasta",
+            "plural": "navetoista"
+        },
+        "illative": {
+            "singular": "navettaan",
+            "plural": "navettoihin"
+        },
+        "adessive": {
+            "singular": "navetalla",
+            "plural": "navetoilla"
+        },
+        "ablative": {
+            "singular": "navetalta",
+            "plural": "navetoilta"
+        },
+        "allative": {
+            "singular": "navetalle",
+            "plural": "navetoille"
+        },
+        "essive": {
+            "singular": "navettana",
+            "plural": "navettoina"
+        },
+        "translative": {
+            "singular": "navetaksi",
+            "plural": "navetoiksi"
+        }
+    },
+    "korkea": {
+        "nominative": {
+            "singular": "korkea",
+            "plural": "korkeat"
+        },
+        "genitive": {
+            "singular": "korkean",
+            "plural": "korkeiden"
+        },
+        "partitive": {
+            "singular": "korkeaa",
+            "plural": "korkeita"
+        },
+        "inessive": {
+            "singular": "korkeassa",
+            "plural": "korkeissa"
+        },
+        "elative": {
+            "singular": "korkeasta",
+            "plural": "korkeista"
+        },
+        "illative": {
+            "singular": "korkeaan",
+            "plural": [
+                "korkeihin",
+                "korkeisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "korkealla",
+            "plural": "korkeilla"
+        },
+        "ablative": {
+            "singular": "korkealta",
+            "plural": "korkeilta"
+        },
+        "allative": {
+            "singular": "korkealle",
+            "plural": "korkeille"
+        },
+        "essive": {
+            "singular": "korkeana",
+            "plural": "korkeina"
+        },
+        "translative": {
+            "singular": "korkeaksi",
+            "plural": "korkeiksi"
+        }
+    },
+    "vanhempi": {
+        "nominative": {
+            "singular": "vanhempi",
+            "plural": "vanhemmat"
+        },
+        "genitive": {
+            "singular": "vanhemman",
+            "plural": "vanhempien"
+        },
+        "partitive": {
+            "singular": "vanhempaa",
+            "plural": "vanhempia"
+        },
+        "inessive": {
+            "singular": "vanhemmassa",
+            "plural": "vanhemmissa"
+        },
+        "elative": {
+            "singular": "vanhemmasta",
+            "plural": "vanhemmista"
+        },
+        "illative": {
+            "singular": "vanhempaan",
+            "plural": "vanhempiin"
+        },
+        "adessive": {
+            "singular": "vanhemmalla",
+            "plural": "vanhemmilla"
+        },
+        "ablative": {
+            "singular": "vanhemmalta",
+            "plural": "vanhemmilta"
+        },
+        "allative": {
+            "singular": "vanhemmalle",
+            "plural": "vanhemmille"
+        },
+        "essive": {
+            "singular": "vanhempana",
+            "plural": "vanhempina"
+        },
+        "translative": {
+            "singular": "vanhemmaksi",
+            "plural": "vanhemmiksi"
+        }
+    },
+    "isompi": {
+        "nominative": {
+            "singular": "isompi",
+            "plural": "isommat"
+        },
+        "genitive": {
+            "singular": "isomman",
+            "plural": "isompien"
+        },
+        "partitive": {
+            "singular": "isompaa",
+            "plural": "isompia"
+        },
+        "inessive": {
+            "singular": "isommassa",
+            "plural": "isommissa"
+        },
+        "elative": {
+            "singular": "isommasta",
+            "plural": "isommista"
+        },
+        "illative": {
+            "singular": "isompaan",
+            "plural": "isompiin"
+        },
+        "adessive": {
+            "singular": "isommalla",
+            "plural": "isommilla"
+        },
+        "ablative": {
+            "singular": "isommalta",
+            "plural": "isommilta"
+        },
+        "allative": {
+            "singular": "isommalle",
+            "plural": "isommille"
+        },
+        "essive": {
+            "singular": "isompana",
+            "plural": "isompina"
+        },
+        "translative": {
+            "singular": "isommaksi",
+            "plural": "isommiksi"
+        }
+    },
+    "vapaa": {
+        "nominative": {
+            "singular": "vapaa",
+            "plural": "vapaat"
+        },
+        "genitive": {
+            "singular": "vapaan",
+            "plural": "vapaiden"
+        },
+        "partitive": {
+            "singular": "vapaata",
+            "plural": "vapaita"
+        },
+        "inessive": {
+            "singular": "vapaassa",
+            "plural": "vapaissa"
+        },
+        "elative": {
+            "singular": "vapaasta",
+            "plural": "vapaista"
+        },
+        "illative": {
+            "singular": "vapaaseen",
+            "plural": "vapaisiin"
+        },
+        "adessive": {
+            "singular": "vapaalla",
+            "plural": "vapailla"
+        },
+        "ablative": {
+            "singular": "vapaalta",
+            "plural": "vapailta"
+        },
+        "allative": {
+            "singular": "vapaalle",
+            "plural": "vapaille"
+        },
+        "essive": {
+            "singular": "vapaana",
+            "plural": "vapaina"
+        },
+        "translative": {
+            "singular": "vapaaksi",
+            "plural": "vapaiksi"
+        }
+    },
+    "maa": {
+        "nominative": {
+            "singular": "maa",
+            "plural": "maat"
+        },
+        "genitive": {
+            "singular": "maan",
+            "plural": "maiden"
+        },
+        "partitive": {
+            "singular": "maata",
+            "plural": "maita"
+        },
+        "inessive": {
+            "singular": "maassa",
+            "plural": "maissa"
+        },
+        "elative": {
+            "singular": "maasta",
+            "plural": "maista"
+        },
+        "illative": {
+            "singular": "maahan",
+            "plural": "maihin"
+        },
+        "adessive": {
+            "singular": "maalla",
+            "plural": "mailla"
+        },
+        "ablative": {
+            "singular": "maalta",
+            "plural": "mailta"
+        },
+        "allative": {
+            "singular": "maalle",
+            "plural": "maille"
+        },
+        "essive": {
+            "singular": "maana",
+            "plural": "maina"
+        },
+        "translative": {
+            "singular": "maaksi",
+            "plural": "maiksi"
+        }
+    },
+    "voi": {
+        "nominative": {
+            "singular": "voi",
+            "plural": "voit"
+        },
+        "genitive": {
+            "singular": "voin",
+            "plural": "voiden"
+        },
+        "partitive": {
+            "singular": "voita",
+            "plural": "voita"
+        },
+        "inessive": {
+            "singular": "voissa",
+            "plural": "voissa"
+        },
+        "elative": {
+            "singular": "voista",
+            "plural": "voista"
+        },
+        "illative": {
+            "singular": "voihin",
+            "plural": "voihin"
+        },
+        "adessive": {
+            "singular": "voilla",
+            "plural": "voilla"
+        },
+        "ablative": {
+            "singular": "voilta",
+            "plural": "voilta"
+        },
+        "allative": {
+            "singular": "voille",
+            "plural": "voille"
+        },
+        "essive": {
+            "singular": "voina",
+            "plural": "voina"
+        },
+        "translative": {
+            "singular": "voiksi",
+            "plural": "voiksi"
+        }
+    },
+    "suo": {
+        "nominative": {
+            "singular": "suo",
+            "plural": "suot"
+        },
+        "genitive": {
+            "singular": "suon",
+            "plural": "soiden"
+        },
+        "partitive": {
+            "singular": "suota",
+            "plural": "soita"
+        },
+        "inessive": {
+            "singular": "suossa",
+            "plural": "soissa"
+        },
+        "elative": {
+            "singular": "suosta",
+            "plural": "soista"
+        },
+        "illative": {
+            "singular": "suohon",
+            "plural": "soihin"
+        },
+        "adessive": {
+            "singular": "suolla",
+            "plural": "soilla"
+        },
+        "ablative": {
+            "singular": "suolta",
+            "plural": "soilta"
+        },
+        "allative": {
+            "singular": "suolle",
+            "plural": "soille"
+        },
+        "essive": {
+            "singular": "suona",
+            "plural": "soina"
+        },
+        "translative": {
+            "singular": "suoksi",
+            "plural": "soiksi"
+        }
+    },
+    "tie": {
+        "nominative": {
+            "singular": "tie",
+            "plural": "tiet"
+        },
+        "genitive": {
+            "singular": "tien",
+            "plural": "teiden"
+        },
+        "partitive": {
+            "singular": "tietä",
+            "plural": "teitä"
+        },
+        "inessive": {
+            "singular": "tiessä",
+            "plural": "teissä"
+        },
+        "elative": {
+            "singular": "tiestä",
+            "plural": "teistä"
+        },
+        "illative": {
+            "singular": "tiehen",
+            "plural": "teihin"
+        },
+        "adessive": {
+            "singular": "tiellä",
+            "plural": "teillä"
+        },
+        "ablative": {
+            "singular": "tieltä",
+            "plural": "teiltä"
+        },
+        "allative": {
+            "singular": "tielle",
+            "plural": "teille"
+        },
+        "essive": {
+            "singular": "tienä",
+            "plural": "teinä"
+        },
+        "translative": {
+            "singular": "tieksi",
+            "plural": "teiksi"
+        }
+    },
+    "työ": {
+        "nominative": {
+            "singular": "työ",
+            "plural": "työt"
+        },
+        "genitive": {
+            "singular": "työn",
+            "plural": "töiden"
+        },
+        "partitive": {
+            "singular": "työtä",
+            "plural": "töitä"
+        },
+        "inessive": {
+            "singular": "työssä",
+            "plural": "töissä"
+        },
+        "elative": {
+            "singular": "työstä",
+            "plural": "töistä"
+        },
+        "illative": {
+            "singular": "työhön",
+            "plural": "töihin"
+        },
+        "adessive": {
+            "singular": "työllä",
+            "plural": "töillä"
+        },
+        "ablative": {
+            "singular": "työltä",
+            "plural": "töiltä"
+        },
+        "allative": {
+            "singular": "työlle",
+            "plural": "töille"
+        },
+        "essive": {
+            "singular": "työnä",
+            "plural": "töinä"
+        },
+        "translative": {
+            "singular": "työksi",
+            "plural": "töiksi"
+        }
+    },
+    "filee": {
+        "nominative": {
+            "singular": "filee",
+            "plural": "fileet"
+        },
+        "genitive": {
+            "singular": "fileen",
+            "plural": "fileiden"
+        },
+        "partitive": {
+            "singular": "fileetä",
+            "plural": "fileitä"
+        },
+        "inessive": {
+            "singular": "fileessä",
+            "plural": "fileissä"
+        },
+        "elative": {
+            "singular": "fileestä",
+            "plural": "fileistä"
+        },
+        "illative": {
+            "singular": [
+                "fileehen",
+                "fileeseen"
+            ],
+            "plural": [
+                "fileihin",
+                "fileisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "fileellä",
+            "plural": "fileillä"
+        },
+        "ablative": {
+            "singular": "fileeltä",
+            "plural": "fileiltä"
+        },
+        "allative": {
+            "singular": "fileelle",
+            "plural": "fileille"
+        },
+        "essive": {
+            "singular": "fileenä",
+            "plural": "fileinä"
+        },
+        "translative": {
+            "singular": "fileeksi",
+            "plural": "fileiksi"
+        }
+    },
+    "rosé": {
+        "nominative": {
+            "singular": "rosé",
+            "plural": "rosét"
+        },
+        "genitive": {
+            "singular": "rosén",
+            "plural": "roséiden"
+        },
+        "partitive": {
+            "singular": "roséta",
+            "plural": "roséita"
+        },
+        "inessive": {
+            "singular": "roséssa",
+            "plural": "roséissa"
+        },
+        "elative": {
+            "singular": "rosésta",
+            "plural": "roséista"
+        },
+        "illative": {
+            "singular": "roséhen",
+            "plural": "roséihin"
+        },
+        "adessive": {
+            "singular": "rosélla",
+            "plural": "roséilla"
+        },
+        "ablative": {
+            "singular": "rosélta",
+            "plural": "roséilta"
+        },
+        "allative": {
+            "singular": "rosélle",
+            "plural": "roséille"
+        },
+        "essive": {
+            "singular": "roséna",
+            "plural": "roséina"
+        },
+        "translative": {
+            "singular": "roséksi",
+            "plural": "roséiksi"
+        }
+    },
+    "parfait": {
+        "nominative": {
+            "singular": "parfait",
+            "plural": "parfaitt"
+        },
+        "genitive": {
+            "singular": "parfaitn",
+            "plural": "parfaitiden"
+        },
+        "partitive": {
+            "singular": "parfaitta",
+            "plural": "parfaitita"
+        },
+        "inessive": {
+            "singular": "parfaitssa",
+            "plural": "parfaitissa"
+        },
+        "elative": {
+            "singular": "parfaitsta",
+            "plural": "parfaitista"
+        },
+        "illative": {
+            "singular": "parfaithen",
+            "plural": "parfaitihin"
+        },
+        "adessive": {
+            "singular": "parfaitlla",
+            "plural": "parfaitilla"
+        },
+        "ablative": {
+            "singular": "parfaitlta",
+            "plural": "parfaitilta"
+        },
+        "allative": {
+            "singular": "parfaitlle",
+            "plural": "parfaitille"
+        },
+        "essive": {
+            "singular": "parfaitna",
+            "plural": "parfaitina"
+        },
+        "translative": {
+            "singular": "parfaitksi",
+            "plural": "parfaitiksi"
+        }
+    },
+    "tiili": {
+        "nominative": {
+            "singular": "tiili",
+            "plural": "tiilet"
+        },
+        "genitive": {
+            "singular": "tiilen",
+            "plural": "tiilien"
+        },
+        "partitive": {
+            "singular": "tiiltä",
+            "plural": "tiiliä"
+        },
+        "inessive": {
+            "singular": "tiilessä",
+            "plural": "tiilissä"
+        },
+        "elative": {
+            "singular": "tiilestä",
+            "plural": "tiilistä"
+        },
+        "illative": {
+            "singular": "tiileen",
+            "plural": "tiiliin"
+        },
+        "adessive": {
+            "singular": "tiilellä",
+            "plural": "tiilillä"
+        },
+        "ablative": {
+            "singular": "tiileltä",
+            "plural": "tiililtä"
+        },
+        "allative": {
+            "singular": "tiilelle",
+            "plural": "tiilille"
+        },
+        "essive": {
+            "singular": "tiilenä",
+            "plural": "tiilinä"
+        },
+        "translative": {
+            "singular": "tiileksi",
+            "plural": "tiiliksi"
+        }
+    },
+    "uni": {
+        "nominative": {
+            "singular": "uni",
+            "plural": "unet"
+        },
+        "genitive": {
+            "singular": "unen",
+            "plural": "unien"
+        },
+        "partitive": {
+            "singular": "unta",
+            "plural": "unia"
+        },
+        "inessive": {
+            "singular": "unessa",
+            "plural": "unissa"
+        },
+        "elative": {
+            "singular": "unesta",
+            "plural": "unista"
+        },
+        "illative": {
+            "singular": "uneen",
+            "plural": "uniin"
+        },
+        "adessive": {
+            "singular": "unella",
+            "plural": "unilla"
+        },
+        "ablative": {
+            "singular": "unelta",
+            "plural": "unilta"
+        },
+        "allative": {
+            "singular": "unelle",
+            "plural": "unille"
+        },
+        "essive": {
+            "singular": "unena",
+            "plural": "unina"
+        },
+        "translative": {
+            "singular": "uneksi",
+            "plural": "uniksi"
+        }
+    },
+    "toimi": {
+        "nominative": {
+            "singular": "toimi",
+            "plural": "toimet"
+        },
+        "genitive": {
+            "singular": "toimen",
+            "plural": "toimien"
+        },
+        "partitive": {
+            "singular": "tointa",
+            "plural": "toimia"
+        },
+        "inessive": {
+            "singular": "toimessa",
+            "plural": "toimissa"
+        },
+        "elative": {
+            "singular": "toimesta",
+            "plural": "toimista"
+        },
+        "illative": {
+            "singular": "toimeen",
+            "plural": "toimiin"
+        },
+        "adessive": {
+            "singular": "toimella",
+            "plural": "toimilla"
+        },
+        "ablative": {
+            "singular": "toimelta",
+            "plural": "toimilta"
+        },
+        "allative": {
+            "singular": "toimelle",
+            "plural": "toimille"
+        },
+        "essive": {
+            "singular": "toimena",
+            "plural": "toimina"
+        },
+        "translative": {
+            "singular": "toimeksi",
+            "plural": "toimiksi"
+        }
+    },
+    "pieni": {
+        "nominative": {
+            "singular": "pieni",
+            "plural": "pienet"
+        },
+        "genitive": {
+            "singular": "pienen",
+            "plural": "pienien"
+        },
+        "partitive": {
+            "singular": "pientä",
+            "plural": "pieniä"
+        },
+        "inessive": {
+            "singular": "pienessä",
+            "plural": "pienissä"
+        },
+        "elative": {
+            "singular": "pienestä",
+            "plural": "pienistä"
+        },
+        "illative": {
+            "singular": "pieneen",
+            "plural": "pieniin"
+        },
+        "adessive": {
+            "singular": "pienellä",
+            "plural": "pienillä"
+        },
+        "ablative": {
+            "singular": "pieneltä",
+            "plural": "pieniltä"
+        },
+        "allative": {
+            "singular": "pienelle",
+            "plural": "pienille"
+        },
+        "essive": {
+            "singular": "pienenä",
+            "plural": "pieninä"
+        },
+        "translative": {
+            "singular": "pieneksi",
+            "plural": "pieniksi"
+        }
+    },
+    "käsi": {
+        "nominative": {
+            "singular": "käsi",
+            "plural": "kädet"
+        },
+        "genitive": {
+            "singular": "käden",
+            "plural": "käsien"
+        },
+        "partitive": {
+            "singular": "kättä",
+            "plural": "käsiä"
+        },
+        "inessive": {
+            "singular": "kädessä",
+            "plural": "käsissä"
+        },
+        "elative": {
+            "singular": "kädestä",
+            "plural": "käsistä"
+        },
+        "illative": {
+            "singular": "käteen",
+            "plural": "käsiin"
+        },
+        "adessive": {
+            "singular": "kädellä",
+            "plural": "käsillä"
+        },
+        "ablative": {
+            "singular": "kädeltä",
+            "plural": "käsiltä"
+        },
+        "allative": {
+            "singular": "kädelle",
+            "plural": "käsille"
+        },
+        "essive": {
+            "singular": "kätenä",
+            "plural": "käsinä"
+        },
+        "translative": {
+            "singular": "kädeksi",
+            "plural": "käsiksi"
+        }
+    },
+    "uusi": {
+        "nominative": {
+            "singular": "uusi",
+            "plural": "uudet"
+        },
+        "genitive": {
+            "singular": "uuden",
+            "plural": "uusien"
+        },
+        "partitive": {
+            "singular": "uutta",
+            "plural": "uusia"
+        },
+        "inessive": {
+            "singular": "uudessa",
+            "plural": "uusissa"
+        },
+        "elative": {
+            "singular": "uudesta",
+            "plural": "uusista"
+        },
+        "illative": {
+            "singular": "uuteen",
+            "plural": "uusiin"
+        },
+        "adessive": {
+            "singular": "uudella",
+            "plural": "uusilla"
+        },
+        "ablative": {
+            "singular": "uudelta",
+            "plural": "uusilta"
+        },
+        "allative": {
+            "singular": "uudelle",
+            "plural": "uusille"
+        },
+        "essive": {
+            "singular": "uutena",
+            "plural": "uusina"
+        },
+        "translative": {
+            "singular": "uudeksi",
+            "plural": "uusiksi"
+        }
+    },
+    "kynsi": {
+        "nominative": {
+            "singular": "kynsi",
+            "plural": "kynnet"
+        },
+        "genitive": {
+            "singular": "kynnen",
+            "plural": "kynsien"
+        },
+        "partitive": {
+            "singular": "kynttä",
+            "plural": "kynsiä"
+        },
+        "inessive": {
+            "singular": "kynnessä",
+            "plural": "kynsissä"
+        },
+        "elative": {
+            "singular": "kynnestä",
+            "plural": "kynsistä"
+        },
+        "illative": {
+            "singular": "kynteen",
+            "plural": "kynsiin"
+        },
+        "adessive": {
+            "singular": "kynnellä",
+            "plural": "kynsillä"
+        },
+        "ablative": {
+            "singular": "kynneltä",
+            "plural": "kynsiltä"
+        },
+        "allative": {
+            "singular": "kynnelle",
+            "plural": "kynsille"
+        },
+        "essive": {
+            "singular": "kyntenä",
+            "plural": "kynsinä"
+        },
+        "translative": {
+            "singular": "kynneksi",
+            "plural": "kynsiksi"
+        }
+    },
+    "korsi": {
+        "nominative": {
+            "singular": "korsi",
+            "plural": "korret"
+        },
+        "genitive": {
+            "singular": "korren",
+            "plural": "korsien"
+        },
+        "partitive": {
+            "singular": "kortta",
+            "plural": "korsia"
+        },
+        "inessive": {
+            "singular": "korressa",
+            "plural": "korsissa"
+        },
+        "elative": {
+            "singular": "korresta",
+            "plural": "korsista"
+        },
+        "illative": {
+            "singular": "korteen",
+            "plural": "korsiin"
+        },
+        "adessive": {
+            "singular": "korrella",
+            "plural": "korsilla"
+        },
+        "ablative": {
+            "singular": "korrelta",
+            "plural": "korsilta"
+        },
+        "allative": {
+            "singular": "korrelle",
+            "plural": "korsille"
+        },
+        "essive": {
+            "singular": "kortena",
+            "plural": "korsina"
+        },
+        "translative": {
+            "singular": "korreksi",
+            "plural": "korsiksi"
+        }
+    },
+    "jälsi": {
+        "nominative": {
+            "singular": "jälsi",
+            "plural": "jället"
+        },
+        "genitive": {
+            "singular": "jällen",
+            "plural": "jälsien"
+        },
+        "partitive": {
+            "singular": "jälttä",
+            "plural": "jälsiä"
+        },
+        "inessive": {
+            "singular": "jällessä",
+            "plural": "jälsissä"
+        },
+        "elative": {
+            "singular": "jällestä",
+            "plural": "jälsistä"
+        },
+        "illative": {
+            "singular": "jälteen",
+            "plural": "jälsiin"
+        },
+        "adessive": {
+            "singular": "jällellä",
+            "plural": "jälsillä"
+        },
+        "ablative": {
+            "singular": "jälleltä",
+            "plural": "jälsiltä"
+        },
+        "allative": {
+            "singular": "jällelle",
+            "plural": "jälsille"
+        },
+        "essive": {
+            "singular": "jältenä",
+            "plural": "jälsinä"
+        },
+        "translative": {
+            "singular": "jälleksi",
+            "plural": "jälsiksi"
+        }
+    },
+    "lapsi": {
+        "nominative": {
+            "singular": "lapsi",
+            "plural": "lapset"
+        },
+        "genitive": {
+            "singular": "lapsen",
+            "plural": "lapsien"
+        },
+        "partitive": {
+            "singular": "lasta",
+            "plural": "lapsia"
+        },
+        "inessive": {
+            "singular": "lapsessa",
+            "plural": "lapsissa"
+        },
+        "elative": {
+            "singular": "lapsesta",
+            "plural": "lapsista"
+        },
+        "illative": {
+            "singular": "lapseen",
+            "plural": "lapsiin"
+        },
+        "adessive": {
+            "singular": "lapsella",
+            "plural": "lapsilla"
+        },
+        "ablative": {
+            "singular": "lapselta",
+            "plural": "lapsilta"
+        },
+        "allative": {
+            "singular": "lapselle",
+            "plural": "lapsille"
+        },
+        "essive": {
+            "singular": "lapsena",
+            "plural": "lapsina"
+        },
+        "translative": {
+            "singular": "lapseksi",
+            "plural": "lapsiksi"
+        }
+    },
+    "veitsi": {
+        "nominative": {
+            "singular": "veitsi",
+            "plural": "veitset"
+        },
+        "genitive": {
+            "singular": "veitsen",
+            "plural": "veitsien"
+        },
+        "partitive": {
+            "singular": "veistä",
+            "plural": "veitsiä"
+        },
+        "inessive": {
+            "singular": "veitsessä",
+            "plural": "veitsissä"
+        },
+        "elative": {
+            "singular": "veitsestä",
+            "plural": "veitsistä"
+        },
+        "illative": {
+            "singular": "veitseen",
+            "plural": "veitsiin"
+        },
+        "adessive": {
+            "singular": "veitsellä",
+            "plural": "veitsillä"
+        },
+        "ablative": {
+            "singular": "veitseltä",
+            "plural": "veitsiltä"
+        },
+        "allative": {
+            "singular": "veitselle",
+            "plural": "veitsille"
+        },
+        "essive": {
+            "singular": "veitsenä",
+            "plural": "veitsinä"
+        },
+        "translative": {
+            "singular": "veitseksi",
+            "plural": "veitsiksi"
+        }
+    },
+    "kaksi": {
+        "nominative": {
+            "singular": "kaksi",
+            "plural": "kahdet"
+        },
+        "genitive": {
+            "singular": "kahden",
+            "plural": "kaksien"
+        },
+        "partitive": {
+            "singular": "kahta",
+            "plural": "kaksia"
+        },
+        "inessive": {
+            "singular": "kahdessa",
+            "plural": "kaksissa"
+        },
+        "elative": {
+            "singular": "kahdesta",
+            "plural": "kaksista"
+        },
+        "illative": {
+            "singular": "kahteen",
+            "plural": "kaksiin"
+        },
+        "adessive": {
+            "singular": "kahdella",
+            "plural": "kaksilla"
+        },
+        "ablative": {
+            "singular": "kahdelta",
+            "plural": "kaksilta"
+        },
+        "allative": {
+            "singular": "kahdelle",
+            "plural": "kaksille"
+        },
+        "essive": {
+            "singular": "kahtena",
+            "plural": "kaksina"
+        },
+        "translative": {
+            "singular": "kahdeksi",
+            "plural": "kaksiksi"
+        }
+    },
+    "yksi": {
+        "nominative": {
+            "singular": "yksi",
+            "plural": "yhdet"
+        },
+        "genitive": {
+            "singular": "yhden",
+            "plural": "yksien"
+        },
+        "partitive": {
+            "singular": "yhtä",
+            "plural": "yksiä"
+        },
+        "inessive": {
+            "singular": "yhdessä",
+            "plural": "yksissä"
+        },
+        "elative": {
+            "singular": "yhdestä",
+            "plural": "yksistä"
+        },
+        "illative": {
+            "singular": "yhteen",
+            "plural": "yksiin"
+        },
+        "adessive": {
+            "singular": "yhdellä",
+            "plural": "yksillä"
+        },
+        "ablative": {
+            "singular": "yhdeltä",
+            "plural": "yksiltä"
+        },
+        "allative": {
+            "singular": "yhdelle",
+            "plural": "yksille"
+        },
+        "essive": {
+            "singular": "yhtenä",
+            "plural": "yksinä"
+        },
+        "translative": {
+            "singular": "yhdeksi",
+            "plural": "yksiksi"
+        }
+    },
+    "sisar": {
+        "nominative": {
+            "singular": "sisar",
+            "plural": "sisaret"
+        },
+        "genitive": {
+            "singular": "sisaren",
+            "plural": "sisarien"
+        },
+        "partitive": {
+            "singular": "sisarta",
+            "plural": "sisaria"
+        },
+        "inessive": {
+            "singular": "sisaressa",
+            "plural": "sisarissa"
+        },
+        "elative": {
+            "singular": "sisaresta",
+            "plural": "sisarista"
+        },
+        "illative": {
+            "singular": "sisareen",
+            "plural": "sisariin"
+        },
+        "adessive": {
+            "singular": "sisarella",
+            "plural": "sisarilla"
+        },
+        "ablative": {
+            "singular": "sisarelta",
+            "plural": "sisarilta"
+        },
+        "allative": {
+            "singular": "sisarelle",
+            "plural": "sisarille"
+        },
+        "essive": {
+            "singular": "sisarena",
+            "plural": "sisarina"
+        },
+        "translative": {
+            "singular": "sisareksi",
+            "plural": "sisariksi"
+        }
+    },
+    "tatar": {
+        "nominative": {
+            "singular": "tatar",
+            "plural": "tattaret"
+        },
+        "genitive": {
+            "singular": "tattaren",
+            "plural": "tattarien"
+        },
+        "partitive": {
+            "singular": "tatarta",
+            "plural": "tattaria"
+        },
+        "inessive": {
+            "singular": "tattaressa",
+            "plural": "tattarissa"
+        },
+        "elative": {
+            "singular": "tattaresta",
+            "plural": "tattarista"
+        },
+        "illative": {
+            "singular": "tattareen",
+            "plural": "tattariin"
+        },
+        "adessive": {
+            "singular": "tattarella",
+            "plural": "tattarilla"
+        },
+        "ablative": {
+            "singular": "tattarelta",
+            "plural": "tattarilta"
+        },
+        "allative": {
+            "singular": "tattarelle",
+            "plural": "tattarille"
+        },
+        "essive": {
+            "singular": "tattarena",
+            "plural": "tattarina"
+        },
+        "translative": {
+            "singular": "tattareksi",
+            "plural": "tattariksi"
+        }
+    },
+    "kytkin": {
+        "nominative": {
+            "singular": "kytkin",
+            "plural": "kytkimet"
+        },
+        "genitive": {
+            "singular": "kytkimen",
+            "plural": "kytkimien"
+        },
+        "partitive": {
+            "singular": "kytkintä",
+            "plural": "kytkimiä"
+        },
+        "inessive": {
+            "singular": "kytkimessä",
+            "plural": "kytkimissä"
+        },
+        "elative": {
+            "singular": "kytkimestä",
+            "plural": "kytkimistä"
+        },
+        "illative": {
+            "singular": "kytkimeen",
+            "plural": "kytkimiin"
+        },
+        "adessive": {
+            "singular": "kytkimellä",
+            "plural": "kytkimillä"
+        },
+        "ablative": {
+            "singular": "kytkimeltä",
+            "plural": "kytkimiltä"
+        },
+        "allative": {
+            "singular": "kytkimelle",
+            "plural": "kytkimille"
+        },
+        "essive": {
+            "singular": "kytkimenä",
+            "plural": "kytkiminä"
+        },
+        "translative": {
+            "singular": "kytkimeksi",
+            "plural": "kytkimiksi"
+        }
+    },
+    "laidun": {
+        "nominative": {
+            "singular": "laidun",
+            "plural": "laitumet"
+        },
+        "genitive": {
+            "singular": "laitumen",
+            "plural": "laitumien"
+        },
+        "partitive": {
+            "singular": "laidunta",
+            "plural": "laitumia"
+        },
+        "inessive": {
+            "singular": "laitumessa",
+            "plural": "laitumissa"
+        },
+        "elative": {
+            "singular": "laitumesta",
+            "plural": "laitumista"
+        },
+        "illative": {
+            "singular": "laitumeen",
+            "plural": "laitumiin"
+        },
+        "adessive": {
+            "singular": "laitumella",
+            "plural": "laitumilla"
+        },
+        "ablative": {
+            "singular": "laitumelta",
+            "plural": "laitumilta"
+        },
+        "allative": {
+            "singular": "laitumelle",
+            "plural": "laitumille"
+        },
+        "essive": {
+            "singular": "laitumena",
+            "plural": "laitumina"
+        },
+        "translative": {
+            "singular": "laitumeksi",
+            "plural": "laitumiksi"
+        }
+    },
+    "onneton": {
+        "nominative": {
+            "singular": "onneton",
+            "plural": "onnettomat"
+        },
+        "genitive": {
+            "singular": "onnettoman",
+            "plural": "onnettomien"
+        },
+        "partitive": {
+            "singular": "onnetonta",
+            "plural": "onnettomia"
+        },
+        "inessive": {
+            "singular": "onnettomassa",
+            "plural": "onnettomissa"
+        },
+        "elative": {
+            "singular": "onnettomasta",
+            "plural": "onnettomista"
+        },
+        "illative": {
+            "singular": "onnettomaan",
+            "plural": "onnettomiin"
+        },
+        "adessive": {
+            "singular": "onnettomalla",
+            "plural": "onnettomilla"
+        },
+        "ablative": {
+            "singular": "onnettomalta",
+            "plural": "onnettomilta"
+        },
+        "allative": {
+            "singular": "onnettomalle",
+            "plural": "onnettomille"
+        },
+        "essive": {
+            "singular": "onnettomana",
+            "plural": "onnettomina"
+        },
+        "translative": {
+            "singular": "onnettomaksi",
+            "plural": "onnettomiksi"
+        }
+    },
+    "nimetön": {
+        "nominative": {
+            "singular": "nimetön",
+            "plural": "nimettömät"
+        },
+        "genitive": {
+            "singular": "nimettömän",
+            "plural": "nimettömien"
+        },
+        "partitive": {
+            "singular": "nimetöntä",
+            "plural": "nimettömiä"
+        },
+        "inessive": {
+            "singular": "nimettömässä",
+            "plural": "nimettömissä"
+        },
+        "elative": {
+            "singular": "nimettömästä",
+            "plural": "nimettömistä"
+        },
+        "illative": {
+            "singular": "nimettömään",
+            "plural": "nimettömiin"
+        },
+        "adessive": {
+            "singular": "nimettömällä",
+            "plural": "nimettömillä"
+        },
+        "ablative": {
+            "singular": "nimettömältä",
+            "plural": "nimettömiltä"
+        },
+        "allative": {
+            "singular": "nimettömälle",
+            "plural": "nimettömille"
+        },
+        "essive": {
+            "singular": "nimettömänä",
+            "plural": "nimettöminä"
+        },
+        "translative": {
+            "singular": "nimettömäksi",
+            "plural": "nimettömiksi"
+        }
+    },
+    "lämmin": {
+        "nominative": {
+            "singular": "lämmin",
+            "plural": "lämpimät"
+        },
+        "genitive": {
+            "singular": "lämpimän",
+            "plural": "lämpimien"
+        },
+        "partitive": {
+            "singular": "lämmintä",
+            "plural": "lämpimiä"
+        },
+        "inessive": {
+            "singular": "lämpimässä",
+            "plural": "lämpimissä"
+        },
+        "elative": {
+            "singular": "lämpimästä",
+            "plural": "lämpimistä"
+        },
+        "illative": {
+            "singular": "lämpimään",
+            "plural": "lämpimiin"
+        },
+        "adessive": {
+            "singular": "lämpimällä",
+            "plural": "lämpimillä"
+        },
+        "ablative": {
+            "singular": "lämpimältä",
+            "plural": "lämpimiltä"
+        },
+        "allative": {
+            "singular": "lämpimälle",
+            "plural": "lämpimille"
+        },
+        "essive": {
+            "singular": "lämpimänä",
+            "plural": "lämpiminä"
+        },
+        "translative": {
+            "singular": "lämpimäksi",
+            "plural": "lämpimiksi"
+        }
+    },
+    "hapan": {
+        "nominative": {
+            "singular": "hapan",
+            "plural": "happamat"
+        },
+        "genitive": {
+            "singular": "happaman",
+            "plural": "happamien"
+        },
+        "partitive": {
+            "singular": "hapanta",
+            "plural": "happamia"
+        },
+        "inessive": {
+            "singular": "happamassa",
+            "plural": "happamissa"
+        },
+        "elative": {
+            "singular": "happamasta",
+            "plural": "happamista"
+        },
+        "illative": {
+            "singular": "happamaan",
+            "plural": "happamiin"
+        },
+        "adessive": {
+            "singular": "happamalla",
+            "plural": "happamilla"
+        },
+        "ablative": {
+            "singular": "happamalta",
+            "plural": "happamilta"
+        },
+        "allative": {
+            "singular": "happamalle",
+            "plural": "happamille"
+        },
+        "essive": {
+            "singular": "happamana",
+            "plural": "happamina"
+        },
+        "translative": {
+            "singular": "happamaksi",
+            "plural": "happamiksi"
+        }
+    },
+    "sisin": {
+        "nominative": {
+            "singular": "sisin",
+            "plural": "sisimmät"
+        },
+        "genitive": {
+            "singular": "sisimmän",
+            "plural": "sisimpien"
+        },
+        "partitive": {
+            "singular": "sisintä",
+            "plural": "sisimpiä"
+        },
+        "inessive": {
+            "singular": "sisimmässä",
+            "plural": "sisimmissä"
+        },
+        "elative": {
+            "singular": "sisimmästä",
+            "plural": "sisimmistä"
+        },
+        "illative": {
+            "singular": "sisimpään",
+            "plural": "sisimpiin"
+        },
+        "adessive": {
+            "singular": "sisimmällä",
+            "plural": "sisimmillä"
+        },
+        "ablative": {
+            "singular": "sisimmältä",
+            "plural": "sisimmiltä"
+        },
+        "allative": {
+            "singular": "sisimmälle",
+            "plural": "sisimmille"
+        },
+        "essive": {
+            "singular": "sisimpänä",
+            "plural": "sisimpinä"
+        },
+        "translative": {
+            "singular": "sisimmäksi",
+            "plural": "sisimmiksi"
+        }
+    },
+    "pahin": {
+        "nominative": {
+            "singular": "pahin",
+            "plural": "pahimmat"
+        },
+        "genitive": {
+            "singular": "pahimman",
+            "plural": "pahimpien"
+        },
+        "partitive": {
+            "singular": "pahinta",
+            "plural": "pahimpia"
+        },
+        "inessive": {
+            "singular": "pahimmassa",
+            "plural": "pahimmissa"
+        },
+        "elative": {
+            "singular": "pahimmasta",
+            "plural": "pahimmista"
+        },
+        "illative": {
+            "singular": "pahimpaan",
+            "plural": "pahimpiin"
+        },
+        "adessive": {
+            "singular": "pahimmalla",
+            "plural": "pahimmilla"
+        },
+        "ablative": {
+            "singular": "pahimmalta",
+            "plural": "pahimmilta"
+        },
+        "allative": {
+            "singular": "pahimmalle",
+            "plural": "pahimmille"
+        },
+        "essive": {
+            "singular": "pahimpana",
+            "plural": "pahimpina"
+        },
+        "translative": {
+            "singular": "pahimmaksi",
+            "plural": "pahimmiksi"
+        }
+    },
+    "vasen": {
+        "nominative": {
+            "singular": "vasen",
+            "plural": "vasemmat"
+        },
+        "genitive": {
+            "singular": "vasemman",
+            "plural": "vasempien"
+        },
+        "partitive": {
+            "singular": "vasenta",
+            "plural": "vasempia"
+        },
+        "inessive": {
+            "singular": "vasemmassa",
+            "plural": "vasemmissa"
+        },
+        "elative": {
+            "singular": "vasemmasta",
+            "plural": "vasemmista"
+        },
+        "illative": {
+            "singular": "vasempaan",
+            "plural": "vasempiin"
+        },
+        "adessive": {
+            "singular": "vasemmalla",
+            "plural": "vasemmilla"
+        },
+        "ablative": {
+            "singular": "vasemmalta",
+            "plural": "vasemmilta"
+        },
+        "allative": {
+            "singular": "vasemmalle",
+            "plural": "vasemmille"
+        },
+        "essive": {
+            "singular": "vasempana",
+            "plural": "vasempina"
+        },
+        "translative": {
+            "singular": "vasemmaksi",
+            "plural": "vasemmiksi"
+        }
+    },
+    "nainen": {
+        "nominative": {
+            "singular": "nainen",
+            "plural": "naiset"
+        },
+        "genitive": {
+            "singular": "naisen",
+            "plural": "naisien"
+        },
+        "partitive": {
+            "singular": "naista",
+            "plural": "naisia"
+        },
+        "inessive": {
+            "singular": "naisessa",
+            "plural": "naisissa"
+        },
+        "elative": {
+            "singular": "naisesta",
+            "plural": "naisista"
+        },
+        "illative": {
+            "singular": "naiseen",
+            "plural": "naisiin"
+        },
+        "adessive": {
+            "singular": "naisella",
+            "plural": "naisilla"
+        },
+        "ablative": {
+            "singular": "naiselta",
+            "plural": "naisilta"
+        },
+        "allative": {
+            "singular": "naiselle",
+            "plural": "naisille"
+        },
+        "essive": {
+            "singular": "naisena",
+            "plural": "naisina"
+        },
+        "translative": {
+            "singular": "naiseksi",
+            "plural": "naisiksi"
+        }
+    },
+    "vastaus": {
+        "nominative": {
+            "singular": "vastaus",
+            "plural": "vastaukset"
+        },
+        "genitive": {
+            "singular": "vastauksen",
+            "plural": "vastauksien"
+        },
+        "partitive": {
+            "singular": "vastausta",
+            "plural": "vastauksia"
+        },
+        "inessive": {
+            "singular": "vastauksessa",
+            "plural": "vastauksissa"
+        },
+        "elative": {
+            "singular": "vastauksesta",
+            "plural": "vastauksista"
+        },
+        "illative": {
+            "singular": "vastaukseen",
+            "plural": "vastauksiin"
+        },
+        "adessive": {
+            "singular": "vastauksella",
+            "plural": "vastauksilla"
+        },
+        "ablative": {
+            "singular": "vastaukselta",
+            "plural": "vastauksilta"
+        },
+        "allative": {
+            "singular": "vastaukselle",
+            "plural": "vastauksille"
+        },
+        "essive": {
+            "singular": "vastauksena",
+            "plural": "vastauksina"
+        },
+        "translative": {
+            "singular": "vastaukseksi",
+            "plural": "vastauksiksi"
+        }
+    },
+    "kalleus": {
+        "nominative": {
+            "singular": "kalleus",
+            "plural": "kalleudet"
+        },
+        "genitive": {
+            "singular": "kalleuden",
+            "plural": "kalleuksien"
+        },
+        "partitive": {
+            "singular": "kalleutta",
+            "plural": "kalleuksia"
+        },
+        "inessive": {
+            "singular": "kalleudessa",
+            "plural": "kalleuksissa"
+        },
+        "elative": {
+            "singular": "kalleudesta",
+            "plural": "kalleuksista"
+        },
+        "illative": {
+            "singular": "kalleuteen",
+            "plural": "kalleuksiin"
+        },
+        "adessive": {
+            "singular": "kalleudella",
+            "plural": "kalleuksilla"
+        },
+        "ablative": {
+            "singular": "kalleudelta",
+            "plural": "kalleuksilta"
+        },
+        "allative": {
+            "singular": "kalleudelle",
+            "plural": "kalleuksille"
+        },
+        "essive": {
+            "singular": "kalleutena",
+            "plural": "kalleuksina"
+        },
+        "translative": {
+            "singular": "kalleudeksi",
+            "plural": "kalleuksiksi"
+        }
+    },
+    "kauneus": {
+        "nominative": {
+            "singular": "kauneus",
+            "plural": "kauneudet"
+        },
+        "genitive": {
+            "singular": "kauneuden",
+            "plural": "kauneuksien"
+        },
+        "partitive": {
+            "singular": "kauneutta",
+            "plural": "kauneuksia"
+        },
+        "inessive": {
+            "singular": "kauneudessa",
+            "plural": "kauneuksissa"
+        },
+        "elative": {
+            "singular": "kauneudesta",
+            "plural": "kauneuksista"
+        },
+        "illative": {
+            "singular": "kauneuteen",
+            "plural": "kauneuksiin"
+        },
+        "adessive": {
+            "singular": "kauneudella",
+            "plural": "kauneuksilla"
+        },
+        "ablative": {
+            "singular": "kauneudelta",
+            "plural": "kauneuksilta"
+        },
+        "allative": {
+            "singular": "kauneudelle",
+            "plural": "kauneuksille"
+        },
+        "essive": {
+            "singular": "kauneutena",
+            "plural": "kauneuksina"
+        },
+        "translative": {
+            "singular": "kauneudeksi",
+            "plural": "kauneuksiksi"
+        }
+    },
+    "vieras": {
+        "nominative": {
+            "singular": "vieras",
+            "plural": "vieraat"
+        },
+        "genitive": {
+            "singular": "vieraan",
+            "plural": "vieraiden"
+        },
+        "partitive": {
+            "singular": "vierasta",
+            "plural": "vieraita"
+        },
+        "inessive": {
+            "singular": "vieraassa",
+            "plural": "vieraissa"
+        },
+        "elative": {
+            "singular": "vieraasta",
+            "plural": "vieraista"
+        },
+        "illative": {
+            "singular": "vieraaseen",
+            "plural": "vieraisiin"
+        },
+        "adessive": {
+            "singular": "vieraalla",
+            "plural": "vierailla"
+        },
+        "ablative": {
+            "singular": "vieraalta",
+            "plural": "vierailta"
+        },
+        "allative": {
+            "singular": "vieraalle",
+            "plural": "vieraille"
+        },
+        "essive": {
+            "singular": "vieraana",
+            "plural": "vieraina"
+        },
+        "translative": {
+            "singular": "vieraaksi",
+            "plural": "vieraiksi"
+        }
+    },
+    "keidas": {
+        "nominative": {
+            "singular": "keidas",
+            "plural": "keitaat"
+        },
+        "genitive": {
+            "singular": "keitaan",
+            "plural": "keitaiden"
+        },
+        "partitive": {
+            "singular": "keidasta",
+            "plural": "keitaita"
+        },
+        "inessive": {
+            "singular": "keitaassa",
+            "plural": "keitaissa"
+        },
+        "elative": {
+            "singular": "keitaasta",
+            "plural": "keitaista"
+        },
+        "illative": {
+            "singular": "keitaaseen",
+            "plural": "keitaisiin"
+        },
+        "adessive": {
+            "singular": "keitaalla",
+            "plural": "keitailla"
+        },
+        "ablative": {
+            "singular": "keitaalta",
+            "plural": "keitailta"
+        },
+        "allative": {
+            "singular": "keitaalle",
+            "plural": "keitaille"
+        },
+        "essive": {
+            "singular": "keitaana",
+            "plural": "keitaina"
+        },
+        "translative": {
+            "singular": "keitaaksi",
+            "plural": "keitaiksi"
+        }
+    },
+    "mies": {
+        "nominative": {
+            "singular": "mies",
+            "plural": "miehet"
+        },
+        "genitive": {
+            "singular": "miehen",
+            "plural": "miehien"
+        },
+        "partitive": {
+            "singular": "miestä",
+            "plural": "miehiä"
+        },
+        "inessive": {
+            "singular": "miehessä",
+            "plural": "miehissä"
+        },
+        "elative": {
+            "singular": "miehestä",
+            "plural": "miehistä"
+        },
+        "illative": {
+            "singular": "mieheen",
+            "plural": "miehiin"
+        },
+        "adessive": {
+            "singular": "miehellä",
+            "plural": "miehillä"
+        },
+        "ablative": {
+            "singular": "mieheltä",
+            "plural": "miehiltä"
+        },
+        "allative": {
+            "singular": "miehelle",
+            "plural": "miehille"
+        },
+        "essive": {
+            "singular": "miehenä",
+            "plural": "miehinä"
+        },
+        "translative": {
+            "singular": "mieheksi",
+            "plural": "miehiksi"
+        }
+    },
+    "ohut": {
+        "nominative": {
+            "singular": "ohut",
+            "plural": "ohuet"
+        },
+        "genitive": {
+            "singular": "ohuen",
+            "plural": "ohuiden"
+        },
+        "partitive": {
+            "singular": "ohutta",
+            "plural": "ohuita"
+        },
+        "inessive": {
+            "singular": "ohuessa",
+            "plural": "ohuissa"
+        },
+        "elative": {
+            "singular": "ohuesta",
+            "plural": "ohuista"
+        },
+        "illative": {
+            "singular": "ohueen",
+            "plural": [
+                "ohuihin",
+                "ohuisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "ohuella",
+            "plural": "ohuilla"
+        },
+        "ablative": {
+            "singular": "ohuelta",
+            "plural": "ohuilta"
+        },
+        "allative": {
+            "singular": "ohuelle",
+            "plural": "ohuille"
+        },
+        "essive": {
+            "singular": "ohuena",
+            "plural": "ohuina"
+        },
+        "translative": {
+            "singular": "ohueksi",
+            "plural": "ohuiksi"
+        }
+    },
+    "immyt": {
+        "nominative": {
+            "singular": "immyt",
+            "plural": "impyet"
+        },
+        "genitive": {
+            "singular": "impyen",
+            "plural": "impyiden"
+        },
+        "partitive": {
+            "singular": "immyttä",
+            "plural": "impyitä"
+        },
+        "inessive": {
+            "singular": "impyessä",
+            "plural": "impyissä"
+        },
+        "elative": {
+            "singular": "impyestä",
+            "plural": "impyistä"
+        },
+        "illative": {
+            "singular": "impyeen",
+            "plural": [
+                "impyihin",
+                "impyisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "impyellä",
+            "plural": "impyillä"
+        },
+        "ablative": {
+            "singular": "impyeltä",
+            "plural": "impyiltä"
+        },
+        "allative": {
+            "singular": "impyelle",
+            "plural": "impyille"
+        },
+        "essive": {
+            "singular": "impyenä",
+            "plural": "impyinä"
+        },
+        "translative": {
+            "singular": "impyeksi",
+            "plural": "impyiksi"
+        }
+    },
+    "kevät": {
+        "nominative": {
+            "singular": "kevät",
+            "plural": "keväät"
+        },
+        "genitive": {
+            "singular": "kevään",
+            "plural": "keväiden"
+        },
+        "partitive": {
+            "singular": "kevättä",
+            "plural": "keväitä"
+        },
+        "inessive": {
+            "singular": "keväässä",
+            "plural": "keväissä"
+        },
+        "elative": {
+            "singular": "keväästä",
+            "plural": "keväistä"
+        },
+        "illative": {
+            "singular": "kevääseen",
+            "plural": [
+                "keväihin",
+                "keväisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "keväällä",
+            "plural": "keväillä"
+        },
+        "ablative": {
+            "singular": "keväältä",
+            "plural": "keväiltä"
+        },
+        "allative": {
+            "singular": "keväälle",
+            "plural": "keväille"
+        },
+        "essive": {
+            "singular": "keväänä",
+            "plural": "keväinä"
+        },
+        "translative": {
+            "singular": "kevääksi",
+            "plural": "keväiksi"
+        }
+    },
+    "kahdeksas": {
+        "nominative": {
+            "singular": "kahdeksas",
+            "plural": "kahdeksannet"
+        },
+        "genitive": {
+            "singular": "kahdeksannen",
+            "plural": "kahdeksansien"
+        },
+        "partitive": {
+            "singular": "kahdeksatta",
+            "plural": "kahdeksansia"
+        },
+        "inessive": {
+            "singular": "kahdeksannessa",
+            "plural": "kahdeksansissa"
+        },
+        "elative": {
+            "singular": "kahdeksannesta",
+            "plural": "kahdeksansista"
+        },
+        "illative": {
+            "singular": "kahdeksanteen",
+            "plural": "kahdeksansiin"
+        },
+        "adessive": {
+            "singular": "kahdeksannella",
+            "plural": "kahdeksansilla"
+        },
+        "ablative": {
+            "singular": "kahdeksannelta",
+            "plural": "kahdeksansilta"
+        },
+        "allative": {
+            "singular": "kahdeksannelle",
+            "plural": "kahdeksansille"
+        },
+        "essive": {
+            "singular": "kahdeksantena",
+            "plural": "kahdeksansina"
+        },
+        "translative": {
+            "singular": "kahdeksanneksi",
+            "plural": "kahdeksansiksi"
+        }
+    },
+    "kolmas": {
+        "nominative": {
+            "singular": "kolmas",
+            "plural": "kolmannet"
+        },
+        "genitive": {
+            "singular": "kolmannen",
+            "plural": "kolmansien"
+        },
+        "partitive": {
+            "singular": "kolmatta",
+            "plural": "kolmansia"
+        },
+        "inessive": {
+            "singular": "kolmannessa",
+            "plural": "kolmansissa"
+        },
+        "elative": {
+            "singular": "kolmannesta",
+            "plural": "kolmansista"
+        },
+        "illative": {
+            "singular": "kolmanteen",
+            "plural": "kolmansiin"
+        },
+        "adessive": {
+            "singular": "kolmannella",
+            "plural": "kolmansilla"
+        },
+        "ablative": {
+            "singular": "kolmannelta",
+            "plural": "kolmansilta"
+        },
+        "allative": {
+            "singular": "kolmannelle",
+            "plural": "kolmansille"
+        },
+        "essive": {
+            "singular": "kolmantena",
+            "plural": "kolmansina"
+        },
+        "translative": {
+            "singular": "kolmanneksi",
+            "plural": "kolmansiksi"
+        }
+    },
+    "tuhat": {
+        "nominative": {
+            "singular": "tuhat",
+            "plural": "tuhannet"
+        },
+        "genitive": {
+            "singular": "tuhannen",
+            "plural": "tuhansien"
+        },
+        "partitive": {
+            "singular": "tuhatta",
+            "plural": "tuhansia"
+        },
+        "inessive": {
+            "singular": "tuhannessa",
+            "plural": "tuhansissa"
+        },
+        "elative": {
+            "singular": "tuhannesta",
+            "plural": "tuhansista"
+        },
+        "illative": {
+            "singular": "tuhanteen",
+            "plural": "tuhansiin"
+        },
+        "adessive": {
+            "singular": "tuhannella",
+            "plural": "tuhansilla"
+        },
+        "ablative": {
+            "singular": "tuhannelta",
+            "plural": "tuhansilta"
+        },
+        "allative": {
+            "singular": "tuhannelle",
+            "plural": "tuhansille"
+        },
+        "essive": {
+            "singular": "tuhantena",
+            "plural": "tuhansina"
+        },
+        "translative": {
+            "singular": "tuhanneksi",
+            "plural": "tuhansiksi"
+        }
+    },
+    "kuollut": {
+        "nominative": {
+            "singular": "kuollut",
+            "plural": "kuolleet"
+        },
+        "genitive": {
+            "singular": "kuolleen",
+            "plural": "kuolleiden"
+        },
+        "partitive": {
+            "singular": "kuollutta",
+            "plural": "kuolleita"
+        },
+        "inessive": {
+            "singular": "kuolleessa",
+            "plural": "kuolleissa"
+        },
+        "elative": {
+            "singular": "kuolleesta",
+            "plural": "kuolleista"
+        },
+        "illative": {
+            "singular": "kuolleeseen",
+            "plural": [
+                "kuolleihin",
+                "kuolleisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "kuolleella",
+            "plural": "kuolleilla"
+        },
+        "ablative": {
+            "singular": "kuolleelta",
+            "plural": "kuolleilta"
+        },
+        "allative": {
+            "singular": "kuolleelle",
+            "plural": "kuolleille"
+        },
+        "essive": {
+            "singular": "kuolleena",
+            "plural": "kuolleina"
+        },
+        "translative": {
+            "singular": "kuolleeksi",
+            "plural": "kuolleiksi"
+        }
+    },
+    "hame": {
+        "nominative": {
+            "singular": "hame",
+            "plural": "hameet"
+        },
+        "genitive": {
+            "singular": "hameen",
+            "plural": "hameiden"
+        },
+        "partitive": {
+            "singular": "hametta",
+            "plural": "hameita"
+        },
+        "inessive": {
+            "singular": "hameessa",
+            "plural": "hameissa"
+        },
+        "elative": {
+            "singular": "hameesta",
+            "plural": "hameista"
+        },
+        "illative": {
+            "singular": "hameeseen",
+            "plural": [
+                "hameihin",
+                "hameisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "hameella",
+            "plural": "hameilla"
+        },
+        "ablative": {
+            "singular": "hameelta",
+            "plural": "hameilta"
+        },
+        "allative": {
+            "singular": "hameelle",
+            "plural": "hameille"
+        },
+        "essive": {
+            "singular": "hameena",
+            "plural": "hameina"
+        },
+        "translative": {
+            "singular": "hameeksi",
+            "plural": "hameiksi"
+        }
+    },
+    "sade": {
+        "nominative": {
+            "singular": "sade",
+            "plural": "sateet"
+        },
+        "genitive": {
+            "singular": "sateen",
+            "plural": "sateiden"
+        },
+        "partitive": {
+            "singular": "sadetta",
+            "plural": "sateita"
+        },
+        "inessive": {
+            "singular": "sateessa",
+            "plural": "sateissa"
+        },
+        "elative": {
+            "singular": "sateesta",
+            "plural": "sateista"
+        },
+        "illative": {
+            "singular": "sateeseen",
+            "plural": [
+                "sateihin",
+                "sateisiin"
+            ]
+        },
+        "adessive": {
+            "singular": "sateella",
+            "plural": "sateilla"
+        },
+        "ablative": {
+            "singular": "sateelta",
+            "plural": "sateilta"
+        },
+        "allative": {
+            "singular": "sateelle",
+            "plural": "sateille"
+        },
+        "essive": {
+            "singular": "sateena",
+            "plural": "sateina"
+        },
+        "translative": {
+            "singular": "sateeksi",
+            "plural": "sateiksi"
+        }
+    }
+}

@@ -44,6 +44,29 @@ def main():
             results.append(datr_theory.query(query))
         print(prettify(results))
 
+def compile_theory(filename):
+    # Open the input file
+    try:
+        with open(filename, 'r',  encoding='utf-8') as f:
+            data = f.read()
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' not found.")
+        return
+
+    # Tokenize the file content
+    print("== Tokens ==")
+    lexer.lexer.input(data)
+    for tok in lexer.lexer:
+        print(tok)
+
+    # Parse the file content
+    print("\n== Parse Tree ==")
+    result = parser.parser.parse(data, lexer=lexer.lexer)
+    print(result)
+
+    print("\n")
+    return theory.Theory("default", result)
+
 def prettify(result_list):
     pretty_list = []
     for result in result_list:
