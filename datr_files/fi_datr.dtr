@@ -9,7 +9,7 @@ NOMINAL:
 	% Sentences for the partitive
 	<$grad_type sg part a> == "<sg stem Gradation:<$grad_type part sg a>>" Harmony:<phn "<phn harmony>" a>
 	<$grad_type sg part ta> == "<sg stem Gradation:<$grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
-	<$grad_type cs part ta> == "<cs stem Gradation:<$grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
+	<$grad_type cs part ta> == "<cons stem Gradation:<$grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
 	
 	<$grad_type pl part a> == "<pl stem Gradation:<$grad_type part pl a>>" Harmony:<phn "<phn harmony>" a>
 	<$grad_type pl part ta> == "<pl stem Gradation:<$grad_type part pl ta>>" t Harmony:<phn "<phn harmony>" a>
@@ -19,7 +19,7 @@ NOMINAL:
 	
 	<$grad_type pl gen en> == "<pl stem Gradation:<$grad_type gen pl en>>" en
 	<$grad_type pl gen den> == "<pl stem Gradation:<$grad_type gen pl den>>" den
-	<$grad_type cs gen ten> == "<cs stem Gradation:<$grad_type gen pl ten>>" ten
+	<$grad_type cs gen ten> == "<cons stem Gradation:<$grad_type gen pl ten>>" ten
 
 	% Sentences for the partitive
 	<$grad_type sg ill vn> == "<sg stem Gradation:<$grad_type ill sg vn>>" "<final vowel>" n
@@ -486,7 +486,7 @@ Type23:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>"
+	<cons stem> == "<stem>"
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -504,7 +504,7 @@ Type24:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>"
+	<cons stem> == "<stem>"
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -522,7 +522,7 @@ Type25:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" mi
 	<sg stem> == "<stem>" me
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -540,7 +540,7 @@ Type26:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>"
+	<cons stem> == "<stem>"
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -558,7 +558,7 @@ Type27:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" si
 	<sg stem> == "<stem>" Gradation_Res:<phn t> e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -576,7 +576,7 @@ Type28nt:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" nsi
 	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cs stem> == "<stem>" nt
+	<cons stem> == "<stem>" nt
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -591,7 +591,7 @@ Type28rt:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" rsi
 	<sg stem> == "<stem>" Gradation_Res:<phn rt> e
-	<cs stem> == "<stem>" rt
+	<cons stem> == "<stem>" rt
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -606,7 +606,7 @@ Type28lt:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" lsi
 	<sg stem> == "<stem>" Gradation_Res:<phn lt> e
-	<cs stem> == "<stem>" lt
+	<cons stem> == "<stem>" lt
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -624,7 +624,7 @@ Type29:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" psi
 	<sg stem> == "<stem>" pse
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -642,7 +642,7 @@ Type30:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" tsi
 	<sg stem> == "<stem>" tse
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -660,7 +660,7 @@ Type31:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" ksi
 	<sg stem> == "<stem>" h Gradation_Res:<phn t> e
-	<cs stem> == "<stem>" h
+	<cons stem> == "<stem>" h
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -678,7 +678,7 @@ Type32:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>"
+	<cons stem> == "<stem>"
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -696,7 +696,7 @@ Type33:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
 	<sg stem> == "<stem>" me
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -714,7 +714,7 @@ Type34:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
 	<sg stem> == "<stem>" m Harmony:<phn "<phn harmony>" a>
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -732,7 +732,7 @@ Type35:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
 	<sg stem> == "<stem>" m Harmony:<phn "<phn harmony>" a>
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -750,7 +750,7 @@ Type36:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
 	<sg stem> == "<stem>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -768,7 +768,7 @@ Type37:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
 	<sg stem> == "<stem>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
-	<cs stem> == "<stem>" n
+	<cons stem> == "<stem>" n
 	<sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -786,7 +786,7 @@ Type38:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" nen
 	<sg stem> == "<stem>" se
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -804,7 +804,7 @@ Type39:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
 	<sg stem> == "<stem>" kse
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -822,7 +822,7 @@ Type40:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
 	<sg stem> == "<stem>" Gradation_Res:<phn t> e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -839,7 +839,7 @@ Type41:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
 	<sg stem> == "<stem>" "<final vowel>"
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
@@ -857,7 +857,7 @@ Type42:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
 	<sg stem> == "<stem>" he
-	<cs stem> == "<stem>" s
+	<cons stem> == "<stem>" s
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -875,7 +875,7 @@ Type43:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -892,7 +892,7 @@ Type44:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
 	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
@@ -910,7 +910,7 @@ Type45:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
 	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -928,7 +928,7 @@ Type46:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
 	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
@@ -945,7 +945,7 @@ Type47:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" u> t
 	<sg stem> == "<stem>" ee
-	<cs stem> == "<stem>" Harmony:<phn "<phn harmony>" u> t
+	<cons stem> == "<stem>" Harmony:<phn "<phn harmony>" u> t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
@@ -962,7 +962,7 @@ Type48:
 	<> == NOMINAL:<"<gt>">
 	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
 	<sg stem> == "<stem>" e
-	<cs stem> == "<stem>" t
+	<cons stem> == "<stem>" t
 	<sg part> == NOMINAL:<"<gt>" cs part ta>
 	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
