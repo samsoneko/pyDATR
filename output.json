@@ -1158,7 +1158,10 @@
             "plural": "korkeiden"
         },
         "partitive": {
-            "singular": "korkeaa",
+            "singular": [
+                "korkeaa",
+                "korkeata"
+            ],
             "plural": "korkeita"
         },
         "inessive": {
@@ -1915,7 +1918,10 @@
             ]
         },
         "partitive": {
-            "singular": "tointa",
+            "singular": [
+                "tointa",
+                "toimea"
+            ],
             "plural": "toimia"
         },
         "inessive": {
@@ -2743,7 +2749,10 @@
         },
         "genitive": {
             "singular": "onnettoman",
-            "plural": "onnettomien"
+            "plural": [
+                "onnettomien",
+                "onnetonten"
+            ]
         },
         "partitive": {
             "singular": "onnetonta",
@@ -2796,7 +2805,10 @@
         },
         "genitive": {
             "singular": "nimettömän",
-            "plural": "nimettömien"
+            "plural": [
+                "nimettömien",
+                "nimetönten"
+            ]
         },
         "partitive": {
             "singular": "nimetöntä",
@@ -3073,7 +3085,10 @@
             ]
         },
         "partitive": {
-            "singular": "vasenta",
+            "singular": [
+                "vasenta",
+                "vasempaa"
+            ],
             "plural": "vasempia"
         },
         "inessive": {

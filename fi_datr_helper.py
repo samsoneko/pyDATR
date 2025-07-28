@@ -74,8 +74,8 @@ for word in words_to_test:
                 for element in result:
                     pretty_result += element
                 
-                if "xxx" in pretty_result:
-                    variants = pretty_result.split("xxx")
+                if "_" in pretty_result:
+                    variants = pretty_result.split("_")
                     results_dict[word][case][number] = [variant for variant in variants]
                     pretty_result = [debug_clean(variant) for variant in variants]
                 else:
