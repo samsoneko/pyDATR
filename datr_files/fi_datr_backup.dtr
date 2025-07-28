@@ -39,10 +39,7 @@ NOMINAL:
 	<$grad_type pl abl> == "<pl_stem Gradation:<$grad_type abl pl>>" lt Harmony:<"<harmony>" a>
 	
 	<$grad_type sg trans> == "<sg_stem Gradation:<$grad_type trans sg>>" ksi
-	<$grad_type pl trans> == "<pl_stem Gradation:<$grad_type trans pl>>" ksi
-	<$grad_type sg abess> == "<sg_stem Gradation:<$grad_type abess sg>>" tt Harmony:<"<harmony>" a>
-	<$grad_type pl abess> == "<pl_stem Gradation:<$grad_type abess pl>>" tt Harmony:<"<harmony>" a>
-	<$grad_type pl instr> == "<pl_stem Gradation:<$grad_type instr pl>>" n.
+	<$grad_type pl trans> == "<pl_stem Gradation:<$grad_type trans pl>>" ksi.
 
 Harmony:
 	<front a> == ä

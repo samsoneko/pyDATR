@@ -32,6 +32,8 @@ json_to_datr_dict = {
     "ablative": "abl",
     "essive": "ess",
     "translative": "trans",
+    "abessive": "abess",
+    "instructive": "instr",
     "singular": "sg",
     "plural": "pl"
 }
@@ -60,6 +62,11 @@ for word in words_to_test:
 
         for number in [key for key in declination_table[case]]:
             datr_number = json_to_datr_dict[number]
+            
+            # Skip instructive singular
+            if case == "instructive" and number == "singular":
+                continue
+
             # Start the query
             try:
                 result = theory.query(word.capitalize() + ":<" + datr_number + " " + datr_case + ">")

@@ -45,6 +45,14 @@
             "translative": {
                 "singular": "valoksi",
                 "plural": "valoiksi"
+            },
+            "abessive": {
+                "singular": "valotta",
+                "plural": "valoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "valoin"
             }
         }
     },
@@ -94,6 +102,14 @@
             "translative": {
                 "singular": "kaduksi",
                 "plural": "kaduiksi"
+            },
+            "abessive": {
+                "singular": "kadutta",
+                "plural": "kaduitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kaduin"
             }
         }
     },
@@ -150,6 +166,14 @@
             "translative": {
                 "singular": "palveluksi",
                 "plural": "palveluiksi"
+            },
+            "abessive": {
+                "singular": "palvelutta",
+                "plural": "palveluitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "palveluin"
             }
         }
     },
@@ -202,6 +226,14 @@
             "translative": {
                 "singular": "valtioksi",
                 "plural": "valtioiksi"
+            },
+            "abessive": {
+                "singular": "valtiotta",
+                "plural": "valtioitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "valtioin"
             }
         }
     },
@@ -261,6 +293,14 @@
             "translative": {
                 "singular": "laatikoksi",
                 "plural": "laatikoiksi"
+            },
+            "abessive": {
+                "singular": "laatikotta",
+                "plural": "laatikoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "laatikoin"
             }
         }
     },
@@ -310,6 +350,14 @@
             "translative": {
                 "singular": "ristiksi",
                 "plural": "risteiksi"
+            },
+            "abessive": {
+                "singular": "ristittä",
+                "plural": "risteittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "ristein"
             }
         }
     },
@@ -359,6 +407,14 @@
             "translative": {
                 "singular": "kodiksi",
                 "plural": "kodeiksi"
+            },
+            "abessive": {
+                "singular": "koditta",
+                "plural": "kodeitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kodein"
             }
         }
     },
@@ -415,6 +471,14 @@
             "translative": {
                 "singular": "paperiksi",
                 "plural": "papereiksi"
+            },
+            "abessive": {
+                "singular": "paperitta",
+                "plural": "papereitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "paperein"
             }
         }
     },
@@ -464,6 +528,14 @@
             "translative": {
                 "singular": "oveksi",
                 "plural": "oviksi"
+            },
+            "abessive": {
+                "singular": "ovetta",
+                "plural": "ovitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "ovin"
             }
         }
     },
@@ -513,6 +585,14 @@
             "translative": {
                 "singular": "lahdeksi",
                 "plural": "lahdiksi"
+            },
+            "abessive": {
+                "singular": "lahdetta",
+                "plural": "lahditta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "lahdin"
             }
         }
     },
@@ -565,6 +645,14 @@
             "translative": {
                 "singular": "nalleksi",
                 "plural": "nalleiksi"
+            },
+            "abessive": {
+                "singular": "nalletta",
+                "plural": "nalleitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "nallein"
             }
         }
     },
@@ -617,6 +705,14 @@
             "translative": {
                 "singular": "nukeksi",
                 "plural": "nukeiksi"
+            },
+            "abessive": {
+                "singular": "nuketta",
+                "plural": "nukeitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "nukein"
             }
         }
     },
@@ -669,6 +765,14 @@
             "translative": {
                 "singular": "kalaksi",
                 "plural": "kaloiksi"
+            },
+            "abessive": {
+                "singular": "kalatta",
+                "plural": "kaloitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kaloin"
             }
         }
     },
@@ -721,6 +825,14 @@
             "translative": {
                 "singular": "raudaksi",
                 "plural": "raudoiksi"
+            },
+            "abessive": {
+                "singular": "raudatta",
+                "plural": "raudoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "raudoin"
             }
         }
     },
@@ -773,6 +885,14 @@
             "translative": {
                 "singular": "koiraksi",
                 "plural": "koiriksi"
+            },
+            "abessive": {
+                "singular": "koiratta",
+                "plural": "koiritta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "koirin"
             }
         }
     },
@@ -825,6 +945,14 @@
             "translative": {
                 "singular": "sodaksi",
                 "plural": "sodiksi"
+            },
+            "abessive": {
+                "singular": "sodatta",
+                "plural": "soditta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "sodin"
             }
         }
     },
@@ -908,6 +1036,20 @@
                     "omenoiksi",
                     "omeniksi"
                 ]
+            },
+            "abessive": {
+                "singular": "omenatta",
+                "plural": [
+                    "omenoitta",
+                    "omenitta"
+                ]
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": [
+                    "omenoin",
+                    "omenin"
+                ]
             }
         }
     },
@@ -961,6 +1103,14 @@
             "translative": {
                 "singular": "kulkijaksi",
                 "plural": "kulkijoiksi"
+            },
+            "abessive": {
+                "singular": "kulkijatta",
+                "plural": "kulkijoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kulkijoin"
             }
         }
     },
@@ -1018,6 +1168,14 @@
             "translative": {
                 "singular": "katiskaksi",
                 "plural": "katiskoiksi"
+            },
+            "abessive": {
+                "singular": "katiskatta",
+                "plural": "katiskoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "katiskoin"
             }
         }
     },
@@ -1078,6 +1236,14 @@
             "translative": {
                 "singular": "solakaksi",
                 "plural": "solakoiksi"
+            },
+            "abessive": {
+                "singular": "solakatta",
+                "plural": "solakoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "solakoin"
             }
         }
     },
@@ -1138,6 +1304,14 @@
             "translative": {
                 "singular": "navetaksi",
                 "plural": "navetoiksi"
+            },
+            "abessive": {
+                "singular": "navetatta",
+                "plural": "navetoitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "navetoin"
             }
         }
     },
@@ -1197,6 +1371,14 @@
             "translative": {
                 "singular": "korkeaksi",
                 "plural": "korkeiksi"
+            },
+            "abessive": {
+                "singular": "korkeatta",
+                "plural": "korkeitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "korkein"
             }
         }
     },
@@ -1249,6 +1431,14 @@
             "translative": {
                 "singular": "vanhemmaksi",
                 "plural": "vanhemmiksi"
+            },
+            "abessive": {
+                "singular": "vanhemmatta",
+                "plural": "vanhemmitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "vanhemmin"
             }
         }
     },
@@ -1301,6 +1491,14 @@
             "translative": {
                 "singular": "isommaksi",
                 "plural": "isommiksi"
+            },
+            "abessive": {
+                "singular": "isommatta",
+                "plural": "isommitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "isommin"
             }
         }
     },
@@ -1356,6 +1554,14 @@
             "translative": {
                 "singular": "vapaaksi",
                 "plural": "vapaiksi"
+            },
+            "abessive": {
+                "singular": "vapaatta",
+                "plural": "vapaitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "vapain"
             }
         }
     },
@@ -1408,6 +1614,14 @@
             "translative": {
                 "singular": "maaksi",
                 "plural": "maiksi"
+            },
+            "abessive": {
+                "singular": "maatta",
+                "plural": "maitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "main"
             }
         }
     },
@@ -1460,6 +1674,14 @@
             "translative": {
                 "singular": "voiksi",
                 "plural": "voiksi"
+            },
+            "abessive": {
+                "singular": "voitta",
+                "plural": "voitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "voin"
             }
         }
     },
@@ -1512,6 +1734,14 @@
             "translative": {
                 "singular": "suoksi",
                 "plural": "soiksi"
+            },
+            "abessive": {
+                "singular": "suotta",
+                "plural": "soitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "soin"
             }
         }
     },
@@ -1564,6 +1794,14 @@
             "translative": {
                 "singular": "tieksi",
                 "plural": "teiksi"
+            },
+            "abessive": {
+                "singular": "tiettä",
+                "plural": "teittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "tein"
             }
         }
     },
@@ -1616,6 +1854,14 @@
             "translative": {
                 "singular": "työksi",
                 "plural": "töiksi"
+            },
+            "abessive": {
+                "singular": "työttä",
+                "plural": "töittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "töin"
             }
         }
     },
@@ -1674,6 +1920,14 @@
             "translative": {
                 "singular": "fileeksi",
                 "plural": "fileiksi"
+            },
+            "abessive": {
+                "singular": "fileettä",
+                "plural": "fileittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "filein"
             }
         }
     },
@@ -1726,6 +1980,14 @@
             "translative": {
                 "singular": "roséksi",
                 "plural": "roséiksi"
+            },
+            "abessive": {
+                "singular": "rosétta",
+                "plural": "roséitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "roséin"
             }
         }
     },
@@ -1778,6 +2040,14 @@
             "translative": {
                 "singular": "parfaitksi",
                 "plural": "parfaitiksi"
+            },
+            "abessive": {
+                "singular": "parfaittta",
+                "plural": "parfaititta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "parfaitin"
             }
         }
     },
@@ -1827,6 +2097,14 @@
             "translative": {
                 "singular": "tiileksi",
                 "plural": "tiiliksi"
+            },
+            "abessive": {
+                "singular": "tiilettä",
+                "plural": "tiilittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "tiilin"
             }
         }
     },
@@ -1879,6 +2157,14 @@
             "translative": {
                 "singular": "uneksi",
                 "plural": "uniksi"
+            },
+            "abessive": {
+                "singular": "unetta",
+                "plural": "unitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "unin"
             }
         }
     },
@@ -1934,6 +2220,14 @@
             "translative": {
                 "singular": "toimeksi",
                 "plural": "toimiksi"
+            },
+            "abessive": {
+                "singular": "toimetta",
+                "plural": "toimitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "toimin"
             }
         }
     },
@@ -1986,6 +2280,14 @@
             "translative": {
                 "singular": "pieneksi",
                 "plural": "pieniksi"
+            },
+            "abessive": {
+                "singular": "pienettä",
+                "plural": "pienittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "pienin"
             }
         }
     },
@@ -2038,6 +2340,14 @@
             "translative": {
                 "singular": "kädeksi",
                 "plural": "käsiksi"
+            },
+            "abessive": {
+                "singular": "kädettä",
+                "plural": "käsittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "käsin"
             }
         }
     },
@@ -2090,6 +2400,14 @@
             "translative": {
                 "singular": "uudeksi",
                 "plural": "uusiksi"
+            },
+            "abessive": {
+                "singular": "uudetta",
+                "plural": "uusitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "uusin"
             }
         }
     },
@@ -2142,6 +2460,14 @@
             "translative": {
                 "singular": "kynneksi",
                 "plural": "kynsiksi"
+            },
+            "abessive": {
+                "singular": "kynnettä",
+                "plural": "kynsittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kynsin"
             }
         }
     },
@@ -2194,6 +2520,14 @@
             "translative": {
                 "singular": "korreksi",
                 "plural": "korsiksi"
+            },
+            "abessive": {
+                "singular": "korretta",
+                "plural": "korsitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "korsin"
             }
         }
     },
@@ -2246,6 +2580,14 @@
             "translative": {
                 "singular": "jälleksi",
                 "plural": "jälsiksi"
+            },
+            "abessive": {
+                "singular": "jällettä",
+                "plural": "jälsittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "jälsin"
             }
         }
     },
@@ -2298,6 +2640,14 @@
             "translative": {
                 "singular": "lapseksi",
                 "plural": "lapsiksi"
+            },
+            "abessive": {
+                "singular": "lapsetta",
+                "plural": "lapsitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "lapsin"
             }
         }
     },
@@ -2350,6 +2700,14 @@
             "translative": {
                 "singular": "veitseksi",
                 "plural": "veitsiksi"
+            },
+            "abessive": {
+                "singular": "veitsettä",
+                "plural": "veitsittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "veitsin"
             }
         }
     },
@@ -2399,6 +2757,14 @@
             "translative": {
                 "singular": "kahdeksi",
                 "plural": "kaksiksi"
+            },
+            "abessive": {
+                "singular": "kahdetta",
+                "plural": "kaksitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kaksin"
             }
         }
     },
@@ -2448,6 +2814,14 @@
             "translative": {
                 "singular": "yhdeksi",
                 "plural": "yksiksi"
+            },
+            "abessive": {
+                "singular": "yhdettä",
+                "plural": "yksittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "yksin"
             }
         }
     },
@@ -2500,6 +2874,14 @@
             "translative": {
                 "singular": "sisareksi",
                 "plural": "sisariksi"
+            },
+            "abessive": {
+                "singular": "sisaretta",
+                "plural": "sisaritta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "sisarin"
             }
         }
     },
@@ -2552,6 +2934,14 @@
             "translative": {
                 "singular": "tattareksi",
                 "plural": "tattariksi"
+            },
+            "abessive": {
+                "singular": "tattaretta",
+                "plural": "tattaritta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "tattarin"
             }
         }
     },
@@ -2604,6 +2994,14 @@
             "translative": {
                 "singular": "kytkimeksi",
                 "plural": "kytkimiksi"
+            },
+            "abessive": {
+                "singular": "kytkimettä",
+                "plural": "kytkimittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kytkimin"
             }
         }
     },
@@ -2656,6 +3054,14 @@
             "translative": {
                 "singular": "laitumeksi",
                 "plural": "laitumiksi"
+            },
+            "abessive": {
+                "singular": "laitumetta",
+                "plural": "laitumitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "laitumin"
             }
         }
     },
@@ -2708,6 +3114,14 @@
             "translative": {
                 "singular": "onnettomaksi",
                 "plural": "onnettomiksi"
+            },
+            "abessive": {
+                "singular": "onnettomatta",
+                "plural": "onnettomitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "onnettomin"
             }
         }
     },
@@ -2760,6 +3174,14 @@
             "translative": {
                 "singular": "nimettömäksi",
                 "plural": "nimettömiksi"
+            },
+            "abessive": {
+                "singular": "nimettömättä",
+                "plural": "nimettömittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "nimettömin"
             }
         }
     },
@@ -2812,6 +3234,14 @@
             "translative": {
                 "singular": "lämpimäksi",
                 "plural": "lämpimiksi"
+            },
+            "abessive": {
+                "singular": "lämpimättä",
+                "plural": "lämpimittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "lämpimin"
             }
         }
     },
@@ -2864,6 +3294,14 @@
             "translative": {
                 "singular": "happamaksi",
                 "plural": "happamiksi"
+            },
+            "abessive": {
+                "singular": "happamatta",
+                "plural": "happamitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "happamin"
             }
         }
     },
@@ -2917,6 +3355,14 @@
             "translative": {
                 "singular": "sisimmäksi",
                 "plural": "sisimmiksi"
+            },
+            "abessive": {
+                "singular": "sisimmättä",
+                "plural": "sisimmittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "sisimmin"
             }
         }
     },
@@ -2970,6 +3416,14 @@
             "translative": {
                 "singular": "pahimmaksi",
                 "plural": "pahimmiksi"
+            },
+            "abessive": {
+                "singular": "pahimmatta",
+                "plural": "pahimmitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "pahimmin"
             }
         }
     },
@@ -3026,6 +3480,14 @@
             "translative": {
                 "singular": "vasemmaksi",
                 "plural": "vasemmiksi"
+            },
+            "abessive": {
+                "singular": "vasemmatta",
+                "plural": "vasemmitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "vasemmin"
             }
         }
     },
@@ -3078,6 +3540,14 @@
             "translative": {
                 "singular": "naiseksi",
                 "plural": "naisiksi"
+            },
+            "abessive": {
+                "singular": "naisetta",
+                "plural": "naisitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "naisin"
             }
         }
     },
@@ -3130,6 +3600,14 @@
             "translative": {
                 "singular": "vastaukseksi",
                 "plural": "vastauksiksi"
+            },
+            "abessive": {
+                "singular": "vastauksetta",
+                "plural": "vastauksitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "vastauksin"
             }
         }
     },
@@ -3179,6 +3657,14 @@
             "translative": {
                 "singular": "kalleudeksi",
                 "plural": "kalleuksiksi"
+            },
+            "abessive": {
+                "singular": "kalleudetta",
+                "plural": "kalleuksitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kalleuksin"
             }
         }
     },
@@ -3228,6 +3714,14 @@
             "translative": {
                 "singular": "kauneudeksi",
                 "plural": "kauneuksiksi"
+            },
+            "abessive": {
+                "singular": "kauneudetta",
+                "plural": "kauneuksitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kauneuksin"
             }
         }
     },
@@ -3284,6 +3778,14 @@
             "translative": {
                 "singular": "vieraaksi",
                 "plural": "vieraiksi"
+            },
+            "abessive": {
+                "singular": "vieraatta",
+                "plural": "vieraitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "vierain"
             }
         }
     },
@@ -3340,6 +3842,14 @@
             "translative": {
                 "singular": "keitaaksi",
                 "plural": "keitaiksi"
+            },
+            "abessive": {
+                "singular": "keitaatta",
+                "plural": "keitaitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "keitain"
             }
         }
     },
@@ -3392,6 +3902,14 @@
             "translative": {
                 "singular": "mieheksi",
                 "plural": "miehiksi"
+            },
+            "abessive": {
+                "singular": "miehettä",
+                "plural": "miehittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "miehin"
             }
         }
     },
@@ -3447,6 +3965,14 @@
             "translative": {
                 "singular": "ohueksi",
                 "plural": "ohuiksi"
+            },
+            "abessive": {
+                "singular": "ohuetta",
+                "plural": "ohuitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "ohuin"
             }
         }
     },
@@ -3502,6 +4028,14 @@
             "translative": {
                 "singular": "impyeksi",
                 "plural": "impyiksi"
+            },
+            "abessive": {
+                "singular": "impyettä",
+                "plural": "impyittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "impyin"
             }
         }
     },
@@ -3557,6 +4091,14 @@
             "translative": {
                 "singular": "kevääksi",
                 "plural": "keväiksi"
+            },
+            "abessive": {
+                "singular": "keväättä",
+                "plural": "keväittä"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "keväin"
             }
         }
     },
@@ -3606,6 +4148,14 @@
             "translative": {
                 "singular": "kahdeksanneksi",
                 "plural": "kahdeksansiksi"
+            },
+            "abessive": {
+                "singular": "kahdeksannetta",
+                "plural": "kahdeksansitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kahdeksansin"
             }
         }
     },
@@ -3655,6 +4205,14 @@
             "translative": {
                 "singular": "kolmanneksi",
                 "plural": "kolmansiksi"
+            },
+            "abessive": {
+                "singular": "kolmannetta",
+                "plural": "kolmansitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kolmansin"
             }
         }
     },
@@ -3707,6 +4265,14 @@
             "translative": {
                 "singular": "tuhanneksi",
                 "plural": "tuhansiksi"
+            },
+            "abessive": {
+                "singular": "tuhannetta",
+                "plural": "tuhansitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "tuhansin"
             }
         }
     },
@@ -3762,6 +4328,14 @@
             "translative": {
                 "singular": "kuolleeksi",
                 "plural": "kuolleiksi"
+            },
+            "abessive": {
+                "singular": "kuolleetta",
+                "plural": "kuolleitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "kuollein"
             }
         }
     },
@@ -3817,6 +4391,14 @@
             "translative": {
                 "singular": "hameeksi",
                 "plural": "hameiksi"
+            },
+            "abessive": {
+                "singular": "hameetta",
+                "plural": "hameitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "hamein"
             }
         }
     },
@@ -3872,6 +4454,14 @@
             "translative": {
                 "singular": "sateeksi",
                 "plural": "sateiksi"
+            },
+            "abessive": {
+                "singular": "sateetta",
+                "plural": "sateitta"
+            },
+            "instructive": {
+                "singular": "none",
+                "plural": "satein"
             }
         }
     }
