@@ -69,7 +69,7 @@ for word in words_to_test:
 
             # Start the query
             try:
-                result = theory.query(word.capitalize() + ":<" + datr_number + " " + datr_case + ">")
+                result = theory.query(word.capitalize() + ":<mor " + datr_number + " " + datr_case + ">")
                 pretty_result = ""
                 for element in result:
                     pretty_result += element

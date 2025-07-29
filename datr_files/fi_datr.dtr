@@ -4,45 +4,45 @@
 % Base node for all nominals, used for completing case endings
 NOMINAL:
 	% Only plural queries end up here
-	<$grad_type pl nom> == "<sg stem Gradation:<$grad_type nom pl>>" t
+	<$grad_type pl nom> == "<mor sg stem Gradation:<phn $grad_type nom pl>>" t
 
 	% Sentences for the partitive
-	<$grad_type sg part a> == "<sg stem Gradation:<$grad_type part sg a>>" Harmony:<phn "<phn harmony>" a>
-	<$grad_type sg part ta> == "<sg stem Gradation:<$grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
-	<$grad_type cs part ta> == "<cons stem Gradation:<$grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
+	<$grad_type sg part a> == "<mor sg stem Gradation:<phn $grad_type part sg a>>" Harmony:<phn "<phn harmony>" a>
+	<$grad_type sg part ta> == "<mor sg stem Gradation:<phn $grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
+	<$grad_type cs part ta> == "<mor cons stem Gradation:<phn $grad_type part sg ta>>" t Harmony:<phn "<phn harmony>" a>
 	
-	<$grad_type pl part a> == "<pl stem Gradation:<$grad_type part pl a>>" Harmony:<phn "<phn harmony>" a>
-	<$grad_type pl part ta> == "<pl stem Gradation:<$grad_type part pl ta>>" t Harmony:<phn "<phn harmony>" a>
+	<$grad_type pl part a> == "<mor pl stem Gradation:<phn $grad_type part pl a>>" Harmony:<phn "<phn harmony>" a>
+	<$grad_type pl part ta> == "<mor pl stem Gradation:<phn $grad_type part pl ta>>" t Harmony:<phn "<phn harmony>" a>
 	
 	% Sentences for the genitive
-	<$grad_type sg gen> == "<sg stem Gradation:<$grad_type gen sg>>" n
+	<$grad_type sg gen> == "<mor sg stem Gradation:<phn $grad_type gen sg>>" n
 	
-	<$grad_type pl gen en> == "<pl stem Gradation:<$grad_type gen pl en>>" en
-	<$grad_type pl gen den> == "<pl stem Gradation:<$grad_type gen pl den>>" den
-	<$grad_type cs gen ten> == "<cons stem Gradation:<$grad_type gen pl ten>>" ten
+	<$grad_type pl gen en> == "<mor pl stem Gradation:<phn $grad_type gen pl en>>" en
+	<$grad_type pl gen den> == "<mor pl stem Gradation:<phn $grad_type gen pl den>>" den
+	<$grad_type cs gen ten> == "<mor cons stem Gradation:<phn $grad_type gen pl ten>>" ten
 
 	% Sentences for the partitive
-	<$grad_type sg ill vn> == "<sg stem Gradation:<$grad_type ill sg vn>>" "<final vowel>" n
-	<$grad_type sg ill hvn> == "<sg stem Gradation:<$grad_type ill sg hvn>>" h "<final vowel>" n
-	<$grad_type sg ill seen> == "<sg stem Gradation:<$grad_type ill sg seen>>" seen
+	<$grad_type sg ill vn> == "<mor sg stem Gradation:<phn $grad_type ill sg vn>>" "<final vowel>" n
+	<$grad_type sg ill hvn> == "<mor sg stem Gradation:<phn $grad_type ill sg hvn>>" h "<final vowel>" n
+	<$grad_type sg ill seen> == "<mor sg stem Gradation:<phn $grad_type ill sg seen>>" seen
 	
-	<$grad_type pl ill in> == "<pl stem Gradation:<$grad_type ill pl in>>" in
-	<$grad_type pl ill hin> == "<pl stem Gradation:<$grad_type ill pl hin>>" hin
-	<$grad_type pl ill siin> == "<pl stem Gradation:<$grad_type ill pl siin>>" siin
+	<$grad_type pl ill in> == "<mor pl stem Gradation:<phn $grad_type ill pl in>>" in
+	<$grad_type pl ill hin> == "<mor pl stem Gradation:<phn $grad_type ill pl hin>>" hin
+	<$grad_type pl ill siin> == "<mor pl stem Gradation:<phn $grad_type ill pl siin>>" siin
 	
 	% Essive always in stong form
-	<$grad_type $number ess> == "<$number stem Gradation:<$grad_type ess $number>>" n Harmony:<phn "<phn harmony>" a>
+	<$grad_type $number ess> == "<mor $number stem Gradation:<phn $grad_type ess $number>>" n Harmony:<phn "<phn harmony>" a>
 	
 	% "Regular" cases
-	<$grad_type $number iness> == "<$number stem Gradation:<$grad_type iness $number>>" ss Harmony:<phn "<phn harmony>" a>
-	<$grad_type $number ela> == "<$number stem Gradation:<$grad_type ela $number>>" st Harmony:<phn "<phn harmony>" a>
-	<$grad_type $number all> == "<$number stem Gradation:<$grad_type all $number>>" lle
-	<$grad_type $number adess> == "<$number stem Gradation:<$grad_type adess $number>>" ll Harmony:<phn "<phn harmony>" a>
-	<$grad_type $number abl> == "<$number stem Gradation:<$grad_type abl $number>>" lt Harmony:<phn "<phn harmony>" a>
+	<$grad_type $number iness> == "<mor $number stem Gradation:<phn $grad_type iness $number>>" ss Harmony:<phn "<phn harmony>" a>
+	<$grad_type $number ela> == "<mor $number stem Gradation:<phn $grad_type ela $number>>" st Harmony:<phn "<phn harmony>" a>
+	<$grad_type $number all> == "<mor $number stem Gradation:<phn $grad_type all $number>>" lle
+	<$grad_type $number adess> == "<mor $number stem Gradation:<phn $grad_type adess $number>>" ll Harmony:<phn "<phn harmony>" a>
+	<$grad_type $number abl> == "<mor $number stem Gradation:<phn $grad_type abl $number>>" lt Harmony:<phn "<phn harmony>" a>
 	
-	<$grad_type $number trans> == "<$number stem Gradation:<$grad_type trans $number>>" ksi
-	<$grad_type $number abess> == "<$number stem Gradation:<$grad_type abess $number>>" tt Harmony:<phn "<phn harmony>" a>
-	<$grad_type pl instr> == "<pl stem Gradation:<$grad_type instr pl>>" n.
+	<$grad_type $number trans> == "<mor $number stem Gradation:<phn $grad_type trans $number>>" ksi
+	<$grad_type $number abess> == "<mor $number stem Gradation:<phn $grad_type abess $number>>" tt Harmony:<phn "<phn harmony>" a>
+	<$grad_type pl instr> == "<mor pl stem Gradation:<phn $grad_type instr pl>>" n.
 
 Harmony:
 	<phn front a> == ä
@@ -79,20 +79,20 @@ Gradation_Res:
 	<phn k weak> == .
 
 Gradation:
-	<none> == none
+	<phn none> == none
 
-	<for> == weak
-	<for nom sg> == strong
-	<for part> == strong
-	<for gen pl en> == strong
-	<for part pl ta> == weak
-	<for ill> == strong
-	<for ess> == strong
+	<phn for> == weak
+	<phn for nom sg> == strong
+	<phn for part> == strong
+	<phn for gen pl en> == strong
+	<phn for part pl ta> == weak
+	<phn for ill> == strong
+	<phn for ess> == strong
 
-	<rev> == strong
-	<rev nom sg> == weak
-	<rev gen pl ten> == weak
-	<rev part sg> == weak.
+	<phn rev> == strong
+	<phn rev nom sg> == weak
+	<phn rev gen pl ten> == weak
+	<phn rev part sg> == weak.
 
 % Declension types based on Kotimaisten kielten keskus
 
@@ -101,48 +101,48 @@ Gradation:
 % 18340
 Type1:
 	<gt> == for
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-o⟩, ⟨-u⟩, ⟨-ö⟩, ⟨-y⟩, 3+ syllables, No gradation.
 % palvelu
 % 4610
 Type2:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ao⟩, ⟨-eo⟩, ⟨-io⟩, ⟨-iö⟩, ⟨-ie⟩, ⟨-oe⟩, No gradation.
 % valtio
 % 2640
 Type3:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-kko⟩, ⟨-kkö⟩, ⟨-tto⟩, 3+ syllables, With final-syllable gradation.
 % laatikko
@@ -150,16 +150,16 @@ Type3:
 Type4:
 	<gt> == for
 	<final vowel> == o
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-i⟩ (possibly no vowel in the nominative singular), 2 syllables, With final-syllable gradation.
 % risti
@@ -167,17 +167,17 @@ Type4:
 Type5:
 	<gt> == for
 	<final vowel> == i
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" i
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" i
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" ei
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl stem> == "<mor root>" ei
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
 	% Extra rule for manual genitive based on nominative
-	<pl gen> == <sg nom> en
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl gen> == <mor sg nom> en
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-i⟩ (possibly no vowel in the nominative singular), 3+ syllables, No gradation.
 % paperi
@@ -185,17 +185,17 @@ Type5:
 Type6:
 	<gt> == none
 	<final vowel> == i
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" i
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" i
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" ei
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl stem> == "<mor root>" ei
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
 	% Extra rule for manual genitive based on nominative
-	<pl gen> == <sg nom> en _ NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
+	<mor pl gen> == <mor sg nom> en _ NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-e⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables, With final-syllable gradation.
 % ovi
@@ -203,16 +203,16 @@ Type6:
 Type7:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" e
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" e
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-e⟩, 2 syllables, With final-syllable gradation.
 % nalle
@@ -220,16 +220,16 @@ Type7:
 Type8:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-a⟩, 2 syllables, Non-rounded vowel (a, e, i) in first syllable, With final-syllable gradation.
 % kala
@@ -237,16 +237,16 @@ Type8:
 Type9:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-a⟩ or ⟨-ä⟩, 2 syllables, If ending in ⟨-a⟩, rounded vowel (⟨o⟩ or ⟨u⟩) in first syllable, With final-syllable gradation.
 % koira
@@ -254,16 +254,16 @@ Type9:
 Type10:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in short consonant + ⟨-a⟩ or ⟨-ä⟩, 3+ syllables. No gradation.
 % omena
@@ -271,16 +271,16 @@ Type10:
 Type11:
 	<gt> == none
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-a⟩ or ⟨-ä⟩, 3+ syllables. No gradation.
 % kulkija
@@ -288,16 +288,16 @@ Type11:
 Type12:
 	<gt> == none
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-a⟩ or ⟨-ä⟩, 3+ syllables. No gradation.
 % katsika
@@ -305,16 +305,16 @@ Type12:
 Type13:
 	<gt> == none
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in long consonant + ⟨-a⟩ or ⟨-ä⟩, 3+ syllables. With final-syllable gradation.
 % solakka
@@ -322,16 +322,16 @@ Type13:
 Type14:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a> _ NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ea⟩, ⟨-eä⟩, ⟨-oa⟩. No gradation.
 % korkea
@@ -339,16 +339,16 @@ Type14:
 Type15:
 	<gt> == none
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a> _ NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" a>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a> _ NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Comparative adjectives. Ending in ⟨-mpa⟩, ⟨-mpä⟩ (⟨-a⟩or⟨-ä⟩ > ⟨-i⟩ in the nominative singular). With final-syllable gradation.
 % vanhempi
@@ -356,109 +356,109 @@ Type15:
 Type16:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<sg part> == NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor sg part> == NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-aa⟩, ⟨-oo⟩, ⟨-uu⟩, rarely ⟨-ee⟩, ⟨-yy⟩, 2+ syllables. No gradation.
 % vapaa
 % 276
 Type17:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" "<final vowel>"
-	<sg stem> == "<stem>" "<final vowel>"
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" "<final vowel>"
+	<mor sg stem> == "<mor root>" "<final vowel>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in a long vowel _ a diphthong ending in ⟨-i⟩, 1 syllable. No gradation.
 % maa
 % 1464
 Type18:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" "<final vowel>"
-	<sg stem> == "<stem>" "<final vowel>"
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" "<final vowel>"
+	<mor sg stem> == "<mor root>" "<final vowel>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ie⟩, ⟨-uo⟩, ⟨-yö⟩, 1 syllable. No gradation.
 % suo
 % 662
 Type19ie:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" ie
-	<sg stem> == "<stem>" ie
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" ie
+	<mor sg stem> == "<mor root>" ie
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn>
 	
-	<pl stem> == "<stem>" ei
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" ei
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 Type19uo:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" u> Harmony:<phn "<phn harmony>" o>
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" u> Harmony:<phn "<phn harmony>" o>
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" u> Harmony:<phn "<phn harmony>" o>
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" u> Harmony:<phn "<phn harmony>" o>
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn>
 	
-	<pl stem> == "<stem>" Harmony:<phn "<phn harmony>" o> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" Harmony:<phn "<phn harmony>" o> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ee⟩, ⟨-öö⟩, ⟨-yy⟩, rarely ⟨-aa⟩, ⟨-oo⟩, ⟨-uu⟩, 2+ syllables. No gradation.
 % filee
 % 145
 Type20:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" "<final vowel>"
-	<sg stem> == "<stem>" "<final vowel>"
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn> _ NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" "<final vowel>"
+	<mor sg stem> == "<mor root>" "<final vowel>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn> _ NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Foreign words ending in a vowel. No gradation.
 % rosé
 % 59
 Type21:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Foreign words ending in a vowel, but written with a final consonant (mostly French loanwords). No gradation.
 % parfait
@@ -466,16 +466,16 @@ Type21:
 Type22:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>" ’
-	<sg part> == NOMINAL:<"<gt>" sg part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill hvn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>" ’
+	<mor sg part> == NOMINAL:<"<gt>" sg part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill hvn>
 	
-	<pl stem> == "<stem>" ’i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" ’i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-he-⟩, ⟨-le-⟩, rarely ⟨-ne-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % tiili
@@ -483,17 +483,17 @@ Type22:
 Type23:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-he-⟩, ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩, ⟨-se-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % uni
@@ -501,17 +501,17 @@ Type23:
 Type24:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-me-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % toimi
@@ -519,17 +519,17 @@ Type24:
 Type25:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" mi
-	<sg stem> == "<stem>" me
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" mi
+	<mor sg stem> == "<mor root>" me
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" mi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" mi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % pieni
@@ -537,17 +537,17 @@ Type25:
 Type26:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" i
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" i
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-te-⟩ (⟨-te⟩ > ⟨-si⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
 % käsi
@@ -555,17 +555,17 @@ Type26:
 Type27:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" si
-	<sg stem> == "<stem>" Gradation_Res:<phn t> e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" si
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn t> e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" si
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" si
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-lte-⟩, ⟨-nte-⟩, ⟨-rte-⟩ (⟨-te⟩ > ⟨-si⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
 % kynsi
@@ -573,47 +573,47 @@ Type27:
 Type28nt:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" nsi
-	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cons stem> == "<stem>" nt
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" nsi
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn nt> e
+	<mor cons stem> == "<mor root>" nt
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" nsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" nsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 Type28rt:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" rsi
-	<sg stem> == "<stem>" Gradation_Res:<phn rt> e
-	<cons stem> == "<stem>" rt
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" rsi
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn rt> e
+	<mor cons stem> == "<mor root>" rt
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" rsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" rsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 Type28lt:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" lsi
-	<sg stem> == "<stem>" Gradation_Res:<phn lt> e
-	<cons stem> == "<stem>" lt
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" lsi
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn lt> e
+	<mor cons stem> == "<mor root>" lt
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" lsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" lsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-pse-⟩, ⟨-kse-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % lapsi
@@ -621,17 +621,17 @@ Type28lt:
 Type29:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" psi
-	<sg stem> == "<stem>" pse
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" psi
+	<mor sg stem> == "<mor root>" pse
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" psi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" psi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-tse-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
 % veitsi
@@ -639,17 +639,17 @@ Type29:
 Type30:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" tsi
-	<sg stem> == "<stem>" tse
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" tsi
+	<mor sg stem> == "<mor root>" tse
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" tsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" tsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-hte-⟩ (⟨-hte⟩ > ⟨-ksi⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
 % kaksi
@@ -657,17 +657,17 @@ Type30:
 Type31:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" ksi
-	<sg stem> == "<stem>" h Gradation_Res:<phn t> e
-	<cons stem> == "<stem>" h
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" ksi
+	<mor sg stem> == "<mor root>" h Gradation_Res:<phn t> e
+	<mor cons stem> == "<mor root>" h
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" ksi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" ksi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩ (no vowel in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
 % sisar
@@ -675,17 +675,17 @@ Type31:
 Type32:
 	<gt> == rev
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>"
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>"
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-me-⟩ (⟨-me⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
 % kytkin
@@ -693,17 +693,17 @@ Type32:
 Type33:
 	<gt> == rev
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
-	<sg stem> == "<stem>" me
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" n
+	<mor sg stem> == "<mor root>" me
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" mi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" mi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-toma-⟩, ⟨-tömä-⟩ (⟨-ma⟩or⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
 % onneton
@@ -711,17 +711,17 @@ Type33:
 Type34:
 	<gt> == rev
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
-	<sg stem> == "<stem>" m Harmony:<phn "<phn harmony>" a>
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" n
+	<mor sg stem> == "<mor root>" m Harmony:<phn "<phn harmony>" a>
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" mi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" mi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % The words lämmin and hapan only. Ending in ⟨-mä-⟩ (⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
 % lämmin, hapan
@@ -729,17 +729,17 @@ Type34:
 Type35:
 	<gt> == rev
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
-	<sg stem> == "<stem>" m Harmony:<phn "<phn harmony>" a>
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" n
+	<mor sg stem> == "<mor root>" m Harmony:<phn "<phn harmony>" a>
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" mi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" mi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Superlative adjectives. Ending in ⟨-impa-⟩, ⟨-impä-⟩ (⟨-mpa⟩or⟨-mpä⟩ > ⟨-n⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
 % sisin
@@ -747,17 +747,17 @@ Type35:
 Type36:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
-	<sg stem> == "<stem>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" n
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Gradation_Res:<phn mp> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" Gradation_Res:<phn mp> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % The word vasen only. Ending in ⟨-mpa-⟩ (⟨-mpa⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
 % vasen
@@ -765,17 +765,17 @@ Type36:
 Type37:
 	<gt> == for
 	<final vowel> == Harmony:<phn "<phn harmony>" a>
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" n
-	<sg stem> == "<stem>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
-	<cons stem> == "<stem>" n
-	<sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" n
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn mp> Harmony:<phn "<phn harmony>" a>
+	<mor cons stem> == "<mor root>" n
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" Gradation_Res:<phn mp> i
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" Gradation_Res:<phn mp> i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-se-⟩ (⟨-se⟩ > ⟨-nen⟩ in the nominative singular), 2+ syllables. No gradation.
 % nainen
@@ -783,17 +783,17 @@ Type37:
 Type38:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" nen
-	<sg stem> == "<stem>" se
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" nen
+	<mor sg stem> == "<mor root>" se
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" si
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" si
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-kse-⟩ (⟨-kse⟩ > ⟨-s⟩ in the nominative singular), 3+ syllables. No gradation.
 % vastaus
@@ -801,17 +801,17 @@ Type38:
 Type39:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
-	<sg stem> == "<stem>" kse
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" s
+	<mor sg stem> == "<mor root>" kse
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" ksi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" ksi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-te-⟩ (⟨-te⟩ > ⟨-s⟩ in the nominative singular), 3+ syllables. With final-syllable gradation.
 % kalleus
@@ -819,34 +819,34 @@ Type39:
 Type40:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
-	<sg stem> == "<stem>" Gradation_Res:<phn t> e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" s
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn t> e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" ksi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" ksi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 	
 % Ending in long vowel (long vowel > short vowel + ⟨-s⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
 % vieras
 % 2104
 Type41:
 	<gt> == rev
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
-	<sg stem> == "<stem>" "<final vowel>"
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" s
+	<mor sg stem> == "<mor root>" "<final vowel>"
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % The word mies only. Ending in ⟨-he-⟩ (⟨-he⟩ > ⟨-s⟩ in the nominative singular), 2 syllables. No gradation.
 % mies
@@ -854,17 +854,17 @@ Type41:
 Type42:
 	<gt> == none
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
-	<sg stem> == "<stem>" he
-	<cons stem> == "<stem>" s
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" s
+	<mor sg stem> == "<mor root>" he
+	<mor cons stem> == "<mor root>" s
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" hi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" hi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-ue-⟩, ⟨-ye-⟩ (⟨-e⟩ > ⟨-t⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
 % ohut
@@ -872,34 +872,34 @@ Type42:
 Type43:
 	<gt> == rev
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" t
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ää-⟩ (⟨-ä⟩ > ⟨-t⟩ in the nominative singular), 2+ syllables. No gradation (outside of proper nouns).
 % kevät
 % 8
 Type44:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
-	<sg stem> == "<stem>" Harmony:<phn "<phn harmony>" a>
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" t
+	<mor sg stem> == "<mor root>" Harmony:<phn "<phn harmony>" a>
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ordinal numbers. Ending in ⟨-nte-⟩ (⟨-nte⟩ > ⟨-s⟩ in the nominative singular), 3+ syllables. With final-syllable gradation.
 % kahdeksas
@@ -907,17 +907,17 @@ Type44:
 Type45:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" s
-	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" s
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn nt> e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" nsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" nsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % The word tuhat only. Ending in ⟨-nte-⟩ (⟨-nte⟩ > ⟨-t⟩ in the nominative singular), 3 syllables. With final-syllable gradation.
 % tuhat
@@ -925,51 +925,51 @@ Type45:
 Type46:
 	<gt> == for
 	<final vowel> == e
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" t
-	<sg stem> == "<stem>" Gradation_Res:<phn nt> e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill vn>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" t
+	<mor sg stem> == "<mor root>" Gradation_Res:<phn nt> e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
-	<pl stem> == "<stem>" nsi
-	<pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<pl gen> == NOMINAL:<"<gt>" pl gen en>
-	<pl part> == NOMINAL:<"<gt>" pl part a>.
+	<mor pl stem> == "<mor root>" nsi
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
+	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Active past participles. Ending in ⟨-ee-⟩ (⟨-ee⟩ > ⟨-ut⟩or⟨-yt⟩ in the nominative singular), 2+ syllables. No gradation.
 % kuollut
 % 1013
 Type47:
 	<gt> == none
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>" Harmony:<phn "<phn harmony>" u> t
-	<sg stem> == "<stem>" ee
-	<cons stem> == "<stem>" Harmony:<phn "<phn harmony>" u> t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>" Harmony:<phn "<phn harmony>" u> t
+	<mor sg stem> == "<mor root>" ee
+	<mor cons stem> == "<mor root>" Harmony:<phn "<phn harmony>" u> t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" ei
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" ei
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % Ending in ⟨-ee-⟩ (⟨-ee⟩ > ⟨-e⟩ˣ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
 % hame
 % 7791
 Type48:
 	<gt> == rev
-	<> == NOMINAL:<"<gt>">
-	<sg nom> == "<stem Gradation:<"<gt>" nom sg>>"
-	<sg stem> == "<stem>" e
-	<cons stem> == "<stem>" t
-	<sg part> == NOMINAL:<"<gt>" cs part ta>
-	<sg ill> == NOMINAL:<"<gt>" sg ill seen>
+	<mor> == NOMINAL:<"<gt>">
+	<mor sg nom> == "<mor root Gradation:<phn "<gt>" nom sg>>"
+	<mor sg stem> == "<mor root>" e
+	<mor cons stem> == "<mor root>" t
+	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
-	<pl stem> == "<stem>" i
-	<pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
-	<pl gen> == NOMINAL:<"<gt>" pl gen den>
-	<pl part> == NOMINAL:<"<gt>" pl part ta>.
+	<mor pl stem> == "<mor root>" i
+	<mor pl ill> == NOMINAL:<"<gt>" pl ill hin> _ NOMINAL:<"<gt>" pl ill siin>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
+	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
 % As either hame _ sisar. Covered by inheriting from either Type48 _ Type32 in the leaf
 % askel _ askele
@@ -990,396 +990,396 @@ Type48:
 
 Valo:
 <> == Type1
-<stem> == valo
+<mor root> == valo
 <final vowel> == o
 <phn harmony> == back.
 
 Katu:
 <> == Type1
-<stem> == ka Gradation_Res:<phn t> u
+<mor root> == ka Gradation_Res:<phn t> u
 <final vowel> == u
 <phn harmony> == back.
 
 Palvelu:
 <> == Type2
-<stem> == palvelu
+<mor root> == palvelu
 <final vowel> == u
 <phn harmony> == back.
 
 Valtio:
 <> == Type3
-<stem> == valtio
+<mor root> == valtio
 <final vowel> == o
 <phn harmony> == back.
 
 Laatikko:
 <> == Type4
-<stem> == laati Gradation_Res:<phn kk> o
+<mor root> == laati Gradation_Res:<phn kk> o
 <phn harmony> == back.
 
 Risti:
 <> == Type5
-<stem> == rist
+<mor root> == rist
 <phn harmony> == front.
 
 Koti:
 <> == Type5
-<stem> == ko Gradation_Res:<phn t>
+<mor root> == ko Gradation_Res:<phn t>
 <phn harmony> == back.
 
 Paperi:
 <> == Type6
-<stem> == paper
+<mor root> == paper
 <phn harmony> == back.
 
 Ovi:
 <> == Type7
-<stem> == ov
+<mor root> == ov
 <phn harmony> == back.
 
 Lahti:
 <> == Type7
-<stem> == lah Gradation_Res:<phn t>
+<mor root> == lah Gradation_Res:<phn t>
 <phn harmony> == back.
 
 Nalle:
 <> == Type8
-<stem> == nalle
+<mor root> == nalle
 <phn harmony> == back.
 
 Nukke:
 <> == Type8
-<stem> == nu Gradation_Res:<phn kk> e
+<mor root> == nu Gradation_Res:<phn kk> e
 <phn harmony> == back.
 
 Kala:
 <> == Type9
-<stem> == kal
+<mor root> == kal
 <phn harmony> == back.
 
 Rauta:
 <> == Type9
-<stem> == rau Gradation_Res:<phn t>
+<mor root> == rau Gradation_Res:<phn t>
 <phn harmony> == back.
 
 Koira:
 <> == Type10
-<stem> == koir
+<mor root> == koir
 <phn harmony> == back.
 
 Sota:
 <> == Type10
-<stem> == so Gradation_Res:<phn t>
+<mor root> == so Gradation_Res:<phn t>
 <phn harmony> == back.
 
 Omena:
 <> == Type11
-<stem> == omen
+<mor root> == omen
 <phn harmony> == back.
 
 Kulkija:
 <> == Type12
-<stem> == kulkij
+<mor root> == kulkij
 <phn harmony> == back.
 
 Katiska:
 <> == Type13
-<stem> == katisk
+<mor root> == katisk
 <phn harmony> == back.
 
 Solakka:
 <> == Type14
-<stem> == sola Gradation_Res:<phn kk>
+<mor root> == sola Gradation_Res:<phn kk>
 <phn harmony> == back.
 
 Navetta:
 <> == Type14
-<stem> == nave Gradation_Res:<phn tt>
+<mor root> == nave Gradation_Res:<phn tt>
 <phn harmony> == back.
 
 Korkea:
 <> == Type15
-<stem> == korke
+<mor root> == korke
 <phn harmony> == back.
 
 Vanhempi:
 <> == Type16
-<stem> == vanhe Gradation_Res:<phn mp>
+<mor root> == vanhe Gradation_Res:<phn mp>
 <phn harmony> == back.
 
 Isompi:
 <> == Type16
-<stem> == iso Gradation_Res:<phn mp>
+<mor root> == iso Gradation_Res:<phn mp>
 <phn harmony> == back.
 
 Vapaa:
 <> == Type17
-<stem> == vapa
+<mor root> == vapa
 <final vowel> == a
 <phn harmony> == back.
 
 Maa:
 <> == Type18
-<stem> == ma
+<mor root> == ma
 <final vowel> == Harmony:<phn "<phn harmony>" a>
 <phn harmony> == back.
 
 Voi:
 <> == Type18
-<stem> == vo
+<mor root> == vo
 <final vowel> == i
 <phn harmony> == back.
 
 Suo:
 <> == Type19uo
-<stem> == s
+<mor root> == s
 <final vowel> == o
 <phn harmony> == back.
 
 Tie:
 <> == Type19ie
-<stem> == t
+<mor root> == t
 <final vowel> == e
 <phn harmony> == front.
 
 Työ:
 <> == Type19uo
-<stem> == t
+<mor root> == t
 <final vowel> == ö
 <phn harmony> == front.
 
 Filee:
 <> == Type20
-<stem> == file
+<mor root> == file
 <final vowel> == e
 <phn harmony> == front.
 
 Rosé:
 <> == Type21
-<stem> == rosé
+<mor root> == rosé
 <final vowel> == e
 <phn harmony> == back.
 
 Parfait:
 <> == Type22
-<stem> == parfait
+<mor root> == parfait
 <phn harmony> == back.
 
 Tiili:
 <> == Type23
-<stem> == tiil
+<mor root> == tiil
 <phn harmony> == front.
 
 Uni:
 <> == Type24
-<stem> == un
+<mor root> == un
 <phn harmony> == back.
 
 Toimi:
 <> == Type25
-<stem> == toi
+<mor root> == toi
 <phn harmony> == back.
 
 Pieni:
 <> == Type26
-<stem> == pien
+<mor root> == pien
 <phn harmony> == front.
 
 Käsi:
 <> == Type27
-<stem> == kä
+<mor root> == kä
 <phn harmony> == front.
 
 Uusi:
 <> == Type27
-<stem> == uu
+<mor root> == uu
 <phn harmony> == back.
 
 Kynsi:
 <> == Type28nt
-<stem> == ky
+<mor root> == ky
 <phn harmony> == front.
 
 Korsi:
 <> == Type28rt
-<stem> == ko
+<mor root> == ko
 <phn harmony> == back.
 
 Jälsi:
 <> == Type28lt
-<stem> == jä
+<mor root> == jä
 <phn harmony> == front.
 
 Lapsi:
 <> == Type29
-<stem> == la
+<mor root> == la
 <phn harmony> == back.
 
 Veitsi:
 <> == Type30
-<stem> == vei
+<mor root> == vei
 <phn harmony> == front.
 
 Kaksi:
 <> == Type31
-<stem> == ka
+<mor root> == ka
 <phn harmony> == back.
 
 Yksi:
 <> == Type31
-<stem> == y
+<mor root> == y
 <phn harmony> == front.
 
 Sisar:
 <> == Type32
-<stem> == sisar
+<mor root> == sisar
 <phn harmony> == back.
 
 Tatar:
 <> == Type32
-<stem> == ta Gradation_Res:<phn tt> ar
+<mor root> == ta Gradation_Res:<phn tt> ar
 <phn harmony> == back.
 
 Kytkin:
 <> == Type33
-<stem> == kytki
+<mor root> == kytki
 <phn harmony> == front.
 
 Laidun:
 <> == Type33
-<stem> == lai Gradation_Res:<phn t> u
+<mor root> == lai Gradation_Res:<phn t> u
 <phn harmony> == back.
 
 Onneton:
 <> == Type34
-<stem> == onne Gradation_Res:<phn tt> o
+<mor root> == onne Gradation_Res:<phn tt> o
 <phn harmony> == back.
 
 Nimetön:
 <> == Type34
-<stem> == nime Gradation_Res:<phn tt> ö
+<mor root> == nime Gradation_Res:<phn tt> ö
 <phn harmony> == front.
 
 Lämmin:
 <> == Type35
-<stem> == lä Gradation_Res:<phn mp> i
+<mor root> == lä Gradation_Res:<phn mp> i
 <phn harmony> == front.
 
 Hapan:
 <> == Type35
-<stem> == ha Gradation_Res:<phn pp> a
+<mor root> == ha Gradation_Res:<phn pp> a
 <phn harmony> == back.
 
 Sisin:
 <> == Type36
-<stem> == sisi
+<mor root> == sisi
 <phn harmony> == front.
 
 Pahin:
 <> == Type36
-<stem> == pahi
+<mor root> == pahi
 <phn harmony> == back.
 
 Vasen:
 <> == Type37
-<stem> == vase
+<mor root> == vase
 <phn harmony> == back.
 
 Nainen:
 <> == Type38
-<stem> == nai
+<mor root> == nai
 <phn harmony> == back.
 
 Vastaus:
 <> == Type39
-<stem> == vastau
+<mor root> == vastau
 <phn harmony> == back.
 
 Kalleus:
 <> == Type40
-<stem> == kalleu
+<mor root> == kalleu
 <phn harmony> == back.
 
 Kauneus:
 <> == Type40
-<stem> == kauneu
+<mor root> == kauneu
 <phn harmony> == back.
 
 Vieras:
 <> == Type41
-<stem> == viera
+<mor root> == viera
 <final vowel> == a
 <phn harmony> == back.
 
 Keidas:
 <> == Type41
-<stem> == kei Gradation_Res:<phn t> a
+<mor root> == kei Gradation_Res:<phn t> a
 <final vowel> == a
 <phn harmony> == back.
 
 Mies:
 <> == Type42
-<stem> == mie
+<mor root> == mie
 <phn harmony> == front.
 
 Ohut:
 <> == Type43
-<stem> == ohu
+<mor root> == ohu
 <phn harmony> == back.
 
 Immyt:
 <> == Type43
-<stem> == i Gradation_Res:<phn mp> y
+<mor root> == i Gradation_Res:<phn mp> y
 <phn harmony> == front.
 
 Kevät:
 <> == Type44
-<stem> == kevä
+<mor root> == kevä
 <phn harmony> == front.
 
 Kahdeksas:
 <> == Type45
-<stem> == kahdeksa
+<mor root> == kahdeksa
 <phn harmony> == back.
 
 Kolmas:
 <> == Type45
-<stem> == kolma
+<mor root> == kolma
 <phn harmony> == back.
 
 Tuhat:
 <> == Type46
-<stem> == tuha
+<mor root> == tuha
 <phn harmony> == back.
 
 Kuollut:
 <> == Type47
-<stem> == kuoll
+<mor root> == kuoll
 <phn harmony> == back.
 
 Hame:
 <> == Type48
-<stem> == hame
+<mor root> == hame
 <phn harmony> == back.
 
 Sade:
 <> == Type48
-<stem> == sa Gradation_Res:<phn t> e
+<mor root> == sa Gradation_Res:<phn t> e
 <phn harmony> == back.
 
 %% Currently not covered
 
 Askel:
 <> == Type49
-<stem> == askel
+<mor root> == askel
 <phn harmony> == back.
 
 Isoäiti:
 <> == Type50
-<stem> == isoäiti
+<mor root> == isoäiti
 <phn harmony> == front.
 
 Nuoripari:
 <> == Type51
-<stem> == nuoripari
+<mor root> == nuoripari
 <phn harmony> == back.
