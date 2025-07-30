@@ -9,7 +9,7 @@ NOMINAL:
 	% Sentences for the partitive
 	<$grad_type sg part a> == "<mor sg stem Gradation:<phon $grad_type part sg a>>" Harmony:<phon "<phon harmony>" a>
 	<$grad_type sg part ta> == "<mor sg stem Gradation:<phon $grad_type part sg ta>>" t Harmony:<phon "<phon harmony>" a>
-	<$grad_type cs part ta> == "<mor cons stem Gradation:<phon $grad_type part sg ta>>" t Harmony:<phon "<phon harmony>" a>
+	<$grad_type cons part ta> == "<mor cons stem Gradation:<phon $grad_type part sg ta>>" t Harmony:<phon "<phon harmony>" a>
 	
 	<$grad_type pl part a> == "<mor pl stem Gradation:<phon $grad_type part pl a>>" Harmony:<phon "<phon harmony>" a>
 	<$grad_type pl part ta> == "<mor pl stem Gradation:<phon $grad_type part pl ta>>" t Harmony:<phon "<phon harmony>" a>
@@ -19,7 +19,7 @@ NOMINAL:
 	
 	<$grad_type pl gen en> == "<mor pl stem Gradation:<phon $grad_type gen pl en>>" en
 	<$grad_type pl gen den> == "<mor pl stem Gradation:<phon $grad_type gen pl den>>" den
-	<$grad_type cs gen ten> == "<mor cons stem Gradation:<phon $grad_type gen pl ten>>" ten
+	<$grad_type cons gen ten> == "<mor cons stem Gradation:<phon $grad_type gen pl ten>>" ten
 
 	% Sentences for the partitive
 	<$grad_type sg ill vn> == "<mor sg stem Gradation:<phon $grad_type ill sg vn>>" "<final vowel>" n
@@ -487,7 +487,7 @@ Type23:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" i
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>"
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" i
@@ -505,12 +505,12 @@ Type24:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" i
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>"
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" i
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-me-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
@@ -523,12 +523,12 @@ Type25:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" mi
 	<mor sg stem> == "<mor root>" me
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta> _ NOMINAL:<"<gt>" sg part a>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" mi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
@@ -541,12 +541,12 @@ Type26:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" i
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>"
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" i
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-te-⟩ (⟨-te⟩ > ⟨-si⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
@@ -559,12 +559,12 @@ Type27:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" si
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon t> e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" si
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-lte-⟩, ⟨-nte-⟩, ⟨-rte-⟩ (⟨-te⟩ > ⟨-si⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
@@ -577,12 +577,12 @@ Type28nt:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" nsi
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon nt> e
 	<mor cons stem> == "<mor root>" nt
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" nsi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 Type28rt:
@@ -592,12 +592,12 @@ Type28rt:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" rsi
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon rt> e
 	<mor cons stem> == "<mor root>" rt
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" rsi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 Type28lt:
@@ -607,12 +607,12 @@ Type28lt:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" lsi
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon lt> e
 	<mor cons stem> == "<mor root>" lt
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" lsi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-pse-⟩, ⟨-kse-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
@@ -625,12 +625,12 @@ Type29:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" psi
 	<mor sg stem> == "<mor root>" pse
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" psi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-tse-⟩ (⟨-e⟩ > ⟨-i⟩ in the nominative singular), 2 syllables. No gradation.
@@ -643,12 +643,12 @@ Type30:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" tsi
 	<mor sg stem> == "<mor root>" tse
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" tsi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-hte-⟩ (⟨-hte⟩ > ⟨-ksi⟩ in the nominative singular), 2 syllables. With final-syllable gradation.
@@ -661,7 +661,7 @@ Type31:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" ksi
 	<mor sg stem> == "<mor root>" h Gradation_Res:<phon t> e
 	<mor cons stem> == "<mor root>" h
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" ksi
@@ -679,12 +679,12 @@ Type32:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>"
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>"
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" i
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-me-⟩ (⟨-me⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
@@ -697,12 +697,12 @@ Type33:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" n
 	<mor sg stem> == "<mor root>" me
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" mi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-toma-⟩, ⟨-tömä-⟩ (⟨-ma⟩or⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
@@ -715,12 +715,12 @@ Type34:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" n
 	<mor sg stem> == "<mor root>" m Harmony:<phon "<phon harmony>" a>
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" mi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % The words lämmin and hapan only. Ending in ⟨-mä-⟩ (⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
@@ -733,7 +733,7 @@ Type35:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" n
 	<mor sg stem> == "<mor root>" m Harmony:<phon "<phon harmony>" a>
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" mi
@@ -751,12 +751,12 @@ Type36:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" n
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon mp> Harmony:<phon "<phon harmony>" a>
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" Gradation_Res:<phon mp> i
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % The word vasen only. Ending in ⟨-mpa-⟩ (⟨-mpa⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
@@ -769,12 +769,12 @@ Type37:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" n
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon mp> Harmony:<phon "<phon harmony>" a>
 	<mor cons stem> == "<mor root>" n
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta> _ NOMINAL:<"<gt>" sg part a>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta> _ NOMINAL:<"<gt>" sg part a>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" Gradation_Res:<phon mp> i
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-se-⟩ (⟨-se⟩ > ⟨-nen⟩ in the nominative singular), 2+ syllables. No gradation.
@@ -787,12 +787,12 @@ Type38:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" nen
 	<mor sg stem> == "<mor root>" se
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" si
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-kse-⟩ (⟨-kse⟩ > ⟨-s⟩ in the nominative singular), 3+ syllables. No gradation.
@@ -805,12 +805,12 @@ Type39:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" s
 	<mor sg stem> == "<mor root>" kse
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" ksi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-te-⟩ (⟨-te⟩ > ⟨-s⟩ in the nominative singular), 3+ syllables. With final-syllable gradation.
@@ -823,7 +823,7 @@ Type40:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" s
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon t> e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" ksi
@@ -840,7 +840,7 @@ Type41:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" s
 	<mor sg stem> == "<mor root>" "<final vowel>"
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
 	<mor pl stem> == "<mor root>" i
@@ -858,12 +858,12 @@ Type42:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" s
 	<mor sg stem> == "<mor root>" he
 	<mor cons stem> == "<mor root>" s
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" hi
 	<mor pl ill> == NOMINAL:<"<gt>" pl ill in>
-	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cs gen ten>
+	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
 % Ending in ⟨-ue-⟩, ⟨-ye-⟩ (⟨-e⟩ > ⟨-t⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
@@ -876,7 +876,7 @@ Type43:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" t
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" i
@@ -893,7 +893,7 @@ Type44:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" t
 	<mor sg stem> == "<mor root>" Harmony:<phon "<phon harmony>" a>
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
 	<mor pl stem> == "<mor root>" i
@@ -911,7 +911,7 @@ Type45:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" s
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon nt> e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" nsi
@@ -929,7 +929,7 @@ Type46:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" t
 	<mor sg stem> == "<mor root>" Gradation_Res:<phon nt> e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill vn>
 	
 	<mor pl stem> == "<mor root>" nsi
@@ -946,7 +946,7 @@ Type47:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>" Harmony:<phon "<phon harmony>" u> t
 	<mor sg stem> == "<mor root>" ee
 	<mor cons stem> == "<mor root>" Harmony:<phon "<phon harmony>" u> t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
 	<mor pl stem> == "<mor root>" ei
@@ -963,7 +963,7 @@ Type48:
 	<mor sg nom> == "<mor root Gradation:<phon "<gt>" nom sg>>"
 	<mor sg stem> == "<mor root>" e
 	<mor cons stem> == "<mor root>" t
-	<mor sg part> == NOMINAL:<"<gt>" cs part ta>
+	<mor sg part> == NOMINAL:<"<gt>" cons part ta>
 	<mor sg ill> == NOMINAL:<"<gt>" sg ill seen>
 	
 	<mor pl stem> == "<mor root>" i
