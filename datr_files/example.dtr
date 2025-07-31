@@ -1,6 +1,0 @@
-Node1:
-    <> == Node2
-    <path1> == atom1.
-
-Node2:
-    <path2> == "<path1>".
