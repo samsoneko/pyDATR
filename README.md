@@ -52,9 +52,9 @@ All files relevant for the project are listed below:
 
 ## ❔ Usage
 While every step of `pyDATR` can be called separately, a straightforward way to interact with the program is the `datr_cli.py` file.
-When executing it on the command line, the first argument specifies the input file and the second argument the query.
-For example, executing `python datr_cli.py example.dtr "Node1:<path1 path2>"` would compile the theory from `example.dtr` and query it with `Node1:<path1 path2>`.
-The CLI will be expanded with more features in the future.
+When executing it on the command line, the first argument specifies the input file.
+For example, executing `python datr_cli.py example.dtr` would compile the theory from `example.dtr`.
+Afterwards, a query can be given to the program via the console, which returns the resolved atoms.
 
 ## ❗ Important Remarks
 This section covers important details and remarks about the pyDATR implementation. Some of them regard the limits of the current implementation, others regard possible deviations from the original DATR specification.
