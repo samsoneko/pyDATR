@@ -383,7 +383,7 @@ Type17:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
 	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
-% Ending in a long vowel _ a diphthong ending in ⟨-i⟩, 1 syllable. No gradation.
+% Ending in a long vowel or a diphthong ending in ⟨-i⟩, 1 syllable. No gradation.
 % maa
 % 1464
 Type18:
@@ -669,7 +669,7 @@ Type31:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% Ending in ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩ (no vowel in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
+% Ending in ⟨-le-⟩, ⟨-ne-⟩, ⟨-re-⟩ (no vowel in the nominative singular), 3+ syllables. With penultimate-syllable gradation.
 % sisar
 % 373
 Type32:
@@ -687,7 +687,7 @@ Type32:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% Ending in ⟨-me-⟩ (⟨-me⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
+% Ending in ⟨-me-⟩ (⟨-me⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.
 % kytkin
 % 1884
 Type33:
@@ -705,7 +705,7 @@ Type33:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% Ending in ⟨-toma-⟩, ⟨-tömä-⟩ (⟨-ma⟩or⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
+% Ending in ⟨-toma-⟩, ⟨-tömä-⟩ (⟨-ma⟩or⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.
 % onneton
 % 1124
 Type34:
@@ -723,7 +723,7 @@ Type34:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% The words lämmin and hapan only. Ending in ⟨-mä-⟩ (⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
+% The words lämmin and hapan only. Ending in ⟨-mä-⟩ (⟨-mä⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.
 % lämmin, hapan
 % 12
 Type35:
@@ -741,7 +741,7 @@ Type35:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% Superlative adjectives. Ending in ⟨-impa-⟩, ⟨-impä-⟩ (⟨-mpa⟩or⟨-mpä⟩ > ⟨-n⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
+% Superlative adjectives. Ending in ⟨-impa-⟩, ⟨-impä-⟩ (⟨-mpa⟩or⟨-mpä⟩ > ⟨-n⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.
 % sisin
 % 453
 Type36:
@@ -759,7 +759,7 @@ Type36:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% The word vasen only. Ending in ⟨-mpa-⟩ (⟨-mpa⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.➡️
+% The word vasen only. Ending in ⟨-mpa-⟩ (⟨-mpa⟩ > ⟨-n⟩ in the nominative singular), 3 syllables. With penultimate-syllable gradation.
 % vasen
 % 1
 Type37:
@@ -831,7 +831,7 @@ Type40:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 	
-% Ending in long vowel (long vowel > short vowel + ⟨-s⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
+% Ending in long vowel (long vowel > short vowel + ⟨-s⟩ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.
 % vieras
 % 2104
 Type41:
@@ -866,7 +866,7 @@ Type42:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen en> _ NOMINAL:<"<gt>" cons gen ten>
 	<mor pl part> == NOMINAL:<"<gt>" pl part a>.
 
-% Ending in ⟨-ue-⟩, ⟨-ye-⟩ (⟨-e⟩ > ⟨-t⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.➡️
+% Ending in ⟨-ue-⟩, ⟨-ye-⟩ (⟨-e⟩ > ⟨-t⟩ in the nominative singular), 3+ syllables. With penultimate-syllable gradation.
 % ohut
 % 66
 Type43:
@@ -954,7 +954,7 @@ Type47:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
 	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
-% Ending in ⟨-ee-⟩ (⟨-ee⟩ > ⟨-e⟩ˣ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.➡️
+% Ending in ⟨-ee-⟩ (⟨-ee⟩ > ⟨-e⟩ˣ in the nominative singular), 2+ syllables. With penultimate-syllable gradation.
 % hame
 % 7791
 Type48:
@@ -971,8 +971,8 @@ Type48:
 	<mor pl gen> == NOMINAL:<"<gt>" pl gen den>
 	<mor pl part> == NOMINAL:<"<gt>" pl part ta>.
 
-% As either hame _ sisar. Covered by inheriting from either Type48 _ Type32 in the leaf
-% askel _ askele
+% As either hame or sisar. Covered by inheriting from either Type48 or Type32 in the leaf
+% askel or askele
 % 188
 % Type49:
 
